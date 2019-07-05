@@ -1,0 +1,13 @@
+./simcu.sh 289 5000 > log/zr_289.log &
+./simcu.sh 770 5000 > log/zr_770.log &
+./simcu.sh 826 5000 > log/zr_826.log &
+./simcu.sh 1100 5000 > log/zr_1100.log &
+./simcu.sh 1300 5000 > log/zr_1300.log &
+./simcu.sh 1400 5000 > log/zr_1400.log &
+./simcu.sh 1605 5000 > log/zr_1605.log &
+./simcu.sh 1650 5000 > log/zr_1650.log &
+./simcu.sh 1680 5000 > log/zr_1680.log &
+./simcu.sh 1720 5000 > log/zr_1720.log &
+./simcu.sh 2080 5000 > log/zr_2080.log &
+./simcu.sh 2220 5000 > log/zr_2220.log &
+./simcu.sh 2610 5000 > log/zr_2610.log &

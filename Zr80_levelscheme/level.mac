@@ -1,0 +1,34 @@
+# Detector parameters ==========================================================
+/Target/Construct
+/BeamTube/Construct
+/HRarray/detector/enableCapsules
+/HRarray/detector/enableCryostats
+/HRarray/Construct
+
+# Set reaction parameters ======================================================
+/Target/Material Be
+/Target/Thickness 7 mm  # MINOS equivalent
+/BeamIn/A 80
+/BeamIn/Z 30
+/BeamIn/KEu 200 MeV
+/BeamIn/Dpp 0.00
+/BeamIn/Focus/DX 0. mm
+/BeamIn/Focus/DY 0. mm
+/BeamOut/TargetA 9
+/BeamOut/TargetZ 4
+/BeamOut/DA -1
+/BeamOut/DZ -1
+/BeamOut/LevelDataFile test.lvldata
+/BeamOut/ProjectileExcitation 1000 keV
+/BeamOut/AngDistSigmaA 0.000 rad
+/BeamOut/AngDistSigmaB 0.000 rad
+/BeamOut/Update
+
+# Print simulation parameters to stdout ========================================
+/Target/Report
+/ExpHall/Report
+
+# Output parameters ============================================================
+/Mode2/PackingRes 5.0 mm
+/Mode2/Filename level_branch.dat 
+/run/beamOn 1000000

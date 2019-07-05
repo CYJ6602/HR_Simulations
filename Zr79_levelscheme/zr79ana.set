@@ -1,0 +1,35 @@
+VerboseLevel:		0
+LastEvent:		0
+
+#Event Building
+EventTimeDiff:	300
+
+Target.X:		0
+Target.Y:		0
+Target.Z:		0
+Target.Beta:		0.504282
+Ejectile.Mass:		78.9492 #amu
+
+Average.Beta.After:     0.472516
+
+#Type of addback to be used. 0 is crystal (no addback), 1 is cluster, 2 is caloriemter
+AddBackType:	1
+
+Average.MBPositions:	zr79_MBcoordinates.dat
+Sim.Gretina.Position.Resolution:	1
+Sim.Resolution.File:    averageresolution.res
+Sim.Threshold.File:    	averagethresholds.thresh
+
+#Which hole contains each detector
+Detector.0:	1
+Detector.1:	2
+Detector.2:	101
+Detector.3:	201
+Detector.4:	202
+Detector.5:	203
+Detector.6:	204
+Detector.7:	205
+Detector.8:	206
+Detector.9:	207
+Detector.10:	208
+
