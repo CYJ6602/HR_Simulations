@@ -1,0 +1,47 @@
+# Detector parameters ==========================================================
+/Target/Construct
+/BeamTube/Construct
+/HRarray/detector/enableCapsules
+/HRarray/detector/enableCryostats
+/HRarray/Construct
+
+# Set reaction parameters ======================================================
+/Target/Material MINOS
+/Target/Thickness 50 mm  # 
+/Target/SetPosition_Z -10 cm
+
+/BeamTube/R_max 9.6 cm
+/BeamTube/R_min 9.1 cm
+/BeamTube/Length 30 cm
+/BeamTube/Shift -10 cm
+/BeamTube/Shield1Thick -1 mm
+/BeamTube/Shield1Material Pb
+/BeamTube/Shield2Thick -1 mm
+/BeamTube/Shield2Material Sn
+
+/BeamIn/A 84
+/BeamIn/Z 42
+/BeamIn/KEu 213 MeV
+/BeamIn/Dpp 0.00
+/BeamIn/Focus/DX 0. mm
+/BeamIn/Focus/DY 0. mm
+/BeamOut/TargetA 1
+/BeamOut/TargetZ 1
+/BeamOut/DA -1
+/BeamOut/DZ 0
+/BeamOut/LevelDataFile mo83_lowlevel.lvldata
+/BeamOut/ProjectileExcitation 642 keV
+/BeamOut/AngDistSigmaA 0.000 rad
+/BeamOut/AngDistSigmaB 0.000 rad
+/BeamOut/Update
+
+# Print simulation parameters to stdout ========================================
+/Target/Report
+/ExpHall/Report
+
+# Output parameters ============================================================
+/Mode2/PackingRes 5.0 mm
+/Mode2/Filename data/mo83_642keV_6000evt_lowlevel.dat 
+/Mode2/FirstInteractions MBcoordinates_MINOS.dat
+/Mode2/MINOS
+/run/beamOn 6000

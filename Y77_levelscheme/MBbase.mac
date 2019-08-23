@@ -1,0 +1,40 @@
+# Detector parameters ==========================================================
+/Target/Construct
+/BeamTube/Construct
+/HRarray/detector/enableCapsules
+/HRarray/detector/enableCryostats
+/HRarray/Construct
+
+# Set reaction parameters ======================================================
+/Target/Material Be
+/Target/Thickness 2.706 mm  # 
+/BeamIn/A 78
+/BeamIn/Z 39
+/BeamIn/KEu 190 MeV
+/BeamIn/Dpp 0.00
+/BeamIn/Focus/DX 0. mm
+/BeamIn/Focus/DY 0. mm
+/BeamOut/TargetA 9
+/BeamOut/TargetZ 4
+/BeamOut/DA -1
+/BeamOut/DZ 0
+/BeamOut/LevelDataFile MBcoords/y77_EEEEkeV_TTTTps.lvldata
+/BeamOut/ProjectileExcitation EEEE keV
+/BeamOut/AngDistSigmaA 0.000 rad
+/BeamOut/AngDistSigmaB 0.000 rad
+/BeamOut/Update
+
+# Print simulation parameters to stdout ========================================
+/Target/Report
+/ExpHall/Report
+
+# Tracking parameters ==========================================================
+#/GammaPrint/Track_Set
+#/IonPrint/Track_Set
+
+# Output parameters ============================================================
+/Mode2/PackingRes 5.0 mm
+#/Mode2/Print
+/Mode2/Filename MBcoords/y77_EEEEkeV_TTTTps_NNNNevt.dat 
+/Mode2/FirstInteractions y77_MBcoordinates.dat
+/run/beamOn NNNN

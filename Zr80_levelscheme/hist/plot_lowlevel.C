@@ -54,7 +54,7 @@ void plot_lowlevel(const char* filename = "histos.root")
            
     }
 
-  const int nn=13;
+  const int nn=11;
   
   if(nn!=j)
     {
@@ -62,17 +62,30 @@ void plot_lowlevel(const char* filename = "histos.root")
       cout << "Please check the code" << endl;      
     }
   
-  TPad *p;
-  TCanvas *c = new TCanvas("c","Histos",700,600);
-  c->cd();
-  p = new TPad("p","p",0,0,1,1);
-  p->SetTopMargin(0.01);
-  p->SetLeftMargin(0.08);
-  p->SetBottomMargin(0.11);
-  p->SetRightMargin(0.01);
-  p->Draw();
+  TPad *p1;
+  TPad *p2;
+  TCanvas *c1 = new TCanvas("c1","Miniball hist",1000,400);
+  TCanvas *c2 = new TCanvas("c2","Tracking hist",1000,400);
+  c1->cd();
+  p1 = new TPad("p1","p1",0.9,0.9,1,1);
+  p1->SetTopMargin(0.01);
+  p1->SetLeftMargin(0.08);
+  p1->SetBottomMargin(0.05);
+  p1->SetRightMargin(0.03);
+  p1->Draw();
   //p->SetLogy();
-  p->cd();
+  p1->cd();
+  
+  c2->cd();
+  p2 = new TPad("p2","p2",0,0,1,1);
+  p2->SetTopMargin(0.01);
+  p2->SetLeftMargin(0.08);
+  p2->SetBottomMargin(0.05);
+  p2->SetRightMargin(0.03);
+  p2->Draw();
+  //p->SetLogy();
+  p2->cd();
+  
 
   TH1F* h[nn+1][5];
   for(int i=0;i<nn;i++){
@@ -107,32 +120,95 @@ void plot_lowlevel(const char* filename = "histos.root")
 
   for(int i=0 ; i<4; i++)
     {
-      h[nn][i]->Rebin(4);
-      h[nn][i]->GetYaxis()->SetTitle("counts / 4 keV");
+      //h[nn][i]->Rebin(1);
+      h[nn][i]->GetYaxis()->SetTitle("counts / 1 keV");
       h[nn][i]->GetYaxis()->SetTitleSize(0.045);
-      h[nn][i]->GetYaxis()->SetTitleOffset(0.9);
-      h[nn][i]->GetYaxis()->SetLabelSize(0.035);
+      h[nn][i]->GetYaxis()->SetTitleOffset(0.7);
+      h[nn][i]->GetYaxis()->SetLabelSize(0.05);
       h[nn][i]->GetYaxis()->SetLabelOffset(0.01);
       
       h[nn][i]->GetXaxis()->SetTitle("E_{#gamma} (keV)");
       h[nn][i]->GetXaxis()->SetTitleSize(0.045);
-      h[nn][i]->GetXaxis()->SetTitleOffset(1.0);
-      h[nn][i]->GetXaxis()->SetLabelSize(0.035);
-      h[nn][i]->GetXaxis()->SetLabelOffset(0.013);
+      h[nn][i]->GetXaxis()->SetTitleOffset(1.2);
+      h[nn][i]->GetXaxis()->SetLabelSize(0.05);
+      h[nn][i]->GetXaxis()->SetLabelOffset(0.01);
       
-      h[nn][i]->GetXaxis()->SetRangeUser(50,4950);
-      h[nn][i]->GetYaxis()->SetRangeUser(1,1000);
+      h[nn][i]->GetXaxis()->SetRangeUser(0,1500);
+      //h[nn][i]->GetYaxis()->SetRangeUser(0,80);
       
       h[nn][i]->GetXaxis()->SetTitleFont(132);
       h[nn][i]->GetXaxis()->SetLabelFont(132);
       h[nn][i]->GetYaxis()->SetTitleFont(132);
       h[nn][i]->GetYaxis()->SetLabelFont(132);
-      h[nn][i]->Draw();
+      //h[nn][i]->Draw();
       
       //h[nn][i]->SetLineColor(i+2);
-      h[nn][i]->Draw("same");
+      //h[nn][i]->Draw("same");
     }
 
+  /*
+  TF1* f1 = new TF1("f1","pol1(0)+gaus(2)",190,210);
+  f1->SetParameters(300.,-0.01,1200.,195.,1.);
+  h[nn][3]->Fit("f1","R");
+
+  TF1* f2 = new TF1("f2","pol1(0)+gaus(2)",320,340);
+  f2->SetParameters(200.,-0.01,300.,325.,1.);
+  h[nn][3]->Fit("f2","R+");
+
+  
+  TF1* f3 = new TF1("f3","pol1(0)+gaus(2)",340,360);
+  f3->SetParameters(100.,-0.01,100.,345.,1.);
+  h[nn][3]->Fit("f3","R+");
+
+  TF1* f4 = new TF1("f4","pol1(0)+gaus(2)",460,500);
+  f4->SetParameters(50.,0.01,500.,475.,1.);
+  h[nn][3]->Fit("f4","R+");
+
+  TF1* f5 = new TF1("f5","pol1(0)+gaus(2)",510,570);
+  f5->SetParameters(50.,0.01,550.,530.,1.);
+  h[nn][3]->Fit("f5","R+");
+
+  TF1* f6 = new TF1("f6","pol1(0)+gaus(2)",570,590);
+  f6->SetParameters(50.,0.01,50.,575.,1.);
+  h[nn][3]->Fit("f6","R+");
+  */
+  
+  /*
+  TF1* f7 = new TF1("f7","pol1(0)+gaus(2)",270,310);
+  f7->SetParameters(150.,0.1,400.,285.,1.);
+  h[nn][3]->Fit("f7","","",283,295);
+
+  TF1* f8 = new TF1("f8","pol1(0)+gaus(2)",270,310);
+  f8->SetParameters(150.,0.1,400.,285.,1.);
+  h[nn][3]->Fit("f8","","",283,295);
+
+  TF1* f9 = new TF1("f9","pol1(0)+gaus(2)",270,310);
+  f9->SetParameters(150.,0.1,400.,285.,1.);
+  h[nn][3]->Fit("f9","","",283,295);
+
+  TF1* f10 = new TF1("f10","pol1(0)+gaus(2)",270,310);
+  f10->SetParameters(150.,0.1,400.,285.,1.);
+  h[nn][3]->Fit("f10","","",283,295);
+  */
+  
+
+  /*
+  TF1* f2 = new TF1("f2","pol(0)+gaus(2)+gaus(5)+gaus(8)",270,310);
+  f2->SetParameters(20.,0.001,
+		    50.,280.,2.,
+		    400.,285.,1.,
+		    50.,295.,2.);
+  h[nn][3]->Fit("f2","","",270,310);
+  */
+  
+  c1->cd();
+  h[nn][1]->Draw();
+  c2->cd();
+  h[nn][3]->Draw();
+
+  c1->SaveAs("zr80_Miniball_hist.jpg");
+  c2->SaveAs("zr80_Tracking_hist.jpg");
+  
   /*
 TH1F* h[nn+1];
   for(int i=0;i<nn;i++){

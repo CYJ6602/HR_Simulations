@@ -1,0 +1,35 @@
+# Detector parameters ==========================================================
+/Target/Construct
+/BeamTube/Construct
+/HRarray/detector/enableCapsules
+/HRarray/detector/enableCryostats
+/HRarray/Construct
+
+# Set reaction parameters ======================================================
+/Target/Material Be
+/Target/Thickness 2.706 mm  ##
+/BeamIn/A 85
+/BeamIn/Z 42
+/BeamIn/KEu 156 MeV
+/BeamIn/Dpp 0.00
+/BeamIn/Focus/DX 0. mm
+/BeamIn/Focus/DY 0. mm
+/BeamOut/TargetA 9
+/BeamOut/TargetZ 4
+/BeamOut/DA -2
+/BeamOut/DZ 0
+/BeamOut/LevelDataFile mo83_lowlevel.lvldata
+/BeamOut/ProjectileExcitation 229 keV
+/BeamOut/AngDistSigmaA 0.000 rad
+/BeamOut/AngDistSigmaB 0.000 rad
+/BeamOut/Update
+
+# Print simulation parameters to stdout ========================================
+/Target/Report
+/ExpHall/Report
+
+# Output parameters ============================================================
+/Mode2/PackingRes 5.0 mm
+/Mode2/Filename data/mo83_229keV_395evt_lowlevel.dat 
+/Mode2/FirstInteractions mo83_MBcoordinates.dat
+/run/beamOn 395

@@ -1,0 +1,1244 @@
+simulating 6000 events with energy 130
+
+**************************************************************
+ Geant4 version Name: geant4-10-04-patch-03 [MT]   (8-February-2019)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+Instantiating DetectorConstruction ...
+... Done
+Construct incoming and outgoing beams
+... Done
+Event Action
+... Done
+Primary Generator
+... Done
+Run Action
+... Done
+Tracking Action
+... Done
+Stepping Action
+... Done
+Stacking Action
+... Done
+Starting visualization...*** Initializing runManager
+### G4EmStandard_opt4 Construct Processes 
+*** Initialized runManager
+newValue 
+newValue 
+ ----> The capsules will be generated.
+setting beam pipe -------------------------------------------------------
+0---------------------------->1
+1---------------------------->1
+construct target
+
+Reading description of crystals from file asolid ...
+6 polyhedra for a total of 72 vertex points read.
+
+Reading description of clusters from file aclust ...
+ Read 4 cluster description for a total of 13 individual solids.
+
+Reading description of walls from file awalls ...
+58 polyhedra for a total of 544 vertex points read.
+
+Reading Euler angles from file aeuler ...
+11 Euler angles read.
+ Reading slice planes from file aslice
+
+Reading slicing planes from data file aslice
+
+----> The crystals material is Germanium
+
+----> The wall material is Al
+
+----> The back wall material is BackWallMaterial
+
+----> The hole material is G4_Galactic
+
+----> The cryostat material is Al
+
+Generating crystals ... 
+0, colx 1, coly 1, colz 0
+
+  Total Ge volume (geCapsPolyPcone00)     = 369.516 cm3
+    Back dead layer volume (gePassB00)     = 4.95043 cm3
+    Coaxial dead layer volume (geTubsC00) = 11.7814 cm3
+
+1, colx 1, coly 0, colz 1
+
+  Total Ge volume (geCapsPolyPcone01)     = 385.488 cm3
+    Back dead layer volume (gePassB01)     = 4.94789 cm3
+    Coaxial dead layer volume (geTubsC01) = 11.7655 cm3
+
+2, colx 1, coly 0, colz 0
+
+  Total Ge volume (geCapsPolyPcone02)     = 378.326 cm3
+    Back dead layer volume (gePassB02)     = 2.47678 cm3
+    Coaxial dead layer volume (geTubsC02) = 1.59236 cm3
+
+3, colx 0, coly 1, colz 0
+
+  Total Ge volume (geCapsPolyPcone03)     = 384.936 cm3
+    Back dead layer volume (gePassB03)     = 2.47381 cm3
+    Coaxial dead layer volume (geTubsC03) = 1.58711 cm3
+
+WARNING - gePoly04 point [ 1 +  1]/2 is   0.165765 mm outside plane  2
+WARNING - gePoly04 point [ 1 +  1]/2 is   0.004058 mm outside plane  3
+WARNING - gePoly04 point [ 1 +  6]/2 is   0.165765 mm outside plane  2
+WARNING - gePoly04 point [ 1 +  8]/2 is   0.004058 mm outside plane  3
+WARNING - gePoly04 point [ 3 +  3]/2 is   0.019978 mm outside plane  4
+WARNING - gePoly04 point [ 3 +  3]/2 is   0.049876 mm outside plane  5
+WARNING - gePoly04 point [ 3 +  8]/2 is   0.019978 mm outside plane  4
+WARNING - gePoly04 point [ 3 + 10]/2 is   0.049876 mm outside plane  5
+WARNING - gePoly04 point [ 5 +  5]/2 is   0.097001 mm outside plane  7
+WARNING - gePoly04 point [ 5 +  6]/2 is   0.097001 mm outside plane  7
+WARNING - gePoly04 point [ 6 +  6]/2 is   0.165765 mm outside plane  2
+WARNING - gePoly04 point [ 6 +  6]/2 is   0.097001 mm outside plane  7
+WARNING - gePoly04 point [ 8 +  8]/2 is   0.004058 mm outside plane  3
+WARNING - gePoly04 point [ 8 +  8]/2 is   0.019978 mm outside plane  4
+WARNING - gePoly04 point [10 + 10]/2 is   0.049876 mm outside plane  5
+4, colx 0, coly 0, colz 1
+
+  Total Ge volume (geCapsPolyPcone04)     = 380.837304 cm3
+    Back dead layer volume (gePassB04)     = 2.477019 cm3
+    Coaxial dead layer volume (geTubsC04) = 1.588971 cm3
+
+5, colx 1, coly 1, colz 1
+
+  Total Ge volume (geCapsPolyPcone05)     = 255.816077 cm3
+    Back dead layer volume (gePassB05)     = 1.846901 cm3
+    Coaxial dead layer volume (geTubsC05) = 1.753152 cm3
+
+Number of generated crystals is 6
+
+Generating walls ... 
+WARNING - wlPoly00 point [ 0 +  0]/2 is   0.003914 mm outside plane  2
+WARNING - wlPoly00 point [ 0 +  7]/2 is   0.003914 mm outside plane  2
+WARNING - wlPoly00 point [ 1 +  1]/2 is   0.003618 mm outside plane  3
+WARNING - wlPoly00 point [ 1 +  8]/2 is   0.003618 mm outside plane  3
+WARNING - wlPoly00 point [ 2 +  2]/2 is   0.000863 mm outside plane  4
+WARNING - wlPoly00 point [ 2 +  9]/2 is   0.000863 mm outside plane  4
+WARNING - wlPoly00 point [ 3 +  3]/2 is   0.000611 mm outside plane  5
+WARNING - wlPoly00 point [ 3 + 10]/2 is   0.000611 mm outside plane  5
+WARNING - wlPoly00 point [ 5 +  5]/2 is   0.002633 mm outside plane  6
+WARNING - wlPoly00 point [ 5 +  5]/2 is   0.002535 mm outside plane  7
+WARNING - wlPoly00 point [ 5 +  6]/2 is   0.002535 mm outside plane  7
+WARNING - wlPoly00 point [ 5 + 10]/2 is   0.002633 mm outside plane  6
+WARNING - wlPoly00 point [ 6 +  6]/2 is   0.002535 mm outside plane  7
+WARNING - wlPoly00 point [ 6 +  8]/2 is   0.014201 mm outside plane  1
+WARNING - wlPoly00 point [ 6 + 10]/2 is   0.014201 mm outside plane  1
+WARNING - wlPoly00 point [ 7 +  7]/2 is   0.003914 mm outside plane  2
+WARNING - wlPoly00 point [ 7 +  8]/2 is   0.026083 mm outside plane  1
+WARNING - wlPoly00 point [ 7 + 10]/2 is   0.026084 mm outside plane  1
+WARNING - wlPoly00 point [ 8 +  8]/2 is   0.056427 mm outside plane  1
+WARNING - wlPoly00 point [ 8 +  8]/2 is   0.003618 mm outside plane  3
+WARNING - wlPoly00 point [ 8 + 10]/2 is   0.056428 mm outside plane  1
+WARNING - wlPoly00 point [ 8 + 11]/2 is   0.028139 mm outside plane  1
+WARNING - wlPoly00 point [ 9 +  9]/2 is   0.000863 mm outside plane  4
+WARNING - wlPoly00 point [10 + 10]/2 is   0.056429 mm outside plane  1
+WARNING - wlPoly00 point [10 + 10]/2 is   0.000611 mm outside plane  5
+WARNING - wlPoly00 point [10 + 10]/2 is   0.002633 mm outside plane  6
+WARNING - wlPoly00 point [10 + 11]/2 is   0.028139 mm outside plane  1
+WARNING - wlPoly00 point [ 1 +  1]/2 is   0.004389 mm outside plane  2
+WARNING - wlPoly00 point [ 1 +  6]/2 is   0.004389 mm outside plane  2
+WARNING - wlPoly00 point [ 2 +  2]/2 is   0.006061 mm outside plane  3
+WARNING - wlPoly00 point [ 2 +  7]/2 is   0.006061 mm outside plane  3
+WARNING - wlPoly00 point [ 3 +  3]/2 is   0.003541 mm outside plane  4
+WARNING - wlPoly00 point [ 3 +  3]/2 is   0.000101 mm outside plane  5
+WARNING - wlPoly00 point [ 3 +  8]/2 is   0.003541 mm outside plane  4
+WARNING - wlPoly00 point [ 3 + 10]/2 is   0.000101 mm outside plane  5
+WARNING - wlPoly00 point [ 4 +  4]/2 is   0.003430 mm outside plane  6
+WARNING - wlPoly00 point [ 4 + 11]/2 is   0.003430 mm outside plane  6
+WARNING - wlPoly00 point [ 5 +  5]/2 is   0.003232 mm outside plane  7
+WARNING - wlPoly00 point [ 5 +  6]/2 is   0.003232 mm outside plane  7
+WARNING - wlPoly00 point [ 6 +  6]/2 is   0.004389 mm outside plane  2
+WARNING - wlPoly00 point [ 6 +  6]/2 is   0.003232 mm outside plane  7
+WARNING - wlPoly00 point [ 7 +  7]/2 is   0.006061 mm outside plane  3
+WARNING - wlPoly00 point [ 8 +  8]/2 is   0.003541 mm outside plane  4
+WARNING - wlPoly00 point [10 + 10]/2 is   0.000101 mm outside plane  5
+WARNING - wlPoly00 point [11 + 11]/2 is   0.003430 mm outside plane  6
+WARNING - wlPoly00 point [ 1 +  1]/2 is   0.000844 mm outside plane  2
+WARNING - wlPoly00 point [ 1 +  6]/2 is   0.000844 mm outside plane  2
+WARNING - wlPoly00 point [ 2 +  2]/2 is   0.004245 mm outside plane  3
+WARNING - wlPoly00 point [ 2 +  7]/2 is   0.004245 mm outside plane  3
+WARNING - wlPoly00 point [ 3 +  3]/2 is   0.003645 mm outside plane  4
+WARNING - wlPoly00 point [ 3 +  3]/2 is   0.000100 mm outside plane  5
+WARNING - wlPoly00 point [ 3 +  8]/2 is   0.003645 mm outside plane  4
+WARNING - wlPoly00 point [ 3 + 10]/2 is   0.000100 mm outside plane  5
+WARNING - wlPoly00 point [ 4 +  4]/2 is   0.003330 mm outside plane  6
+WARNING - wlPoly00 point [ 4 + 11]/2 is   0.003330 mm outside plane  6
+WARNING - wlPoly00 point [ 5 +  5]/2 is   0.005238 mm outside plane  7
+WARNING - wlPoly00 point [ 5 +  6]/2 is   0.005238 mm outside plane  7
+WARNING - wlPoly00 point [ 6 +  6]/2 is   0.000844 mm outside plane  2
+WARNING - wlPoly00 point [ 6 +  6]/2 is   0.005238 mm outside plane  7
+WARNING - wlPoly00 point [ 7 +  7]/2 is   0.004245 mm outside plane  3
+WARNING - wlPoly00 point [ 8 +  8]/2 is   0.003645 mm outside plane  4
+WARNING - wlPoly00 point [10 + 10]/2 is   0.000100 mm outside plane  5
+WARNING - wlPoly00 point [11 + 11]/2 is   0.003330 mm outside plane  6
+WARNING - wlPoly00 point [ 0 +  0]/2 is   0.001022 mm outside plane  2
+WARNING - wlPoly00 point [ 0 +  7]/2 is   0.001022 mm outside plane  2
+WARNING - wlPoly00 point [ 1 +  1]/2 is   0.003617 mm outside plane  3
+WARNING - wlPoly00 point [ 1 +  8]/2 is   0.003617 mm outside plane  3
+WARNING - wlPoly00 point [ 2 +  2]/2 is   0.000907 mm outside plane  4
+WARNING - wlPoly00 point [ 2 +  9]/2 is   0.000907 mm outside plane  4
+WARNING - wlPoly00 point [ 4 +  4]/2 is   0.003634 mm outside plane  5
+WARNING - wlPoly00 point [ 4 +  9]/2 is   0.003634 mm outside plane  5
+WARNING - wlPoly00 point [ 5 +  5]/2 is   0.002632 mm outside plane  6
+WARNING - wlPoly00 point [ 5 +  5]/2 is   0.000592 mm outside plane  7
+WARNING - wlPoly00 point [ 5 +  6]/2 is   0.000592 mm outside plane  7
+WARNING - wlPoly00 point [ 5 + 10]/2 is   0.002632 mm outside plane  6
+WARNING - wlPoly00 point [ 6 +  6]/2 is   0.000592 mm outside plane  7
+WARNING - wlPoly00 point [ 7 +  7]/2 is   0.001022 mm outside plane  2
+WARNING - wlPoly00 point [ 8 +  8]/2 is   0.003617 mm outside plane  3
+WARNING - wlPoly00 point [ 9 +  9]/2 is   0.000907 mm outside plane  4
+WARNING - wlPoly00 point [ 9 +  9]/2 is   0.003634 mm outside plane  5
+WARNING - wlPoly00 point [10 + 10]/2 is   0.002632 mm outside plane  6
+Number of generated walls is 58
+
+Generating the capsules ... 
+WARNING - vaPoly04 point [ 1 +  1]/2 is   0.165765 mm outside plane  2
+WARNING - vaPoly04 point [ 1 +  1]/2 is   0.004058 mm outside plane  3
+WARNING - vaPoly04 point [ 1 +  6]/2 is   0.165765 mm outside plane  2
+WARNING - vaPoly04 point [ 1 +  8]/2 is   0.004058 mm outside plane  3
+WARNING - vaPoly04 point [ 3 +  3]/2 is   0.019978 mm outside plane  4
+WARNING - vaPoly04 point [ 3 +  3]/2 is   0.049876 mm outside plane  5
+WARNING - vaPoly04 point [ 3 +  8]/2 is   0.019978 mm outside plane  4
+WARNING - vaPoly04 point [ 3 + 10]/2 is   0.049876 mm outside plane  5
+WARNING - vaPoly04 point [ 5 +  5]/2 is   0.097001 mm outside plane  7
+WARNING - vaPoly04 point [ 5 +  6]/2 is   0.097001 mm outside plane  7
+WARNING - vaPoly04 point [ 6 +  6]/2 is   0.165765 mm outside plane  2
+WARNING - vaPoly04 point [ 6 +  6]/2 is   0.097001 mm outside plane  7
+WARNING - vaPoly04 point [ 8 +  8]/2 is   0.004058 mm outside plane  3
+WARNING - vaPoly04 point [ 8 +  8]/2 is   0.019978 mm outside plane  4
+WARNING - vaPoly04 point [10 + 10]/2 is   0.049876 mm outside plane  5
+WARNING - caPoly04 point [ 1 +  1]/2 is   0.165765 mm outside plane  2
+WARNING - caPoly04 point [ 1 +  1]/2 is   0.004058 mm outside plane  3
+WARNING - caPoly04 point [ 1 +  6]/2 is   0.165765 mm outside plane  2
+WARNING - caPoly04 point [ 1 +  8]/2 is   0.004058 mm outside plane  3
+WARNING - caPoly04 point [ 3 +  3]/2 is   0.019978 mm outside plane  4
+WARNING - caPoly04 point [ 3 +  3]/2 is   0.049876 mm outside plane  5
+WARNING - caPoly04 point [ 3 +  8]/2 is   0.019978 mm outside plane  4
+WARNING - caPoly04 point [ 3 + 10]/2 is   0.049876 mm outside plane  5
+WARNING - caPoly04 point [ 5 +  5]/2 is   0.097001 mm outside plane  7
+WARNING - caPoly04 point [ 5 +  6]/2 is   0.097001 mm outside plane  7
+WARNING - caPoly04 point [ 6 +  6]/2 is   0.165765 mm outside plane  2
+WARNING - caPoly04 point [ 6 +  6]/2 is   0.097001 mm outside plane  7
+WARNING - caPoly04 point [ 8 +  8]/2 is   0.004058 mm outside plane  3
+WARNING - caPoly04 point [ 8 +  8]/2 is   0.019978 mm outside plane  4
+WARNING - caPoly04 point [10 + 10]/2 is   0.049876 mm outside plane  5
+Number of generated capsules is 6
+
+Building the clusters ...
+ Cluster #0
+  Solid    1          61.75      9.72    -75.44      0.79     -3.02     18.23
+  Solid    0         147.07     16.37     16.70      4.99      1.50     17.75
+  Solid    1          61.75      9.72    104.56     -0.79      3.02     18.23
+  Solid    0         147.07     16.37   -163.30     -4.99     -1.50     17.75
+  Wall     0           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     1           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     2           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     3           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     4           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     5           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     6           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     7           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     8           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     9           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    10           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    11           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    12           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    13           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    14           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    15           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    16           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    17           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    18           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    19           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    20           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    21           0.00      0.00      0.00      0.00      0.00      0.00
+ Cluster #1
+  Solid    1          61.75      9.72    -75.44      0.79     -3.02     18.23
+  Solid    0         147.07     16.37     16.70      4.99      1.50     17.75
+  Solid    1          61.75      9.72    104.56     -0.79      3.02     18.23
+ Cluster #2
+  Solid    2        -179.73      9.42     -2.94      3.49     -0.16     -4.41
+  Solid    3         177.23      9.42    115.42     -1.39      3.30     -4.42
+  Solid    4        -178.71      9.42   -120.42     -1.73     -3.09     -4.42
+  Wall     3           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     4           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     5           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     6           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     7           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     8           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     9           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    10           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    11           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    12           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    13           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    14           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    15           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    16           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    17           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    18           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    19           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    20           0.00      0.00      0.00      0.00      0.00      0.00
+ Cluster #3
+  Solid    5           0.00      4.51      0.00      3.59      0.00     -0.28
+  Solid    5           0.00      4.51    120.00     -1.79      3.10     -0.28
+  Solid    5           0.00      4.51    240.00     -1.79     -3.10     -0.28
+  Wall     2           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     3           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     4           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     5           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    10           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    11           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    12           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    13           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    18           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    19           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    20           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    21           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     0           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     1           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     8           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall     9           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    16           0.00      0.00      0.00      0.00      0.00      0.00
+  Wall    17           0.00      0.00      0.00      0.00      0.00      0.00
+
+Placing clusters ... 
+0 nEuler = 11 pCa whichClus = 0
+indexP 0
+   0    0    0        0     90.00     65.00    -20.00     -4.26      1.55     -2.11
+1 nEuler = 11 pCa whichClus = 1
+indexP 1004
+   1    1    1     1004      0.00     65.00    -90.00      0.00      4.53     -2.11
+2 nEuler = 11 pCa whichClus = 2
+indexP 100400
+   2  100    2   100400     60.00     65.00   -150.00    -15.70     -9.06      8.45
+3 nEuler = 11 pCa whichClus = 3
+indexP 200800
+   3  200    3   200800      0.00     30.00      0.00     11.00      0.00     19.05
+4 nEuler = 11 pCa whichClus = 3
+indexP 201804
+   4  201    3   201804     60.00     30.00     60.00      5.50      9.53     19.05
+5 nEuler = 11 pCa whichClus = 3
+indexP 202808
+   5  202    3   202808    120.00     30.00    120.00     -5.50      9.53     19.05
+6 nEuler = 11 pCa whichClus = 3
+indexP 203812
+   6  203    3   203812    180.00     30.00    180.00    -11.00      0.00     19.05
+7 nEuler = 11 pCa whichClus = 3
+indexP 204816
+   7  204    3   204816    240.00     30.00    240.00     -5.50     -9.53     19.05
+8 nEuler = 11 pCa whichClus = 3
+indexP 205820
+   8  205    3   205820    300.00     30.00    300.00      5.50     -9.53     19.05
+9 nEuler = 11 pCa whichClus = 3
+indexP 206824
+   9  206    3   206824      0.00     65.00     60.00      9.06     15.70      8.45
+10 nEuler = 11 pCa whichClus = 3
+indexP 207828
+  10  207    3   207828    150.00     65.00    150.00    -15.70      9.06      8.45
+Number of placed clusters is 11  [ 1 1 1 8 ]
+Cluster  Index ranging from 0 to 207
+Detector Index ranging from 0 to 831
+
+Number of placed walls is 184
+
+The equivalent shell extends from 13.592083 cm to 30.020266 cm
+
+
+Generating segments for the ReadOut geometry... 
+ 144 segments
+ 144 segments
+ 144 segments
+ 144 segments
+ 144 segments
+ 24 segments
+ --> Total number of generated sub-segments (4 sub-segments per segment) is 744 [ 144 144 144 144 144 24 ]
+
+Checking consistency of segments ...
+all OK
+newValue 
+----> Target material set to     MINOS
+----> Target thickness is set to 5.000000 cm 
+----> Target position is set to 0.000000 fm , 0.000000 fm , -10.000000 cm , 
+----> Beam Tube outer radius set to 9.600000 cm 
+----> Beam Tube inner radius set to 9.100000 cm 
+----> Beam Tube length set to 30.000000 cm 
+----> Beam Tube shift set to -10.000000 cm 
+----> setting Thickness of shield
+----> Thickness of shield0 set to -1.000000 mm 
+----> setting Thickness of shield
+----> Thickness of shield1 set to -1.000000 mm 
+----> Z of the incoming beam set to  42
+----> A of the incoming beam set to  84
+----> Kin. En. of the incoming beam set to 17.892000 GeV
+----> KE per nucleon of the incoming beam set to 213.000000 MeV
+----> momentum acceptance for the incoming beam set to  0.000000
+----> focal point X position for the incoming beam set to  0.000000 fm 
+----> focal point DX size for the incoming beam set to  0.000000 fm 
+----> focal point Y position for the incoming beam set to  0.000000 fm 
+----> focal point DY size for the incoming beam set to  0.000000 fm 
+----> focal point Z position for the incoming beam set to  -50.000000 cm 
+----> dispersive direction angular divergence for the incoming beam set to  0.000000 mrad = 0.000000 deg
+----> non dispersive direction angular divergence for the incoming beam set to  0.000000 mrad = 0.000000 deg
+AddPrivateData done
+----> Delta A for the outgoing beam-like product set to -1
+----> Delta Z for the outgoing beam-like product set to 0
+----> Target A (for kinematics calculations) is set to 1
+----> Target Z (for kinematics calculations) is set to 1
+----> Excitation energy of the outgoing beam set to 130.000000 keV
+----> Target excitation energy set to 0.000000 eV 
+----> Mass of the incoming beam is 78169.644564 MeV
+----> Mass of the target is 938.272013 MeV
+----> Mass of the outgoing beam-like reaction product is 77245.966536 MeV
+----> Mass of the outgoing target-like reaction product is 1875.613000 MeV
+----> Sigma for ata distribution set to 0.000000
+----> Sigma for bta distribution set to 0.000000
+
+--- G4ParticleDefinition ---
+ Particle Name : proton
+ PDG particle code : 2212 [PDG anti-particle code: -2212]
+ Mass [GeV/c2] : 0.938272     Width : 0.000000
+ Lifetime [nsec] : -1.000000
+ Charge [e]: 1.000000
+ Spin : 1/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (1/2 , 1/2 ) 
+ GParity : 0
+ MagneticMoment [MeV/T] : 0.000000
+ Quark contents     (d,u,s,c,b,t) : 1, 2, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 1
+ Particle type : baryon [nucleon]
+ Atomic Number : 1  Atomic Mass : 1
+ Stable : stable
+
+--- G4ParticleDefinition ---
+ Particle Name : GenericIon
+ PDG particle code : 0 [PDG anti-particle code: 0]
+ Mass [GeV/c2] : 0.938272     Width : 0.000000
+ Lifetime [nsec] : -1.000000
+ Charge [e]: 1.000000
+ Spin : 1/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (1/2 , 1/2 ) 
+ GParity : 0
+ Quark contents     (d,u,s,c,b,t) : 0, 0, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 1
+ Particle type : nucleus [generic]
+ Atomic Number : 1  Atomic Mass : 1
+ Stable : stable
+
+--- G4ParticleDefinition ---
+ Particle Name : deuteron
+ PDG particle code : 1000010020 [PDG anti-particle code: -1000010020]
+ Mass [GeV/c2] : 1.875613     Width : 0.000000
+ Lifetime [nsec] : -1.000000
+ Charge [e]: 1.000000
+ Spin : 2/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (0/2 , 0/2 ) 
+ GParity : 0
+ MagneticMoment [MeV/T] : 0.000000
+ Quark contents     (d,u,s,c,b,t) : 3, 3, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 2
+ Particle type : nucleus [static]
+ Atomic Number : 1  Atomic Mass : 2
+ Stable : stable
+
+--- G4ParticleDefinition ---
+ Particle Name : triton
+ PDG particle code : 1000010030 [PDG anti-particle code: -1000010030]
+ Mass [GeV/c2] : 2.808921     Width : 0.000000
+ Lifetime [nsec] : 388523520000000000.000000
+ Charge [e]: 1.000000
+ Spin : 1/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (0/2 , 0/2 ) 
+ GParity : 0
+ MagneticMoment [MeV/T] : 0.000000
+ Quark contents     (d,u,s,c,b,t) : 4, 5, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 3
+ Particle type : nucleus [static]
+ Atomic Number : 1  Atomic Mass : 3
+ Stable : stable
+
+--- G4ParticleDefinition ---
+ Particle Name : He3
+ PDG particle code : 1000020030 [PDG anti-particle code: -1000020030]
+ Mass [GeV/c2] : 2.808391     Width : 0.000000
+ Lifetime [nsec] : -1.000000
+ Charge [e]: 2.000000
+ Spin : 1/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (0/2 , 0/2 ) 
+ GParity : 0
+ MagneticMoment [MeV/T] : -0.000000
+ Quark contents     (d,u,s,c,b,t) : 5, 4, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 3
+ Particle type : nucleus [static]
+ Atomic Number : 2  Atomic Mass : 3
+ Stable : stable
+
+--- G4ParticleDefinition ---
+ Particle Name : alpha
+ PDG particle code : 1000020040 [PDG anti-particle code: -1000020040]
+ Mass [GeV/c2] : 3.727379     Width : 0.000000
+ Lifetime [nsec] : -1.000000
+ Charge [e]: 2.000000
+ Spin : 0/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (0/2 , 0/2 ) 
+ GParity : 0
+ Quark contents     (d,u,s,c,b,t) : 6, 6, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 4
+ Particle type : nucleus [static]
+ Atomic Number : 2  Atomic Mass : 4
+ Stable : stable
+
+--- G4ParticleDefinition ---
+ Particle Name : Mo83
+ PDG particle code : 1000420830 [PDG anti-particle code: 0]
+ Mass [GeV/c2] : 77.245967     Width : 0.000000
+ Lifetime [nsec] : 577078000.000000
+ Charge [e]: 42.000000
+ Spin : 99/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (0/2 , 0/2 ) 
+ GParity : 0
+ Quark contents     (d,u,s,c,b,t) : 125, 124, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 83
+ Particle type : nucleus [generic]
+ Atomic Number : 42  Atomic Mass : 83
+ Stable : unstable -- lifetime = 577.078000 ms
+  Decay table should be consulted to G4RadioactiveDecayProcess.
+
+--- G4ParticleDefinition ---
+ Particle Name : Mo83[130.000]
+ PDG particle code : 1000420839 [PDG anti-particle code: 0]
+ Mass [GeV/c2] : 77.246097     Width : 0.000000
+ Lifetime [nsec] : 0.000000
+ Charge [e]: 42.000000
+ Spin : 0/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (0/2 , 0/2 ) 
+ GParity : 0
+ Quark contents     (d,u,s,c,b,t) : 125, 124, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 83
+ Particle type : nucleus [generic]
+ Atomic Number : 42  Atomic Mass : 83
+ Stable : unstable -- lifetime = 0.000000 ps
+  Decay table should be consulted to G4RadioactiveDecayProcess.
+
+--- G4ParticleDefinition ---
+ Particle Name : Mo83[229.000]
+ PDG particle code : 1000420839 [PDG anti-particle code: 0]
+ Mass [GeV/c2] : 77.246196     Width : 0.000000
+ Lifetime [nsec] : 0.000000
+ Charge [e]: 42.000000
+ Spin : 0/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (0/2 , 0/2 ) 
+ GParity : 0
+ Quark contents     (d,u,s,c,b,t) : 125, 124, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 83
+ Particle type : nucleus [generic]
+ Atomic Number : 42  Atomic Mass : 83
+ Stable : unstable -- lifetime = 0.000000 ps
+  Decay table should be consulted to G4RadioactiveDecayProcess.
+
+--- G4ParticleDefinition ---
+ Particle Name : Mo83[251.000]
+ PDG particle code : 1000420839 [PDG anti-particle code: 0]
+ Mass [GeV/c2] : 77.246218     Width : 0.000000
+ Lifetime [nsec] : 0.000000
+ Charge [e]: 42.000000
+ Spin : 0/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (0/2 , 0/2 ) 
+ GParity : 0
+ Quark contents     (d,u,s,c,b,t) : 125, 124, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 83
+ Particle type : nucleus [generic]
+ Atomic Number : 42  Atomic Mass : 83
+ Stable : unstable -- lifetime = 0.000000 ps
+  Decay table should be consulted to G4RadioactiveDecayProcess.
+
+--- G4ParticleDefinition ---
+ Particle Name : Mo83[380.000]
+ PDG particle code : 1000420839 [PDG anti-particle code: 0]
+ Mass [GeV/c2] : 77.246347     Width : 0.000000
+ Lifetime [nsec] : 0.000000
+ Charge [e]: 42.000000
+ Spin : 0/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (0/2 , 0/2 ) 
+ GParity : 0
+ Quark contents     (d,u,s,c,b,t) : 125, 124, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 83
+ Particle type : nucleus [generic]
+ Atomic Number : 42  Atomic Mass : 83
+ Stable : unstable -- lifetime = 0.000000 ps
+  Decay table should be consulted to G4RadioactiveDecayProcess.
+
+--- G4ParticleDefinition ---
+ Particle Name : Mo83[642.000]
+ PDG particle code : 1000420839 [PDG anti-particle code: 0]
+ Mass [GeV/c2] : 77.246609     Width : 0.000000
+ Lifetime [nsec] : 0.000000
+ Charge [e]: 42.000000
+ Spin : 0/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (0/2 , 0/2 ) 
+ GParity : 0
+ Quark contents     (d,u,s,c,b,t) : 125, 124, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 83
+ Particle type : nucleus [generic]
+ Atomic Number : 42  Atomic Mass : 83
+ Stable : unstable -- lifetime = 0.000000 ps
+  Decay table should be consulted to G4RadioactiveDecayProcess.
+
+--- G4ParticleDefinition ---
+ Particle Name : Mo84
+ PDG particle code : 1000420840 [PDG anti-particle code: 0]
+ Mass [GeV/c2] : 78.169645     Width : 0.000000
+ Lifetime [nsec] : 3318199000.000000
+ Charge [e]: 42.000000
+ Spin : 0/2
+ Parity : 1
+ Charge conjugation : 0
+ Isospin : (I,Iz): (0/2 , 0/2 ) 
+ GParity : 0
+ Quark contents     (d,u,s,c,b,t) : 126, 126, 0, 0, 0, 0
+ AntiQuark contents               : 0, 0, 0, 0, 0, 0
+ Lepton number : 0 Baryon number : 84
+ Particle type : nucleus [generic]
+ Atomic Number : 42  Atomic Mass : 84
+ Stable : unstable -- lifetime = 3.318199 s 
+  Decay table should be consulted to G4RadioactiveDecayProcess.
+----> Target material set to  MINOS
+----> Target density:         0.076140 g/cm3
+----> Target radius is set to 2.500000 cm 
+----> Target thickness is set to 5.000000 cm 
+----> Number of simulation steps in the target is set to 20
+----> Exp. Hall material set to     G4_Galactic
+----> Exp. Hall X length is set to 8.000000 m  
+----> Exp. Hall Y length is set to 8.000000 m  
+----> Exp. Hall Z length is set to 8.000000 m  
+
+Opened mode 2 Output file: data/mo83_130keV_6000evt_lowlevel.dat
+
+### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+          DefaultRegionForTheWorld  1  1  0
+### ===  Auger cascade flag: 1
+### ===  Ignore cuts flag:   0
+
+phot:   for  gamma    SubType= 12  BuildTable= 0
+      LambdaPrime table from 200.000000 keV to 10.000000 TeV in 154 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric :  Emin= 0.000000 eV    Emax= 10.000000 TeV   AngularGenSauterGavrila  FluoActive
+
+compt:   for  gamma    SubType= 13  BuildTable= 1
+      Lambda table from 100.000000 eV  to 1.000000 MeV, 20 bins per decade, spline: 1
+      LambdaPrime table from 1.000000 MeV to 10.000000 TeV in 140 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LowEPComptonModel :  Emin= 0.000000 eV    Emax= 20.000000 MeV  FluoActive
+        KleinNishina :  Emin= 20.000000 MeV   Emax= 10.000000 TeV  FluoActive
+
+conv:   for  gamma    SubType= 14  BuildTable= 1
+      Lambda table from 1.021998 MeV to 10.000000 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       PenConversion :  Emin= 0.000000 eV    Emax= 80.000000 GeV
+     BetheHeitlerLPM :  Emin= 80.000000 GeV   Emax= 10.000000 TeV
+
+Rayl:   for  gamma    SubType= 11  BuildTable= 1
+      Lambda table from 100.000000 eV  to 100.000000 keV, 20 bins per decade, spline: 0
+      LambdaPrime table from 100.000000 keV to 10.000000 TeV in 160 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh :  Emin= 0.000000 eV    Emax= 10.000000 TeV   CullenGenerator
+
+msc:   for e-    SubType= 10
+      RangeFactor= 0.200000, stepLimitType: 2, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  GoudsmitSaunderson :  Emin= 0.000000 eV    Emax= 100.000000 MeV  Table with 120 bins Emin= 100.000000 eV    Emax= 100.000000 MeV
+        WentzelVIUni :  Emin= 100.000000 MeV   Emax= 10.000000 TeV  Table with 100 bins Emin= 100.000000 MeV   Emax= 10.000000 TeV
+
+eIoni:   for  e-    SubType= 2
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             PenIoni :  Emin= 0.000000 eV    Emax= 1.000000 MeV
+        MollerBhabha :  Emin= 1.000000 MeV   Emax= 10.000000 TeV   deltaVI
+      ===== Limit on energy threshold has been applied 
+
+eBrem:   for  e-    SubType= 3
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      LPM flag: 1 for E > 1.000000 GeV,  VertexHighEnergyTh(GeV)= 100000.000000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin= 0.000000 eV    Emax= 1.000000 GeV   AngularGen2BS
+            eBremLPM :  Emin= 1.000000 GeV   Emax= 10.000000 TeV   AngularGen2BS
+
+ePairProd:   for  e-    SubType= 4
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      Sampling table 21x1001; from 0.100000 GeV to 10.000000 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+CoulombScat:   for  e-, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from 100.000000 MeV to 10.000000 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin= 100.000000 MeV   Emax= 10.000000 TeV
+
+msc:   for e+    SubType= 10
+      RangeFactor= 0.200000, stepLimitType: 2, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  GoudsmitSaunderson :  Emin= 0.000000 eV    Emax= 100.000000 MeV  Table with 120 bins Emin= 100.000000 eV    Emax= 100.000000 MeV
+        WentzelVIUni :  Emin= 100.000000 MeV   Emax= 10.000000 TeV  Table with 100 bins Emin= 100.000000 MeV   Emax= 10.000000 TeV
+
+eIoni:   for  e+    SubType= 2
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             PenIoni :  Emin= 0.000000 eV    Emax= 1.000000 MeV
+        MollerBhabha :  Emin= 1.000000 MeV   Emax= 10.000000 TeV   deltaVI
+      ===== Limit on energy threshold has been applied 
+
+eBrem:   for  e+    SubType= 3
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      LPM flag: 1 for E > 1.000000 GeV,  VertexHighEnergyTh(GeV)= 100000.000000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin= 0.000000 eV    Emax= 1.000000 GeV   AngularGen2BS
+            eBremLPM :  Emin= 1.000000 GeV   Emax= 10.000000 TeV   AngularGen2BS
+
+ePairProd:   for  e+    SubType= 4
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      Sampling table 21x1001; from 0.100000 GeV to 10.000000 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+annihil:   for  e+, integral: 1     SubType= 5  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+CoulombScat:   for  e+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from 100.000000 MeV to 10.000000 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin= 100.000000 MeV   Emax= 10.000000 TeV
+
+msc:   for proton    SubType= 10
+      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+
+hIoni:   for  proton    SubType= 2
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.010000, dRoverRange= 0.100000, integral: 1, fluct: 1, linLossLimit= 0.010000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin= 0.000000 eV    Emax= 2.000000 MeV   deltaVI
+          BetheBloch :  Emin= 2.000000 MeV   Emax= 10.000000 TeV   deltaVI
+      ===== Limit on energy threshold has been applied 
+
+hBrems:   for  proton    SubType= 3
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+      ===== Limit on energy threshold has been applied 
+
+hPairProd:   for  proton    SubType= 4
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      Sampling table 13x1001; from 7.506176 GeV to 10.000000 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+CoulombScat:   for  proton, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10.000000 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+nuclearStopping:   for  proton    SubType= 8  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping :  Emin= 0.000000 eV    Emax= 1.000000 MeV
+
+msc:   for GenericIon    SubType= 10
+      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+ionIoni:   for  GenericIon    SubType= 2
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.001000, dRoverRange= 0.100000, integral: 1, fluct: 1, linLossLimit= 0.020000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+         ParamICRU73 :  Emin= 0.000000 eV    Emax= 10.000000 TeV   deltaVI
+      ===== Limit on energy threshold has been applied 
+
+nuclearStopping:   for  GenericIon    SubType= 8  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping :  Emin= 0.000000 eV    Emax= 1.000000 MeV
+=======================================================================
+======       Radioactive Decay Physics Parameters              ========
+=======================================================================
+Max life time                                     1000000000000000.00000 ps
+Internal e- conversion flag                       1
+Stored internal conversion coefficients           0
+Enable correlated gamma emission                  0
+Max 2J for sampling of angular correlations       10
+Atomic de-excitation enabled                      1
+Auger electron emission enabled                   1
+Auger cascade enabled                             1
+Check EM cuts disabled for atomic de-excitation   0
+Use Bearden atomic level energies                 0
+=======================================================================
+
+msc:   for alpha    SubType= 10
+      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+
+ionIoni:   for  alpha    SubType= 2
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.010000, dRoverRange= 0.100000, integral: 1, fluct: 1, linLossLimit= 0.020000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon :  Emin= 0.000000 eV    Emax= 7.945199 MeV   deltaVI
+          BetheBloch :  Emin= 7.945199 MeV   Emax= 10.000000 TeV   deltaVI
+      ===== Limit on energy threshold has been applied 
+
+nuclearStopping:   for  alpha    SubType= 8  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping :  Emin= 0.000000 eV    Emax= 1.000000 MeV
+
+msc:   for anti_proton    SubType= 10
+      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+
+hIoni:   for  anti_proton    SubType= 2
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.010000, dRoverRange= 0.100000, integral: 1, fluct: 1, linLossLimit= 0.010000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin= 0.000000 eV    Emax= 2.000000 MeV   deltaVI
+          BetheBloch :  Emin= 2.000000 MeV   Emax= 10.000000 TeV   deltaVI
+      ===== Limit on energy threshold has been applied 
+
+hBrems:   for  anti_proton    SubType= 3
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+      ===== Limit on energy threshold has been applied 
+
+hPairProd:   for  anti_proton    SubType= 4
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      Sampling table 13x1001; from 7.506176 GeV to 10.000000 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+CoulombScat:   for  anti_proton, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10.000000 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+nuclearStopping:   for  anti_proton    SubType= 8  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping :  Emin= 0.000000 eV    Emax= 1.000000 MeV
+
+msc:   for kaon+    SubType= 10
+      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+
+hIoni:   for  kaon+    SubType= 2
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin= 0.000000 eV    Emax= 1.052311 MeV   deltaVI
+          BetheBloch :  Emin= 1.052311 MeV   Emax= 10.000000 TeV   deltaVI
+      ===== Limit on energy threshold has been applied 
+
+hBrems:   for  kaon+    SubType= 3
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+      ===== Limit on energy threshold has been applied 
+
+hPairProd:   for  kaon+    SubType= 4
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      Sampling table 14x1001; from 3.949416 GeV to 10.000000 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+CoulombScat:   for  kaon+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10.000000 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+msc:   for kaon-    SubType= 10
+      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+
+hIoni:   for  kaon-    SubType= 2
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin= 0.000000 eV    Emax= 1.052311 MeV   deltaVI
+          BetheBloch :  Emin= 1.052311 MeV   Emax= 10.000000 TeV   deltaVI
+      ===== Limit on energy threshold has been applied 
+
+hBrems:   for  kaon-    SubType= 3
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+      ===== Limit on energy threshold has been applied 
+
+hPairProd:   for  kaon-    SubType= 4
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      Sampling table 14x1001; from 3.949416 GeV to 10.000000 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+CoulombScat:   for  kaon-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of kaon+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+msc:   for mu+    SubType= 10
+      RangeFactor= 0.200000, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180.000000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+
+muIoni:   for  mu+    SubType= 2
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin= 0.000000 eV    Emax= 200.000000 keV   deltaVI
+          BetheBloch :  Emin= 200.000000 keV   Emax= 1.000000 GeV   deltaVI
+        MuBetheBloch :  Emin= 1.000000 GeV   Emax= 10.000000 TeV
+      ===== Limit on energy threshold has been applied 
+
+muBrems:   for  mu+    SubType= 3
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+      ===== Limit on energy threshold has been applied 
+
+muPairProd:   for  mu+    SubType= 4
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      Sampling table 17x1001; from 1.000000 GeV to 10.000000 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+CoulombScat:   for  mu+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10.000000 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+msc:   for mu-    SubType= 10
+      RangeFactor= 0.200000, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180.000000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+
+muIoni:   for  mu-    SubType= 2
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin= 0.000000 eV    Emax= 200.000000 keV   deltaVI
+          BetheBloch :  Emin= 200.000000 keV   Emax= 1.000000 GeV   deltaVI
+        MuBetheBloch :  Emin= 1.000000 GeV   Emax= 10.000000 TeV
+      ===== Limit on energy threshold has been applied 
+
+muBrems:   for  mu-    SubType= 3
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+      ===== Limit on energy threshold has been applied 
+
+muPairProd:   for  mu-    SubType= 4
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      Sampling table 17x1001; from 1.000000 GeV to 10.000000 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+CoulombScat:   for  mu-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of mu+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+msc:   for pi+    SubType= 10
+      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+
+hIoni:   for  pi+    SubType= 2
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin= 0.000000 eV    Emax= 297.504557 keV   deltaVI
+          BetheBloch :  Emin= 297.504557 keV   Emax= 10.000000 TeV   deltaVI
+      ===== Limit on energy threshold has been applied 
+
+hBrems:   for  pi+    SubType= 3
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+      ===== Limit on energy threshold has been applied 
+
+hPairProd:   for  pi+    SubType= 4
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      Sampling table 16x1001; from 1.116561 GeV to 10.000000 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+CoulombScat:   for  pi+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10.000000 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+msc:   for pi-    SubType= 10
+      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+
+hIoni:   for  pi-    SubType= 2
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin= 0.000000 eV    Emax= 297.504557 keV   deltaVI
+          BetheBloch :  Emin= 297.504557 keV   Emax= 10.000000 TeV   deltaVI
+      ===== Limit on energy threshold has been applied 
+
+hBrems:   for  pi-    SubType= 3
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+      ===== Limit on energy threshold has been applied 
+
+hPairProd:   for  pi-    SubType= 4
+      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
+      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+      Sampling table 16x1001; from 1.116561 GeV to 10.000000 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+
+CoulombScat:   for  pi-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of pi+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+ Beginning of run 
+ Simulating 6000 beam ions
+ Writing Mode 2 output to data/mo83_130keV_6000evt_lowlevel.dat
+ 17 %   105 events/s 48 remaining        33 %   135 events/s 30 remaining        50 %   144 events/s 21 remaining        67 %   149 events/s 13 remaining        83 %   152 events/s  7 remaining                                                            
+Real time: 36.54   System time:  0.04   User time: 36.41   164.20 events/s
+
+#average beta at reaction (ctr=6000):
+Target.Beta:	0.539363
+#average beta at emission (ctr=6000):
+Target.Beta:	0.539347
+#average beta after the target (ctr=6000):
+Average.Beta.After:	0.482093
+input file: data/mo83_130keV_6000evt_lowlevel.dat
+writing to output file: root/mo83_130keV_6000evt_lowlevel.root
+------------------------------------
+generated 1 permutations for N = 0
+generated 1 permutations for N = 1
+generated 2 permutations for N = 2
+generated 6 permutations for N = 3
+generated 24 permutations for N = 4
+generated 120 permutations for N = 5
+generated 720 permutations for N = 6
+generated 5040 permutations for N = 7
+generated 40320 permutations for N = 8
+setting up calibrated tree 
+setting up simulation tree 
+10000 buffers read... 2 MB... 42835.6 buffers/scannot read data/mo83_130keV_6000evt_lowlevel.dat (anymore)
+Total of 11206 data buffers (2 MB) and
+Total of 1691 cal events (0 MB) written.
+Total of 27890 sim events (0 MB) written.
+Program Run time 0.236248 s.
+Unpacked 47433.2 buffers/s.
+
+ CPU time: 0.21	Real time: 0.236243
+input file(s):
+root/mo83_130keV_6000evt_lowlevel.root
+output file: hist/mo83_130keV_6000evt_lowlevel.root
+creating outputfile 
+6000 entries in sim tree 
+1691 entries in cal tree 
+New 1-d histogram: egam_emitted
+New 1-d histogram: posx_emitted
+New 1-d histogram: posy_emitted
+New 2-d histogram: posxy_emitted
+New 1-d histogram: posz_emitted
+New 1-d histogram: phi_emitted
+New 1-d histogram: theta_emitted
+New 2-d histogram: phi_theta_emitted
+New 1-d histogram: mult_emitted
+New 2-d histogram: mult_emitted_detected
+New 2-d histogram: MBmult_emitted_detected
+New 1-d histogram: ata
+New 1-d histogram: yta
+New 1-d histogram: bta
+New 2-d histogram: ata_vs_bta
+New 1-d histogram: betata
+New 1-d histogram: azita
+New 1-d histogram: scatter
+New 1-d histogram: ptot
+New 1-d histogram: ppar
+New 1-d histogram: ptra
+New 1-d histogram: etot
+New 1-d histogram: egam
+New 1-d histogram: egamdc
+New 2-d histogram: egam_mult
+New 2-d histogram: egamdc_mult
+New 1-d histogram: egam_emitted_diff
+New 2-d histogram: egam_emitted_detected
+New 2-d histogram: egam_dettheta
+New 2-d histogram: egamdc_dettheta
+New 1-d histogram: MBegam
+New 1-d histogram: MBegamdc
+New 2-d histogram: MBegam_mult
+New 2-d histogram: MBegamdc_mult
+New 1-d histogram: MBegam_emitted_diff
+New 2-d histogram: MBegam_emitted_detected
+New 2-d histogram: MBegam_dettheta
+New 2-d histogram: MBegamdc_dettheta
+New 1-d histogram: egamAB
+New 1-d histogram: egamABdc
+New 2-d histogram: egamAB_mult
+New 2-d histogram: egamABdc_mult
+New 1-d histogram: egamAB_emitted_diff
+New 2-d histogram: egamAB_emitted_detected
+New 2-d histogram: egamAB_dettheta
+New 2-d histogram: egamABdc_dettheta
+New 1-d histogram: MBegamAB
+New 1-d histogram: MBegamABdc
+New 2-d histogram: MBegamAB_mult
+New 2-d histogram: MBegamABdc_mult
+New 1-d histogram: MBegamAB_emitted_diff
+New 2-d histogram: MBegamAB_emitted_detected
+New 2-d histogram: MBegamAB_dettheta
+New 2-d histogram: MBegamABdc_dettheta
+New 1-d histogram: mult
+New 1-d histogram: mult_ab
+New 1-d histogram: MBmult
+New 1-d histogram: MBmult_ab
+New 2-d histogram: posxy
+New 2-d histogram: posxz
+New 2-d histogram: posyz
+New 1-d histogram: pos_phi
+New 1-d histogram: pos_theta
+New 2-d histogram: pos_phi_theta
+New 2-d histogram: MBposxy
+New 2-d histogram: MBposxz
+New 2-d histogram: MBposyz
+New 1-d histogram: MBpos_phi
+New 1-d histogram: MBpos_theta
+New 2-d histogram: MBpos_phi_theta
+  0.0 % done	0.0 events/s infs to go New 2-d histogram: GRmult_emitted_detected
+New 1-d histogram: GRegam
+New 1-d histogram: GRegamdc
+New 2-d histogram: GRegam_mult
+New 2-d histogram: GRegamdc_mult
+New 1-d histogram: GRegam_emitted_diff
+New 2-d histogram: GRegam_emitted_detected
+New 2-d histogram: GRegam_dettheta
+New 2-d histogram: GRegamdc_dettheta
+New 1-d histogram: GRegamAB
+New 1-d histogram: GRegamABdc
+New 2-d histogram: GRegamAB_mult
+New 2-d histogram: GRegamABdc_mult
+New 1-d histogram: GRegamAB_emitted_diff
+New 2-d histogram: GRegamAB_emitted_detected
+New 2-d histogram: GRegamAB_dettheta
+New 2-d histogram: GRegamABdc_dettheta
+New 1-d histogram: GRmult
+New 1-d histogram: GRmult_ab
+New 2-d histogram: GRposxy
+New 2-d histogram: GRposxz
+New 2-d histogram: GRposyz
+New 1-d histogram: GRpos_phi
+New 1-d histogram: GRpos_theta
+New 2-d histogram: GRpos_phi_theta
+New 2-d histogram: egamegam_all
+New 2-d histogram: GRegamegam_all
+New 2-d histogram: egamegamdc_all
+New 2-d histogram: GRegamegamdc_all
+New 2-d histogram: MBegamegam_all
+New 2-d histogram: MBegamegamdc_all
+New 2-d histogram: egamegamAB_all
+New 2-d histogram: MBegamegamAB_all
+New 2-d histogram: egamegamdcAB_all
+New 2-d histogram: MBegamegamdcAB_all
+New 2-d histogram: GRegamegamAB_all
+New 2-d histogram: GRegamegamdcAB_all
+
+writing histograms to file
+Run time 0.8 s.

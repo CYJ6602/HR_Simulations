@@ -8,16 +8,16 @@
 # Set reaction parameters ======================================================
 /Target/Material Be
 /Target/Thickness 2.706 mm  # 
-/BeamIn/A 82
-/BeamIn/Z 41
-/BeamIn/KEu 157 MeV
+/BeamIn/A 81
+/BeamIn/Z 40
+/BeamIn/KEu 166 MeV
 /BeamIn/Dpp 0.00
 /BeamIn/Focus/DX 0. mm
 /BeamIn/Focus/DY 0. mm
 /BeamOut/TargetA 9
 /BeamOut/TargetZ 4
-/BeamOut/DA -2
-/BeamOut/DZ -1
+/BeamOut/DA -1
+/BeamOut/DZ 0
 /BeamOut/LevelDataFile MBcoords/zr80_EEEEkeV_TTTTps.lvldata
 /BeamOut/ProjectileExcitation EEEE keV
 /BeamOut/AngDistSigmaA 0.000 rad
@@ -36,5 +36,5 @@
 /Mode2/PackingRes 5.0 mm
 #/Mode2/Print
 /Mode2/Filename MBcoords/zr80_EEEEkeV_TTTTps_NNNNevt.dat 
-/Mode2/FirstInteractions MBcoordinates.dat
+/Mode2/FirstInteractions MBcoordinates_2.706mm.dat
 /run/beamOn NNNN

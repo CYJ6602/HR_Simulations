@@ -18,7 +18,7 @@
 /BeamOut/TargetZ 4
 /BeamOut/DA -2
 /BeamOut/DZ -1
-/BeamOut/LevelDataFile zr80_lowlevel_nolifetime.lvldata
+/BeamOut/LevelDataFile zr80_lowlevel.lvldata
 /BeamOut/ProjectileExcitation XXXX keV
 /BeamOut/AngDistSigmaA 0.000 rad
 /BeamOut/AngDistSigmaB 0.000 rad
