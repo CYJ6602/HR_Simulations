@@ -1,4 +1,4 @@
-simulating 48000 events with energy 770
+simulating 1800 events with energy 770
 
 **************************************************************
  Geant4 version Name: geant4-10-04-patch-03 [MT]   (8-February-2019)
@@ -799,7 +799,7 @@ AddPrivateData done
 ----> Exp. Hall Y length is set to 8.000000 m  
 ----> Exp. Hall Z length is set to 8.000000 m  
 
-Opened mode 2 Output file: data/zr80_770keV_48000evt_lowlevel.dat
+Opened mode 2 Output file: data/zr80_770keV_1800evt_lowlevel.dat
 
 ### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
           DefaultRegionForTheWorld  1  1  0
@@ -1237,19 +1237,19 @@ CoulombScat:   for  pi-, integral: 1     SubType= 1  BuildTable= 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
   eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
  Beginning of run 
- Simulating 48000 beam ions
- Writing Mode 2 output to data/zr80_770keV_48000evt_lowlevel.dat
-  2 %   181 events/s  4:20 remaining         4 %   1942 events/s 24 remaining         6 %   2444 events/s 18 remaining         8 %   2795 events/s 16 remaining        10 %   2925 events/s 15 remaining        12 %   3013 events/s 14 remaining        15 %   3075 events/s 13 remaining        17 %   3137 events/s 13 remaining        19 %   3185 events/s 12 remaining        21 %   3237 events/s 12 remaining        23 %   3306 events/s 11 remaining        25 %   3351 events/s 11 remaining        27 %   3401 events/s 10 remaining        29 %   3433 events/s 10 remaining        31 %   3451 events/s 10 remaining        33 %   3476 events/s  9 remaining        35 %   3489 events/s  9 remaining        38 %   3481 events/s  9 remaining        40 %   3492 events/s  8 remaining        42 %   3503 events/s  8 remaining        44 %   3512 events/s  8 remaining        46 %   3528 events/s  7 remaining        48 %   3529 events/s  7 remaining        50 %   3537 events/s  7 remaining        52 %   3533 events/s  7 remaining        54 %   3535 events/s  6 remaining        56 %   3546 events/s  6 remaining        58 %   3552 events/s  6 remaining        60 %   3562 events/s  5 remaining        62 %   3571 events/s  5 remaining        65 %   3580 events/s  5 remaining        67 %   3589 events/s  4 remaining        69 %   3596 events/s  4 remaining        71 %   3604 events/s  4 remaining        73 %   3611 events/s  4 remaining        75 %   3617 events/s  3 remaining        77 %   3628 events/s  3 remaining        79 %   3630 events/s  3 remaining        81 %   3622 events/s  2 remaining        83 %   3624 events/s  2 remaining        85 %   3626 events/s  2 remaining        88 %   3602 events/s  2 remaining        90 %   3574 events/s  1 remaining        92 %   3548 events/s  1 remaining        94 %   3522 events/s  1 remaining        96 %   3499 events/s  1 remaining        98 %   3475 events/s  0 remaining                                                            
-Real time: 13.99   System time:  0.29   User time: 13.68   3431.02 events/s
+ Simulating 1800 beam ions
+ Writing Mode 2 output to data/zr80_770keV_1800evt_lowlevel.dat
+ 56 %   172 events/s  5 remaining                                                            
+Real time:  0.78   System time:  0.01   User time:  0.76   2307.69 events/s
 
-#average beta at reaction (ctr=48000):
-Target.Beta:	0.488866
-#average beta at emission (ctr=94583):
-Target.Beta:	0.451278
-#average beta after the target (ctr=48000):
-Average.Beta.After:	0.453486
-input file: data/zr80_770keV_48000evt_lowlevel.dat
-writing to output file: root/zr80_770keV_48000evt_lowlevel.root
+#average beta at reaction (ctr=1800):
+Target.Beta:	0.489271
+#average beta at emission (ctr=3560):
+Target.Beta:	0.451304
+#average beta after the target (ctr=1800):
+Average.Beta.After:	0.453508
+input file: data/zr80_770keV_1800evt_lowlevel.dat
+writing to output file: root/zr80_770keV_1800evt_lowlevel.root
 ------------------------------------
 generated 1 permutations for N = 0
 generated 1 permutations for N = 1
@@ -1262,20 +1262,20 @@ generated 5040 permutations for N = 7
 generated 40320 permutations for N = 8
 setting up calibrated tree 
 setting up simulation tree 
-10000 buffers read... 2 MB... 27486.4 buffers/s20000 buffers read... 4 MB... 41484.7 buffers/s30000 buffers read... 6 MB... 49210.4 buffers/s40000 buffers read... 8 MB... 54401.2 buffers/s50000 buffers read... 11 MB... 57031.1 buffers/s60000 buffers read... 13 MB... 58851.9 buffers/s70000 buffers read... 15 MB... 60309.1 buffers/scannot read data/zr80_770keV_48000evt_lowlevel.dat (anymore)
-Total of 79914 data buffers (17 MB) and
-Total of 13816 cal events (1 MB) written.
-Total of 70095 sim events (3 MB) written.
-Program Run time 1.2496 s.
-Unpacked 63951.6 buffers/s.
+cannot read data/zr80_770keV_1800evt_lowlevel.dat (anymore)
+Total of 3101 data buffers (0 MB) and
+Total of 559 cal events (0 MB) written.
+Total of 23880 sim events (0 MB) written.
+Program Run time 0.183684 s.
+Unpacked 16882.3 buffers/s.
 
- CPU time: 1.19	Real time: 1.2496
+ CPU time: 0.16	Real time: 0.1837
 input file(s):
-root/zr80_770keV_48000evt_lowlevel.root
-output file: hist/zr80_770keV_48000evt_lowlevel.root
+root/zr80_770keV_1800evt_lowlevel.root
+output file: hist/zr80_770keV_1800evt_lowlevel.root
 creating outputfile 
-48000 entries in sim tree 
-13816 entries in cal tree 
+1800 entries in sim tree 
+559 entries in cal tree 
 New 1-d histogram: egam_emitted
 New 1-d histogram: posx_emitted
 New 1-d histogram: posy_emitted
@@ -1383,6 +1383,184 @@ New 2-d histogram: GRegamegam_all
 New 2-d histogram: GRegamegamdc_all
 New 2-d histogram: GRegamegamAB_all
 New 2-d histogram: GRegamegamdcAB_all
- 20.8 % done	14386.2 events/s 2.6s to go  41.7 % done	20405.4 events/s 1.4s to go  62.5 % done	23769.0 events/s 0.8s to go  83.3 % done	25872.6 events/s 0.3s to go 
+
 writing histograms to file
-Run time 2.4 s.
+Run time 1.0 s.
+input file(s):
+root/zr80_770keV_1800evt_lowlevel.root
+output file: coin/zr80_770keV_1800evt_lowlevel.root
+creating outputfile 
+DCenergy : 199.832
+DCenergy : 229.411
+DCenergy : 108.758
+DCenergy : 350.331
+DCenergy : 0
+DCenergy : 405.755
+DCenergy : 98.5068
+DCenergy : 158.87
+DCenergy : 473.315
+DCenergy : 578.087
+DCenergy : 312.928
+DCenergy : 0
+DCenergy : 205.821
+DCenergy : 173.951
+DCenergy : 149.103
+DCenergy : 168.234
+DCenergy : 263.442
+DCenergy : 117.163
+DCenergy : 162.68
+DCenergy : 337.98
+DCenergy : 366.645
+DCenergy : 159.513
+DCenergy : 166.892
+DCenergy : 0
+DCenergy : 130.879
+DCenergy : 266.744
+DCenergy : 150.75
+DCenergy : 181.566
+DCenergy : 134.096
+DCenergy : 252.01
+DCenergy : 338.947
+DCenergy : 283.433
+DCenergy : 89.6639
+DCenergy : 259.776
+DCenergy : 0
+DCenergy : 209.621
+DCenergy : 228.523
+DCenergy : 162.439
+DCenergy : 226.587
+DCenergy : 447.102
+DCenergy : 249.777
+DCenergy : 261.438
+DCenergy : 114.004
+DCenergy : 235.144
+DCenergy : 210.217
+DCenergy : 224.978
+DCenergy : 129.946
+DCenergy : 407.005
+DCenergy : 255.811
+DCenergy : 163.92
+DCenergy : 148.098
+DCenergy : 100.34
+DCenergy : 0
+DCenergy : 359.461
+DCenergy : 211.098
+DCenergy : 79.0723
+DCenergy : 178.31
+DCenergy : 0
+DCenergy : 0
+DCenergy : 194.472
+DCenergy : 427.108
+DCenergy : 261.168
+DCenergy : 437.06
+DCenergy : 91.5161
+DCenergy : 255.522
+DCenergy : 358.862
+DCenergy : 155.956
+DCenergy : 230.65
+DCenergy : 223.664
+DCenergy : 271.931
+DCenergy : 138.258
+DCenergy : 159.053
+DCenergy : 109.941
+DCenergy : 426.378
+DCenergy : 273.759
+DCenergy : 203.316
+DCenergy : 128.827
+DCenergy : 139.797
+DCenergy : 292.94
+DCenergy : 141.737
+DCenergy : 284.543
+DCenergy : 245.186
+DCenergy : 162.925
+DCenergy : 147.201
+DCenergy : 0
+DCenergy : 142.849
+DCenergy : 0
+DCenergy : 83.6334
+DCenergy : 0
+DCenergy : 134.319
+DCenergy : 0
+DCenergy : 136.565
+DCenergy : 174.417
+DCenergy : 288
+DCenergy : 282.909
+DCenergy : 132.175
+DCenergy : 443.881
+DCenergy : 578
+DCenergy : 70.694
+DCenergy : 106.772
+DCenergy : 258.106
+DCenergy : 347.381
+DCenergy : 239.056
+DCenergy : 377.405
+DCenergy : 195.095
+DCenergy : 195.957
+DCenergy : 435.903
+DCenergy : 625.184
+DCenergy : 186.599
+DCenergy : 103.223
+DCenergy : 338.954
+DCenergy : 91.4075
+DCenergy : 88.5627
+DCenergy : 281.559
+DCenergy : 0
+DCenergy : 103.964
+DCenergy : 367.466
+DCenergy : 141.566
+DCenergy : 305.694
+DCenergy : 238.014
+DCenergy : 150.244
+DCenergy : 341.208
+DCenergy : 160.846
+DCenergy : 241.312
+DCenergy : 219.829
+DCenergy : 349.447
+DCenergy : 166.281
+DCenergy : 254.166
+DCenergy : 178.231
+DCenergy : 289.366
+DCenergy : 170.265
+DCenergy : 269.007
+DCenergy : 233.472
+DCenergy : 206.475
+DCenergy : 204.072
+DCenergy : 0
+DCenergy : 0
+DCenergy : 279.957
+DCenergy : 0
+DCenergy : 355.436
+DCenergy : 473.095
+DCenergy : 218.694
+DCenergy : 131.205
+DCenergy : 166.375
+DCenergy : 261.268
+DCenergy : 108.531
+DCenergy : 471.187
+DCenergy : 203.669
+DCenergy : 178.985
+DCenergy : 283.171
+DCenergy : 265.58
+DCenergy : 337.236
+DCenergy : 243.036
+DCenergy : 267.192
+DCenergy : 102.509
+DCenergy : 248.219
+DCenergy : 267.182
+DCenergy : 318.65
+DCenergy : 75.5314
+DCenergy : 233.556
+DCenergy : 149.179
+DCenergy : 225.627
+DCenergy : 160.306
+DCenergy : 194.986
+DCenergy : 419.042
+DCenergy : 186.273
+DCenergy : 0
+DCenergy : 168.066
+DCenergy : 253.219
+DCenergy : 392.358
+DCenergy : 204.942
+DCenergy : 188.556
+DCenergy : 287.878
+writing coincidence tree to file
