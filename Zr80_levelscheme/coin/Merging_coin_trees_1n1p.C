@@ -6,7 +6,7 @@ void Merging_coin_trees_1n1p(const char* filename = "coin_tree.root")
   gStyle->SetTextFont(132);
 
  
-  const char *dirname="/home/cho/Desktop/SimulationPackage/HRArray/examples/Zr80_levelscheme/coin/";
+  const char *dirname="/home/cho/Desktop/HRSimulation_git/HR_Simulations/Zr80_levelscheme/coin/";
   const char *ext="lowlevel.root";
   TSystemDirectory dir(dirname, dirname);
   
@@ -63,15 +63,37 @@ void Merging_coin_trees_1n1p(const char* filename = "coin_tree.root")
     }
 
   TTree* t[nn+1];
-  TH2F* coin_hist = new TH2F("coin_hist","coin_hist",2000,0,2000,2000,0,2000);
+  TH2F* Total_coin_hist = new TH2F("Total_coin_hist","Total_coin_hist",2000,0,2000,2000,0,2000);
   TH2F* temph = new TH2F("temph","temph",2000,0,2000,2000,0,2000);
   
   for(int i=0;i<nn;i++){
-    t[i] = (TTree*)f[i]->Get("coin_tree");
+    t[i] = (TTree*)f[i]->Get("Total_coin_tree");
 
-    t[i]->Draw("GRcoin2_ABdc_energy:GRcoin1_ABdc_energy>>temph(2000,0,2000,2000,0,2000)","GRcoin2_ABdc_energy!=GRcoin1_ABdc_energy","goff");
+    t[i]->Draw("Totalgc2_E:Totalgc1_E>>temph(2000,0,2000,2000,0,2000)","Totalgc2_E!=Totalgc1_E","goff");
 
-    coin_hist->Add(temph);
+    Total_coin_hist->Add(temph);
+  }
+
+  TH2F* GR_coin_hist = new TH2F("GR_coin_hist","GR_coin_hist",2000,0,2000,2000,0,2000);
+  //TH2F* temph = new TH2F("temph","temph",2000,0,2000,2000,0,2000);
+  
+  for(int i=0;i<nn;i++){
+    t[i] = (TTree*)f[i]->Get("GRcoin_tree");
+
+    t[i]->Draw("GRgc2_E:GRgc1_E>>temph(2000,0,2000,2000,0,2000)","GRgc2_E!=GRgc1_E","goff");
+
+    GR_coin_hist->Add(temph);
+  }
+
+  TH2F* MB_coin_hist = new TH2F("MB_coin_hist","MB_coin_hist",2000,0,2000,2000,0,2000);
+  //TH2F* temph = new TH2F("temph","temph",2000,0,2000,2000,0,2000);
+  
+  for(int i=0;i<nn;i++){
+    t[i] = (TTree*)f[i]->Get("MBcoin_tree");
+
+    t[i]->Draw("MBgc2_E:MBgc1_E>>temph(2000,0,2000,2000,0,2000)","MBgc2_E!=MBgc1_E","goff");
+
+    MB_coin_hist->Add(temph);
   }
 
  
@@ -82,7 +104,9 @@ void Merging_coin_trees_1n1p(const char* filename = "coin_tree.root")
   
   TFile* f0 = new TFile(filename,"RECREATE");
   //total_tree->Write();
-  coin_hist->Write();
+  Total_coin_hist->Write();
+  GR_coin_hist->Write();
+  MB_coin_hist->Write();
   f0->Close();
  
   

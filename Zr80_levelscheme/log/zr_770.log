@@ -1,7 +1,7 @@
-simulating 1800 events with energy 770
+simulating 19200 events with energy 770
 
 **************************************************************
- Geant4 version Name: geant4-10-04-patch-03 [MT]   (8-February-2019)
+ Geant4 version Name: geant4-10-05-patch-01 [MT]   (17-April-2019)
                        Copyright : Geant4 Collaboration
                       References : NIM A 506 (2003), 250-303
                                  : IEEE-TNS 53 (2006), 270-278
@@ -26,7 +26,6 @@ Stepping Action
 Stacking Action
 ... Done
 Starting visualization...*** Initializing runManager
-### G4EmStandard_opt4 Construct Processes 
 *** Initialized runManager
 newValue 
 newValue 
@@ -799,167 +798,162 @@ AddPrivateData done
 ----> Exp. Hall Y length is set to 8.000000 m  
 ----> Exp. Hall Z length is set to 8.000000 m  
 
-Opened mode 2 Output file: data/zr80_770keV_1800evt_lowlevel.dat
+Opened mode 2 Output file: data/zr80_770keV_19200evt_lowlevel.dat
 
 ### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
-          DefaultRegionForTheWorld  1  1  0
-### ===  Auger cascade flag: 1
+          DefaultRegionForTheWorld  1  0  0
 ### ===  Ignore cuts flag:   0
 
-phot:   for  gamma    SubType= 12  BuildTable= 0
-      LambdaPrime table from 200.000000 keV to 10.000000 TeV in 154 bins 
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200.000000 keV to 100.000000 TeV in 174 bins 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
- LivermorePhElectric :  Emin= 0.000000 eV    Emax= 10.000000 TeV   AngularGenSauterGavrila  FluoActive
+ LivermorePhElectric : Emin=0.000000 eV  Emax=100.000000 TeV  SauterGavrila Fluo
 
-compt:   for  gamma    SubType= 13  BuildTable= 1
-      Lambda table from 100.000000 eV  to 1.000000 MeV, 20 bins per decade, spline: 1
-      LambdaPrime table from 1.000000 MeV to 10.000000 TeV in 140 bins 
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100.000000 eV  to 1.000000 MeV, 20 bins/decade, spline: 1
+      LambdaPrime table from 1.000000 MeV to 100.000000 TeV in 160 bins 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-   LowEPComptonModel :  Emin= 0.000000 eV    Emax= 20.000000 MeV  FluoActive
-        KleinNishina :  Emin= 20.000000 MeV   Emax= 10.000000 TeV  FluoActive
+   LowEPComptonModel : Emin=0.000000 eV  Emax=20.000000 MeV Fluo
+        KleinNishina : Emin=20.000000 MeV Emax=100.000000 TeV Fluo
 
-conv:   for  gamma    SubType= 14  BuildTable= 1
-      Lambda table from 1.021998 MeV to 10.000000 TeV, 20 bins per decade, spline: 1
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.021998 MeV to 100.000000 TeV, 20 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-       PenConversion :  Emin= 0.000000 eV    Emax= 80.000000 GeV
-     BetheHeitlerLPM :  Emin= 80.000000 GeV   Emax= 10.000000 TeV
+       PenConversion : Emin=0.000000 eV  Emax=20.000000 MeV
+        BetheHeitler : Emin=20.000000 MeV Emax=80.000000 GeV  ModifiedTsai
+     BetheHeitlerLPM : Emin=80.000000 GeV Emax=100.000000 TeV  ModifiedTsai
 
-Rayl:   for  gamma    SubType= 11  BuildTable= 1
-      Lambda table from 100.000000 eV  to 100.000000 keV, 20 bins per decade, spline: 0
-      LambdaPrime table from 100.000000 keV to 10.000000 TeV in 160 bins 
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100.000000 eV  to 100.000000 keV, 20 bins/decade, spline: 0
+      LambdaPrime table from 100.000000 keV to 100.000000 TeV in 180 bins 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-   LivermoreRayleigh :  Emin= 0.000000 eV    Emax= 10.000000 TeV   CullenGenerator
+   LivermoreRayleigh : Emin=0.000000 eV  Emax=100.000000 TeV  CullenGenerator
 
-msc:   for e-    SubType= 10
-      RangeFactor= 0.200000, stepLimitType: 2, latDisplacement: 1
+msc:  for e-  SubType= 10
+      RangeFactor= 0.080000, stepLimType: 2, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-  GoudsmitSaunderson :  Emin= 0.000000 eV    Emax= 100.000000 MeV  Table with 120 bins Emin= 100.000000 eV    Emax= 100.000000 MeV
-        WentzelVIUni :  Emin= 100.000000 MeV   Emax= 10.000000 TeV  Table with 100 bins Emin= 100.000000 MeV   Emax= 10.000000 TeV
+  GoudsmitSaunderson : Emin=0.000000 eV  Emax=100.000000 MeV Nbins=120 100.000000 eV  - 100.000000 MeV
+        WentzelVIUni : Emin=100.000000 MeV Emax=100.000000 TeV Nbins=120 100.000000 MeV - 100.000000 TeV
 
-eIoni:   for  e-    SubType= 2
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+eIoni:  for e-  SubType=2
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.200000, 0.010000 mm), integ: 1, fluct: 1, linLossLim= 0.010000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-             PenIoni :  Emin= 0.000000 eV    Emax= 1.000000 MeV
-        MollerBhabha :  Emin= 1.000000 MeV   Emax= 10.000000 TeV   deltaVI
-      ===== Limit on energy threshold has been applied 
+       LowEnergyIoni : Emin=0.000000 eV  Emax=100.000000 keV  deltaVI
+        MollerBhabha : Emin=100.000000 keV Emax=100.000000 TeV  deltaVI
 
-eBrem:   for  e-    SubType= 3
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+eBrem:  for e-  SubType=3
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
       LPM flag: 1 for E > 1.000000 GeV,  VertexHighEnergyTh(GeV)= 100000.000000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-             eBremSB :  Emin= 0.000000 eV    Emax= 1.000000 GeV   AngularGen2BS
-            eBremLPM :  Emin= 1.000000 GeV   Emax= 10.000000 TeV   AngularGen2BS
+             eBremSB : Emin=0.000000 eV  Emax=1.000000 GeV  AngularGen2BS
+            eBremLPM : Emin=1.000000 GeV Emax=100.000000 TeV  AngularGen2BS
 
-ePairProd:   for  e-    SubType= 4
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      Sampling table 21x1001; from 0.100000 GeV to 10.000000 TeV 
+ePairProd:  for e-  SubType=4
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      Sampling table 25x1001; from 0.100000 GeV to 100.000000 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-          muPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+           ePairProd : Emin=0.000000 eV  Emax=100.000000 TeV
 
-CoulombScat:   for  e-, integral: 1     SubType= 1  BuildTable= 1
-      Lambda table from 100.000000 MeV to 10.000000 TeV, 20 bins per decade, spline: 1
+CoulombScat:  for e-, integral:1  SubType=1 BuildTable=1
+      Lambda table from 100.000000 MeV to 100.000000 TeV, 20 bins/decade, spline: 1
       ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-  eCoulombScattering :  Emin= 100.000000 MeV   Emax= 10.000000 TeV
+  eCoulombScattering : Emin=100.000000 MeV Emax=100.000000 TeV
 
-msc:   for e+    SubType= 10
-      RangeFactor= 0.200000, stepLimitType: 2, latDisplacement: 1
+msc:  for e+  SubType= 10
+      RangeFactor= 0.080000, stepLimType: 2, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-  GoudsmitSaunderson :  Emin= 0.000000 eV    Emax= 100.000000 MeV  Table with 120 bins Emin= 100.000000 eV    Emax= 100.000000 MeV
-        WentzelVIUni :  Emin= 100.000000 MeV   Emax= 10.000000 TeV  Table with 100 bins Emin= 100.000000 MeV   Emax= 10.000000 TeV
+  GoudsmitSaunderson : Emin=0.000000 eV  Emax=100.000000 MeV Nbins=120 100.000000 eV  - 100.000000 MeV
+        WentzelVIUni : Emin=100.000000 MeV Emax=100.000000 TeV Nbins=120 100.000000 MeV - 100.000000 TeV
 
-eIoni:   for  e+    SubType= 2
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+eIoni:  for e+  SubType=2
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.200000, 0.010000 mm), integ: 1, fluct: 1, linLossLim= 0.010000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-             PenIoni :  Emin= 0.000000 eV    Emax= 1.000000 MeV
-        MollerBhabha :  Emin= 1.000000 MeV   Emax= 10.000000 TeV   deltaVI
+             PenIoni : Emin=0.000000 eV  Emax=100.000000 keV
+        MollerBhabha : Emin=100.000000 keV Emax=100.000000 TeV  deltaVI
       ===== Limit on energy threshold has been applied 
 
-eBrem:   for  e+    SubType= 3
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+eBrem:  for e+  SubType=3
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
       LPM flag: 1 for E > 1.000000 GeV,  VertexHighEnergyTh(GeV)= 100000.000000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-             eBremSB :  Emin= 0.000000 eV    Emax= 1.000000 GeV   AngularGen2BS
-            eBremLPM :  Emin= 1.000000 GeV   Emax= 10.000000 TeV   AngularGen2BS
+             eBremSB : Emin=0.000000 eV  Emax=1.000000 GeV  AngularGen2BS
+            eBremLPM : Emin=1.000000 GeV Emax=100.000000 TeV  AngularGen2BS
 
-ePairProd:   for  e+    SubType= 4
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      Sampling table 21x1001; from 0.100000 GeV to 10.000000 TeV 
+ePairProd:  for e+  SubType=4
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      Sampling table 25x1001; from 0.100000 GeV to 100.000000 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-          muPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+           ePairProd : Emin=0.000000 eV  Emax=100.000000 TeV
 
-annihil:   for  e+, integral: 1     SubType= 5  BuildTable= 0
+annihil:  for e+, integral:1  SubType=5 BuildTable=0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-            eplus2gg :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+            eplus2gg : Emin=0.000000 eV  Emax=100.000000 TeV
 
-CoulombScat:   for  e+, integral: 1     SubType= 1  BuildTable= 1
-      Lambda table from 100.000000 MeV to 10.000000 TeV, 20 bins per decade, spline: 1
+CoulombScat:  for e+, integral:1  SubType=1 BuildTable=1
+      Lambda table from 100.000000 MeV to 100.000000 TeV, 20 bins/decade, spline: 1
       ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-  eCoulombScattering :  Emin= 100.000000 MeV   Emax= 10.000000 TeV
+  eCoulombScattering : Emin=100.000000 MeV Emax=100.000000 TeV
 
-msc:   for proton    SubType= 10
-      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+msc:  for proton  SubType= 10
+      RangeFactor= 0.200000, stepLimType: 0, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+        WentzelVIUni : Emin=0.000000 eV  Emax=100.000000 TeV Nbins=240 100.000000 eV  - 100.000000 TeV
 
-hIoni:   for  proton    SubType= 2
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      finalRange(mm)= 0.010000, dRoverRange= 0.100000, integral: 1, fluct: 1, linLossLimit= 0.010000
+hIoni:  for proton  SubType=2
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.100000, 0.020000 mm), integ: 1, fluct: 1, linLossLim= 0.010000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               Bragg :  Emin= 0.000000 eV    Emax= 2.000000 MeV   deltaVI
-          BetheBloch :  Emin= 2.000000 MeV   Emax= 10.000000 TeV   deltaVI
+               Bragg : Emin=0.000000 eV  Emax=2.000000 MeV  deltaVI
+          BetheBloch : Emin=2.000000 MeV Emax=100.000000 TeV  deltaVI
       ===== Limit on energy threshold has been applied 
 
-hBrems:   for  proton    SubType= 3
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+hBrems:  for proton  SubType=3
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+               hBrem : Emin=0.000000 eV  Emax=100.000000 TeV
       ===== Limit on energy threshold has been applied 
 
-hPairProd:   for  proton    SubType= 4
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      Sampling table 13x1001; from 7.506176 GeV to 10.000000 TeV 
+hPairProd:  for proton  SubType=4
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      Sampling table 17x1001; from 7.506176 GeV to 100.000000 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+           hPairProd : Emin=0.000000 eV  Emax=100.000000 TeV
 
-CoulombScat:   for  proton, integral: 1     SubType= 1  BuildTable= 1
-      Lambda table from threshold  to 10.000000 TeV, 20 bins per decade, spline: 1
+CoulombScat:  for proton, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100.000000 TeV, 20 bins/decade, spline: 1
       ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+  eCoulombScattering : Emin=0.000000 eV  Emax=100.000000 TeV
 
-nuclearStopping:   for  proton    SubType= 8  BuildTable= 0
+msc:  for GenericIon  SubType= 10
+      RangeFactor= 0.200000, stepLimType: 0, latDisp: 0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-   ICRU49NucStopping :  Emin= 0.000000 eV    Emax= 1.000000 MeV
+            UrbanMsc : Emin=0.000000 eV  Emax=100.000000 TeV
 
-msc:   for GenericIon    SubType= 10
-      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 0
+ionIoni:  for GenericIon  SubType=2
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.100000, 0.001000 mm), integ: 1, fluct: 1, linLossLim= 0.020000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-            UrbanMsc :  Emin= 0.000000 eV    Emax= 10.000000 TeV
-
-ionIoni:   for  GenericIon    SubType= 2
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      finalRange(mm)= 0.001000, dRoverRange= 0.100000, integral: 1, fluct: 1, linLossLimit= 0.020000
-      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-         ParamICRU73 :  Emin= 0.000000 eV    Emax= 10.000000 TeV   deltaVI
+         ParamICRU73 : Emin=0.000000 eV  Emax=100.000000 TeV  deltaVI
       ===== Limit on energy threshold has been applied 
 
-nuclearStopping:   for  GenericIon    SubType= 8  BuildTable= 0
+nuclearStopping:  for GenericIon SubType=8 BuildTable=0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-   ICRU49NucStopping :  Emin= 0.000000 eV    Emax= 1.000000 MeV
+   ICRU49NucStopping : Emin=0.000000 eV  Emax=1.000000 MeV
 =======================================================================
 ======       Radioactive Decay Physics Parameters              ========
 =======================================================================
@@ -969,287 +963,283 @@ Stored internal conversion coefficients           0
 Enable correlated gamma emission                  0
 Max 2J for sampling of angular correlations       10
 Atomic de-excitation enabled                      1
-Auger electron emission enabled                   1
-Auger cascade enabled                             1
+Auger electron emission enabled                   0
+Auger cascade enabled                             0
 Check EM cuts disabled for atomic de-excitation   0
 Use Bearden atomic level energies                 0
 =======================================================================
 
-msc:   for alpha    SubType= 10
-      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+msc:  for alpha  SubType= 10
+      RangeFactor= 0.200000, stepLimType: 0, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-            UrbanMsc :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+            UrbanMsc : Emin=0.000000 eV  Emax=100.000000 TeV Nbins=240 100.000000 eV  - 100.000000 TeV
 
-ionIoni:   for  alpha    SubType= 2
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      finalRange(mm)= 0.010000, dRoverRange= 0.100000, integral: 1, fluct: 1, linLossLimit= 0.020000
+ionIoni:  for alpha  SubType=2
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.100000, 0.020000 mm), integ: 1, fluct: 1, linLossLim= 0.020000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-            BraggIon :  Emin= 0.000000 eV    Emax= 7.945199 MeV   deltaVI
-          BetheBloch :  Emin= 7.945199 MeV   Emax= 10.000000 TeV   deltaVI
+            BraggIon : Emin=0.000000 eV  Emax=7.945199 MeV  deltaVI
+          BetheBloch : Emin=7.945199 MeV Emax=100.000000 TeV  deltaVI
       ===== Limit on energy threshold has been applied 
 
-nuclearStopping:   for  alpha    SubType= 8  BuildTable= 0
+nuclearStopping:  for alpha SubType=8 BuildTable=0
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-   ICRU49NucStopping :  Emin= 0.000000 eV    Emax= 1.000000 MeV
+   ICRU49NucStopping : Emin=0.000000 eV  Emax=1.000000 MeV
 
-msc:   for anti_proton    SubType= 10
-      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+msc:  for anti_proton  SubType= 10
+      RangeFactor= 0.200000, stepLimType: 0, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+        WentzelVIUni : Emin=0.000000 eV  Emax=100.000000 TeV Nbins=240 100.000000 eV  - 100.000000 TeV
 
-hIoni:   for  anti_proton    SubType= 2
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      finalRange(mm)= 0.010000, dRoverRange= 0.100000, integral: 1, fluct: 1, linLossLimit= 0.010000
+hIoni:  for anti_proton  SubType=2
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.100000, 0.020000 mm), integ: 1, fluct: 1, linLossLim= 0.010000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-            ICRU73QO :  Emin= 0.000000 eV    Emax= 2.000000 MeV   deltaVI
-          BetheBloch :  Emin= 2.000000 MeV   Emax= 10.000000 TeV   deltaVI
+            ICRU73QO : Emin=0.000000 eV  Emax=2.000000 MeV  deltaVI
+          BetheBloch : Emin=2.000000 MeV Emax=100.000000 TeV  deltaVI
       ===== Limit on energy threshold has been applied 
 
-hBrems:   for  anti_proton    SubType= 3
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+hBrems:  for anti_proton  SubType=3
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+               hBrem : Emin=0.000000 eV  Emax=100.000000 TeV
       ===== Limit on energy threshold has been applied 
 
-hPairProd:   for  anti_proton    SubType= 4
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      Sampling table 13x1001; from 7.506176 GeV to 10.000000 TeV 
+hPairProd:  for anti_proton  SubType=4
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      Sampling table 17x1001; from 7.506176 GeV to 100.000000 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+           hPairProd : Emin=0.000000 eV  Emax=100.000000 TeV
 
-CoulombScat:   for  anti_proton, integral: 1     SubType= 1  BuildTable= 1
-      Lambda table from threshold  to 10.000000 TeV, 20 bins per decade, spline: 1
+CoulombScat:  for anti_proton, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100.000000 TeV, 20 bins/decade, spline: 1
       ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+  eCoulombScattering : Emin=0.000000 eV  Emax=100.000000 TeV
 
-nuclearStopping:   for  anti_proton    SubType= 8  BuildTable= 0
+msc:  for kaon+  SubType= 10
+      RangeFactor= 0.200000, stepLimType: 0, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-   ICRU49NucStopping :  Emin= 0.000000 eV    Emax= 1.000000 MeV
+        WentzelVIUni : Emin=0.000000 eV  Emax=100.000000 TeV Nbins=240 100.000000 eV  - 100.000000 TeV
 
-msc:   for kaon+    SubType= 10
-      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+hIoni:  for kaon+  SubType=2
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.100000, 0.020000 mm), integ: 1, fluct: 1, linLossLim= 0.010000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
-
-hIoni:   for  kaon+    SubType= 2
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
-      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               Bragg :  Emin= 0.000000 eV    Emax= 1.052311 MeV   deltaVI
-          BetheBloch :  Emin= 1.052311 MeV   Emax= 10.000000 TeV   deltaVI
+               Bragg : Emin=0.000000 eV  Emax=1.052311 MeV  deltaVI
+          BetheBloch : Emin=1.052311 MeV Emax=100.000000 TeV  deltaVI
       ===== Limit on energy threshold has been applied 
 
-hBrems:   for  kaon+    SubType= 3
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+hBrems:  for kaon+  SubType=3
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+               hBrem : Emin=0.000000 eV  Emax=100.000000 TeV
       ===== Limit on energy threshold has been applied 
 
-hPairProd:   for  kaon+    SubType= 4
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      Sampling table 14x1001; from 3.949416 GeV to 10.000000 TeV 
+hPairProd:  for kaon+  SubType=4
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      Sampling table 18x1001; from 3.949416 GeV to 100.000000 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+           hPairProd : Emin=0.000000 eV  Emax=100.000000 TeV
 
-CoulombScat:   for  kaon+, integral: 1     SubType= 1  BuildTable= 1
-      Lambda table from threshold  to 10.000000 TeV, 20 bins per decade, spline: 1
+CoulombScat:  for kaon+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100.000000 TeV, 20 bins/decade, spline: 1
       ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+  eCoulombScattering : Emin=0.000000 eV  Emax=100.000000 TeV
 
-msc:   for kaon-    SubType= 10
-      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+msc:  for kaon-  SubType= 10
+      RangeFactor= 0.200000, stepLimType: 0, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+        WentzelVIUni : Emin=0.000000 eV  Emax=100.000000 TeV Nbins=240 100.000000 eV  - 100.000000 TeV
 
-hIoni:   for  kaon-    SubType= 2
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+hIoni:  for kaon-  SubType=2
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.100000, 0.020000 mm), integ: 1, fluct: 1, linLossLim= 0.010000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-            ICRU73QO :  Emin= 0.000000 eV    Emax= 1.052311 MeV   deltaVI
-          BetheBloch :  Emin= 1.052311 MeV   Emax= 10.000000 TeV   deltaVI
+            ICRU73QO : Emin=0.000000 eV  Emax=1.052311 MeV  deltaVI
+          BetheBloch : Emin=1.052311 MeV Emax=100.000000 TeV  deltaVI
       ===== Limit on energy threshold has been applied 
 
-hBrems:   for  kaon-    SubType= 3
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+hBrems:  for kaon-  SubType=3
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+               hBrem : Emin=0.000000 eV  Emax=100.000000 TeV
       ===== Limit on energy threshold has been applied 
 
-hPairProd:   for  kaon-    SubType= 4
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      Sampling table 14x1001; from 3.949416 GeV to 10.000000 TeV 
+hPairProd:  for kaon-  SubType=4
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      Sampling table 18x1001; from 3.949416 GeV to 100.000000 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+           hPairProd : Emin=0.000000 eV  Emax=100.000000 TeV
 
-CoulombScat:   for  kaon-, integral: 1     SubType= 1  BuildTable= 1
+CoulombScat:  for kaon-, integral:1  SubType=1 BuildTable=1
       Used Lambda table of kaon+
       ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+  eCoulombScattering : Emin=0.000000 eV  Emax=100.000000 TeV
 
-msc:   for mu+    SubType= 10
-      RangeFactor= 0.200000, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180.000000
+msc:  for mu+  SubType= 10
+      RangeFactor= 0.200000, stepLimType: 0, latDisp: 1, polarAngLim(deg)= 180.000000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+        WentzelVIUni : Emin=0.000000 eV  Emax=100.000000 TeV Nbins=240 100.000000 eV  - 100.000000 TeV
 
-muIoni:   for  mu+    SubType= 2
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+muIoni:  for mu+  SubType=2
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.100000, 0.020000 mm), integ: 1, fluct: 1, linLossLim= 0.010000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               Bragg :  Emin= 0.000000 eV    Emax= 200.000000 keV   deltaVI
-          BetheBloch :  Emin= 200.000000 keV   Emax= 1.000000 GeV   deltaVI
-        MuBetheBloch :  Emin= 1.000000 GeV   Emax= 10.000000 TeV
+               Bragg : Emin=0.000000 eV  Emax=200.000000 keV  deltaVI
+          BetheBloch : Emin=200.000000 keV Emax=1.000000 GeV  deltaVI
+        MuBetheBloch : Emin=1.000000 GeV Emax=100.000000 TeV
       ===== Limit on energy threshold has been applied 
 
-muBrems:   for  mu+    SubType= 3
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+muBrems:  for mu+  SubType=3
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-              MuBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+              MuBrem : Emin=0.000000 eV  Emax=100.000000 TeV
       ===== Limit on energy threshold has been applied 
 
-muPairProd:   for  mu+    SubType= 4
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      Sampling table 17x1001; from 1.000000 GeV to 10.000000 TeV 
+muPairProd:  for mu+  SubType=4
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      Sampling table 21x1001; from 1.000000 GeV to 100.000000 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-          muPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+          muPairProd : Emin=0.000000 eV  Emax=100.000000 TeV
 
-CoulombScat:   for  mu+, integral: 1     SubType= 1  BuildTable= 1
-      Lambda table from threshold  to 10.000000 TeV, 20 bins per decade, spline: 1
+CoulombScat:  for mu+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100.000000 TeV, 20 bins/decade, spline: 1
       ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+  eCoulombScattering : Emin=0.000000 eV  Emax=100.000000 TeV
 
-msc:   for mu-    SubType= 10
-      RangeFactor= 0.200000, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180.000000
+msc:  for mu-  SubType= 10
+      RangeFactor= 0.200000, stepLimType: 0, latDisp: 1, polarAngLim(deg)= 180.000000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+        WentzelVIUni : Emin=0.000000 eV  Emax=100.000000 TeV Nbins=240 100.000000 eV  - 100.000000 TeV
 
-muIoni:   for  mu-    SubType= 2
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+muIoni:  for mu-  SubType=2
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.100000, 0.020000 mm), integ: 1, fluct: 1, linLossLim= 0.010000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-            ICRU73QO :  Emin= 0.000000 eV    Emax= 200.000000 keV   deltaVI
-          BetheBloch :  Emin= 200.000000 keV   Emax= 1.000000 GeV   deltaVI
-        MuBetheBloch :  Emin= 1.000000 GeV   Emax= 10.000000 TeV
+            ICRU73QO : Emin=0.000000 eV  Emax=200.000000 keV  deltaVI
+          BetheBloch : Emin=200.000000 keV Emax=1.000000 GeV  deltaVI
+        MuBetheBloch : Emin=1.000000 GeV Emax=100.000000 TeV
       ===== Limit on energy threshold has been applied 
 
-muBrems:   for  mu-    SubType= 3
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+muBrems:  for mu-  SubType=3
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-              MuBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+              MuBrem : Emin=0.000000 eV  Emax=100.000000 TeV
       ===== Limit on energy threshold has been applied 
 
-muPairProd:   for  mu-    SubType= 4
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      Sampling table 17x1001; from 1.000000 GeV to 10.000000 TeV 
+muPairProd:  for mu-  SubType=4
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      Sampling table 21x1001; from 1.000000 GeV to 100.000000 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-          muPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+          muPairProd : Emin=0.000000 eV  Emax=100.000000 TeV
 
-CoulombScat:   for  mu-, integral: 1     SubType= 1  BuildTable= 1
+CoulombScat:  for mu-, integral:1  SubType=1 BuildTable=1
       Used Lambda table of mu+
       ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+  eCoulombScattering : Emin=0.000000 eV  Emax=100.000000 TeV
 
-msc:   for pi+    SubType= 10
-      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+msc:  for pi+  SubType= 10
+      RangeFactor= 0.200000, stepLimType: 0, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+        WentzelVIUni : Emin=0.000000 eV  Emax=100.000000 TeV Nbins=240 100.000000 eV  - 100.000000 TeV
 
-hIoni:   for  pi+    SubType= 2
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+hIoni:  for pi+  SubType=2
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.100000, 0.020000 mm), integ: 1, fluct: 1, linLossLim= 0.010000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               Bragg :  Emin= 0.000000 eV    Emax= 297.504557 keV   deltaVI
-          BetheBloch :  Emin= 297.504557 keV   Emax= 10.000000 TeV   deltaVI
+               Bragg : Emin=0.000000 eV  Emax=297.504557 keV  deltaVI
+          BetheBloch : Emin=297.504557 keV Emax=100.000000 TeV  deltaVI
       ===== Limit on energy threshold has been applied 
 
-hBrems:   for  pi+    SubType= 3
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+hBrems:  for pi+  SubType=3
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+               hBrem : Emin=0.000000 eV  Emax=100.000000 TeV
       ===== Limit on energy threshold has been applied 
 
-hPairProd:   for  pi+    SubType= 4
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      Sampling table 16x1001; from 1.116561 GeV to 10.000000 TeV 
+hPairProd:  for pi+  SubType=4
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      Sampling table 20x1001; from 1.116561 GeV to 100.000000 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+           hPairProd : Emin=0.000000 eV  Emax=100.000000 TeV
 
-CoulombScat:   for  pi+, integral: 1     SubType= 1  BuildTable= 1
-      Lambda table from threshold  to 10.000000 TeV, 20 bins per decade, spline: 1
+CoulombScat:  for pi+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100.000000 TeV, 20 bins/decade, spline: 1
       ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+  eCoulombScattering : Emin=0.000000 eV  Emax=100.000000 TeV
 
-msc:   for pi-    SubType= 10
-      RangeFactor= 0.200000, stepLimitType: 0, latDisplacement: 1
+msc:  for pi-  SubType= 10
+      RangeFactor= 0.200000, stepLimType: 0, latDisp: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-        WentzelVIUni :  Emin= 0.000000 eV    Emax= 10.000000 TeV  Table with 220 bins Emin= 100.000000 eV    Emax= 10.000000 TeV
+        WentzelVIUni : Emin=0.000000 eV  Emax=100.000000 TeV Nbins=240 100.000000 eV  - 100.000000 TeV
 
-hIoni:   for  pi-    SubType= 2
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      finalRange(mm)= 0.010000, dRoverRange= 0.200000, integral: 1, fluct: 1, linLossLimit= 0.010000
+hIoni:  for pi-  SubType=2
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      StepFunction=(0.100000, 0.020000 mm), integ: 1, fluct: 1, linLossLim= 0.010000
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-            ICRU73QO :  Emin= 0.000000 eV    Emax= 297.504557 keV   deltaVI
-          BetheBloch :  Emin= 297.504557 keV   Emax= 10.000000 TeV   deltaVI
+            ICRU73QO : Emin=0.000000 eV  Emax=297.504557 keV  deltaVI
+          BetheBloch : Emin=297.504557 keV Emax=100.000000 TeV  deltaVI
       ===== Limit on energy threshold has been applied 
 
-hBrems:   for  pi-    SubType= 3
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
+hBrems:  for pi-  SubType=3
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-               hBrem :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+               hBrem : Emin=0.000000 eV  Emax=100.000000 TeV
       ===== Limit on energy threshold has been applied 
 
-hPairProd:   for  pi-    SubType= 4
-      dE/dx and range tables from 100.000000 eV  to 10.000000 TeV in 220 bins
-      Lambda tables from threshold to 10.000000 TeV, 20 bins per decade, spline: 1
-      Sampling table 16x1001; from 1.116561 GeV to 10.000000 TeV 
+hPairProd:  for pi-  SubType=4
+      dE/dx and range tables from 100.000000 eV  to 100.000000 TeV in 240 bins
+      Lambda tables from threshold to 100.000000 TeV, 20 bins/decade, spline: 1
+      Sampling table 20x1001; from 1.116561 GeV to 100.000000 TeV 
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-           hPairProd :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+           hPairProd : Emin=0.000000 eV  Emax=100.000000 TeV
 
-CoulombScat:   for  pi-, integral: 1     SubType= 1  BuildTable= 1
+CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
       Used Lambda table of pi+
       ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
       ===== EM models for the G4Region  DefaultRegionForTheWorld ======
-  eCoulombScattering :  Emin= 0.000000 eV    Emax= 10.000000 TeV
+  eCoulombScattering : Emin=0.000000 eV  Emax=100.000000 TeV
  Beginning of run 
- Simulating 1800 beam ions
- Writing Mode 2 output to data/zr80_770keV_1800evt_lowlevel.dat
- 56 %   172 events/s  5 remaining                                                            
-Real time:  0.78   System time:  0.01   User time:  0.76   2307.69 events/s
+ Simulating 19200 beam ions
+ Writing Mode 2 output to data/zr80_770keV_19200evt_lowlevel.dat
+  5 %   56 events/s  5:24 remaining        10 %   456 events/s 38 remaining        16 %   633 events/s 26 remaining        21 %   669 events/s 23 remaining        26 %   707 events/s 20 remaining        31 %   725 events/s 18 remaining        36 %   744 events/s 16 remaining        42 %   740 events/s 15 remaining        47 %   740 events/s 14 remaining        52 %   741 events/s 12 remaining        57 %   745 events/s 11 remaining        62 %   745 events/s 10 remaining        68 %   751 events/s  8 remaining        73 %   759 events/s  7 remaining        78 %   769 events/s  5 remaining        83 %   771 events/s  4 remaining        89 %   783 events/s  3 remaining        94 %   778 events/s  2 remaining        99 %   786 events/s  0 remaining                                                            
+Real time: 23.69   System time:  0.12   User time:  5.77   810.49 events/s
 
-#average beta at reaction (ctr=1800):
-Target.Beta:	0.489271
-#average beta at emission (ctr=3560):
-Target.Beta:	0.451304
-#average beta after the target (ctr=1800):
-Average.Beta.After:	0.453508
-input file: data/zr80_770keV_1800evt_lowlevel.dat
-writing to output file: root/zr80_770keV_1800evt_lowlevel.root
+#average beta at reaction (ctr=19200):
+Target.Beta:	0.48841
+#average beta at emission (ctr=37800):
+Target.Beta:	0.451239
+#average beta after the target (ctr=19200):
+Average.Beta.After:	0.453445
+input file: data/zr80_770keV_19200evt_lowlevel.dat
+writing to output file: root/zr80_770keV_19200evt_lowlevel.root
 ------------------------------------
 generated 1 permutations for N = 0
 generated 1 permutations for N = 1
@@ -1262,20 +1252,20 @@ generated 5040 permutations for N = 7
 generated 40320 permutations for N = 8
 setting up calibrated tree 
 setting up simulation tree 
-cannot read data/zr80_770keV_1800evt_lowlevel.dat (anymore)
-Total of 3101 data buffers (0 MB) and
-Total of 559 cal events (0 MB) written.
-Total of 23880 sim events (0 MB) written.
-Program Run time 0.183684 s.
-Unpacked 16882.3 buffers/s.
+10000 buffers read... 2 MB... 9534.27 buffers/s20000 buffers read... 4 MB... 14242.3 buffers/s30000 buffers read... 6 MB... 17340 buffers/scannot read data/zr80_770keV_19200evt_lowlevel.dat (anymore)
+Total of 31746 data buffers (7 MB) and
+Total of 5439 cal events (0 MB) written.
+Total of 19200 sim events (1 MB) written.
+Program Run time 1.77702 s.
+Unpacked 17864.8 buffers/s.
 
- CPU time: 0.16	Real time: 0.1837
+ CPU time: 0.36	Real time: 1.77702
 input file(s):
-root/zr80_770keV_1800evt_lowlevel.root
-output file: hist/zr80_770keV_1800evt_lowlevel.root
+root/zr80_770keV_19200evt_lowlevel.root
+output file: hist/zr80_770keV_19200evt_lowlevel.root
 creating outputfile 
-1800 entries in sim tree 
-559 entries in cal tree 
+19200 entries in sim tree 
+5439 entries in cal tree 
 New 1-d histogram: egam_emitted
 New 1-d histogram: posx_emitted
 New 1-d histogram: posy_emitted
@@ -1286,7 +1276,7 @@ New 1-d histogram: theta_emitted
 New 2-d histogram: phi_theta_emitted
 New 1-d histogram: mult_emitted
   0.0 % done	0.0 events/s infs to go New 2-d histogram: mult_emitted_detected
-New 2-d histogram: GRmult_emitted_detected
+New 2-d histogram: MBmult_emitted_detected
 New 1-d histogram: ata
 New 1-d histogram: yta
 New 1-d histogram: bta
@@ -1306,55 +1296,6 @@ New 1-d histogram: egam_emitted_diff
 New 2-d histogram: egam_emitted_detected
 New 2-d histogram: egam_dettheta
 New 2-d histogram: egamdc_dettheta
-New 1-d histogram: GRegam
-New 1-d histogram: GRegamdc
-New 2-d histogram: GRegam_mult
-New 2-d histogram: GRegamdc_mult
-New 1-d histogram: GRegam_emitted_diff
-New 2-d histogram: GRegam_emitted_detected
-New 2-d histogram: GRegam_dettheta
-New 2-d histogram: GRegamdc_dettheta
-New 1-d histogram: egamAB
-New 1-d histogram: egamABdc
-New 2-d histogram: egamAB_mult
-New 2-d histogram: egamABdc_mult
-New 1-d histogram: egamAB_emitted_diff
-New 2-d histogram: egamAB_emitted_detected
-New 2-d histogram: egamAB_dettheta
-New 2-d histogram: egamABdc_dettheta
-New 1-d histogram: GRegamAB
-New 1-d histogram: GRegamABdc
-New 2-d histogram: GRegamAB_mult
-New 2-d histogram: GRegamABdc_mult
-New 1-d histogram: GRegamAB_emitted_diff
-New 2-d histogram: GRegamAB_emitted_detected
-New 2-d histogram: GRegamAB_dettheta
-New 2-d histogram: GRegamABdc_dettheta
-New 1-d histogram: mult
-New 1-d histogram: mult_ab
-New 1-d histogram: GRmult
-New 1-d histogram: GRmult_ab
-New 2-d histogram: posxy
-New 2-d histogram: posxz
-New 2-d histogram: posyz
-New 1-d histogram: pos_phi
-New 1-d histogram: pos_theta
-New 2-d histogram: pos_phi_theta
-New 2-d histogram: GRposxy
-New 2-d histogram: GRposxz
-New 2-d histogram: GRposyz
-New 1-d histogram: GRpos_phi
-New 1-d histogram: GRpos_theta
-New 2-d histogram: GRpos_phi_theta
-New 2-d histogram: MBmult_emitted_detected
-New 1-d histogram: MBmult
-New 1-d histogram: MBmult_ab
-New 2-d histogram: MBposxy
-New 2-d histogram: MBposxz
-New 2-d histogram: MBposyz
-New 1-d histogram: MBpos_phi
-New 1-d histogram: MBpos_theta
-New 2-d histogram: MBpos_phi_theta
 New 1-d histogram: MBegam
 New 1-d histogram: MBegamdc
 New 2-d histogram: MBegam_mult
@@ -1363,6 +1304,14 @@ New 1-d histogram: MBegam_emitted_diff
 New 2-d histogram: MBegam_emitted_detected
 New 2-d histogram: MBegam_dettheta
 New 2-d histogram: MBegamdc_dettheta
+New 1-d histogram: egamAB
+New 1-d histogram: egamABdc
+New 2-d histogram: egamAB_mult
+New 2-d histogram: egamABdc_mult
+New 1-d histogram: egamAB_emitted_diff
+New 2-d histogram: egamAB_emitted_detected
+New 2-d histogram: egamAB_dettheta
+New 2-d histogram: egamABdc_dettheta
 New 1-d histogram: MBegamAB
 New 1-d histogram: MBegamABdc
 New 2-d histogram: MBegamAB_mult
@@ -1371,196 +1320,6703 @@ New 1-d histogram: MBegamAB_emitted_diff
 New 2-d histogram: MBegamAB_emitted_detected
 New 2-d histogram: MBegamAB_dettheta
 New 2-d histogram: MBegamABdc_dettheta
+New 1-d histogram: mult
+New 1-d histogram: mult_ab
+New 1-d histogram: MBmult
+New 1-d histogram: MBmult_ab
+New 2-d histogram: posxy
+New 2-d histogram: posxz
+New 2-d histogram: posyz
+New 1-d histogram: pos_phi
+New 1-d histogram: pos_theta
+New 2-d histogram: pos_phi_theta
+New 2-d histogram: MBposxy
+New 2-d histogram: MBposxz
+New 2-d histogram: MBposyz
+New 1-d histogram: MBpos_phi
+New 1-d histogram: MBpos_theta
+New 2-d histogram: MBpos_phi_theta
+New 2-d histogram: GRmult_emitted_detected
+New 1-d histogram: GRegam
+New 1-d histogram: GRegamdc
+New 2-d histogram: GRegam_mult
+New 2-d histogram: GRegamdc_mult
+New 1-d histogram: GRegam_emitted_diff
+New 2-d histogram: GRegam_emitted_detected
+New 2-d histogram: GRegam_dettheta
+New 2-d histogram: GRegamdc_dettheta
+New 1-d histogram: GRegamAB
+New 1-d histogram: GRegamABdc
+New 2-d histogram: GRegamAB_mult
+New 2-d histogram: GRegamABdc_mult
+New 1-d histogram: GRegamAB_emitted_diff
+New 2-d histogram: GRegamAB_emitted_detected
+New 2-d histogram: GRegamAB_dettheta
+New 2-d histogram: GRegamABdc_dettheta
+New 1-d histogram: GRmult
+New 1-d histogram: GRmult_ab
+New 2-d histogram: GRposxy
+New 2-d histogram: GRposxz
+New 2-d histogram: GRposyz
+New 1-d histogram: GRpos_phi
+New 1-d histogram: GRpos_theta
+New 2-d histogram: GRpos_phi_theta
 New 2-d histogram: egamegam_all
-New 2-d histogram: MBegamegam_all
+New 2-d histogram: GRegamegam_all
 New 2-d histogram: egamegamdc_all
+New 2-d histogram: GRegamegamdc_all
+New 2-d histogram: MBegamegam_all
 New 2-d histogram: MBegamegamdc_all
 New 2-d histogram: egamegamAB_all
 New 2-d histogram: MBegamegamAB_all
 New 2-d histogram: egamegamdcAB_all
 New 2-d histogram: MBegamegamdcAB_all
-New 2-d histogram: GRegamegam_all
-New 2-d histogram: GRegamegamdc_all
 New 2-d histogram: GRegamegamAB_all
 New 2-d histogram: GRegamegamdcAB_all
-
+ 52.1 % done	4717.8 events/s 2.0s to go 
 writing histograms to file
-Run time 1.0 s.
+Run time 4.3 s.
 input file(s):
-root/zr80_770keV_1800evt_lowlevel.root
-output file: coin/zr80_770keV_1800evt_lowlevel.root
+root/zr80_770keV_19200evt_lowlevel.root
+output file: coin/zr80_770keV_19200evt_lowlevel.root
 creating outputfile 
-DCenergy : 199.832
-DCenergy : 229.411
-DCenergy : 108.758
-DCenergy : 350.331
-DCenergy : 0
-DCenergy : 405.755
-DCenergy : 98.5068
-DCenergy : 158.87
-DCenergy : 473.315
-DCenergy : 578.087
-DCenergy : 312.928
-DCenergy : 0
-DCenergy : 205.821
-DCenergy : 173.951
-DCenergy : 149.103
-DCenergy : 168.234
-DCenergy : 263.442
-DCenergy : 117.163
-DCenergy : 162.68
-DCenergy : 337.98
-DCenergy : 366.645
-DCenergy : 159.513
-DCenergy : 166.892
-DCenergy : 0
-DCenergy : 130.879
-DCenergy : 266.744
-DCenergy : 150.75
-DCenergy : 181.566
-DCenergy : 134.096
-DCenergy : 252.01
-DCenergy : 338.947
-DCenergy : 283.433
-DCenergy : 89.6639
-DCenergy : 259.776
-DCenergy : 0
-DCenergy : 209.621
-DCenergy : 228.523
-DCenergy : 162.439
-DCenergy : 226.587
-DCenergy : 447.102
-DCenergy : 249.777
-DCenergy : 261.438
-DCenergy : 114.004
-DCenergy : 235.144
-DCenergy : 210.217
-DCenergy : 224.978
-DCenergy : 129.946
-DCenergy : 407.005
-DCenergy : 255.811
-DCenergy : 163.92
-DCenergy : 148.098
-DCenergy : 100.34
-DCenergy : 0
-DCenergy : 359.461
-DCenergy : 211.098
-DCenergy : 79.0723
-DCenergy : 178.31
-DCenergy : 0
-DCenergy : 0
-DCenergy : 194.472
-DCenergy : 427.108
-DCenergy : 261.168
-DCenergy : 437.06
-DCenergy : 91.5161
-DCenergy : 255.522
-DCenergy : 358.862
-DCenergy : 155.956
-DCenergy : 230.65
-DCenergy : 223.664
-DCenergy : 271.931
-DCenergy : 138.258
-DCenergy : 159.053
-DCenergy : 109.941
-DCenergy : 426.378
-DCenergy : 273.759
-DCenergy : 203.316
-DCenergy : 128.827
-DCenergy : 139.797
-DCenergy : 292.94
-DCenergy : 141.737
-DCenergy : 284.543
-DCenergy : 245.186
-DCenergy : 162.925
-DCenergy : 147.201
-DCenergy : 0
-DCenergy : 142.849
-DCenergy : 0
-DCenergy : 83.6334
-DCenergy : 0
-DCenergy : 134.319
-DCenergy : 0
-DCenergy : 136.565
-DCenergy : 174.417
-DCenergy : 288
-DCenergy : 282.909
-DCenergy : 132.175
-DCenergy : 443.881
-DCenergy : 578
-DCenergy : 70.694
-DCenergy : 106.772
-DCenergy : 258.106
-DCenergy : 347.381
-DCenergy : 239.056
-DCenergy : 377.405
-DCenergy : 195.095
-DCenergy : 195.957
-DCenergy : 435.903
-DCenergy : 625.184
-DCenergy : 186.599
-DCenergy : 103.223
-DCenergy : 338.954
-DCenergy : 91.4075
-DCenergy : 88.5627
-DCenergy : 281.559
-DCenergy : 0
-DCenergy : 103.964
-DCenergy : 367.466
-DCenergy : 141.566
-DCenergy : 305.694
-DCenergy : 238.014
-DCenergy : 150.244
-DCenergy : 341.208
-DCenergy : 160.846
-DCenergy : 241.312
-DCenergy : 219.829
-DCenergy : 349.447
-DCenergy : 166.281
-DCenergy : 254.166
-DCenergy : 178.231
-DCenergy : 289.366
-DCenergy : 170.265
-DCenergy : 269.007
-DCenergy : 233.472
-DCenergy : 206.475
-DCenergy : 204.072
-DCenergy : 0
-DCenergy : 0
-DCenergy : 279.957
-DCenergy : 0
-DCenergy : 355.436
-DCenergy : 473.095
-DCenergy : 218.694
-DCenergy : 131.205
-DCenergy : 166.375
-DCenergy : 261.268
-DCenergy : 108.531
-DCenergy : 471.187
-DCenergy : 203.669
-DCenergy : 178.985
-DCenergy : 283.171
-DCenergy : 265.58
-DCenergy : 337.236
-DCenergy : 243.036
-DCenergy : 267.192
-DCenergy : 102.509
-DCenergy : 248.219
-DCenergy : 267.182
-DCenergy : 318.65
-DCenergy : 75.5314
-DCenergy : 233.556
-DCenergy : 149.179
-DCenergy : 225.627
-DCenergy : 160.306
-DCenergy : 194.986
-DCenergy : 419.042
-DCenergy : 186.273
-DCenergy : 0
-DCenergy : 168.066
-DCenergy : 253.219
-DCenergy : 392.358
-DCenergy : 204.942
-DCenergy : 188.556
-DCenergy : 287.878
-writing coincidence tree to file
+MB : 210.237
+MB : 146.449
+MB : 350.76
+MB : 254.516
+MB : 86.4097
+MB : 166.357
+MB : 225.269
+GR : 400.544
+MB : 106.391
+GR : 194.856
+MB : 134.701
+MB : 364.867
+MB : 108.992
+GR : 0
+MB : 473.133
+MB : 292.861
+MB : 72.5431
+MB : 211.579
+GR : 98.8985
+GR : 257.622
+MB : 461.812
+GR : 0
+MB : 100.349
+GR : 81.2383
+MB : 94.2654
+MB : 265.841
+MB : 111.842
+MB : 129.246
+MB : 176.767
+MB : 97.7305
+MB : 160.499
+GR : 197.874
+GR : 235.984
+MB : 154.674
+MB : 469.409
+MB : 80.8301
+MB : 0
+MB : 217.881
+MB : 125.391
+GR : 196.967
+MB : 271.388
+MB : 446.803
+MB : 277.569
+MB : 267.982
+GR : 218.882
+MB : 263.78
+GR : 0
+GR : 0
+GR : 271.729
+MB : 135.888
+MB : 252.487
+GR : 232.962
+GR : 453.043
+MB : 388.505
+MB : 112.593
+MB : 242.264
+MB : 94.4003
+GR : 124.325
+MB : 93.7449
+MB : 219.891
+MB : 230.718
+MB : 247.609
+MB : 271.562
+GR : 191.646
+GR : 121.255
+MB : 78.8624
+MB : 124.26
+MB : 283.409
+MB : 68.4249
+GR : 225.271
+GR : 161.388
+MB : 130.335
+MB : 117.247
+MB : 197.684
+GR : 149.047
+GR : 465.393
+MB : 260.087
+MB : 62.5169
+GR : 155.405
+MB : 220.447
+GR : 0
+MB : 353.784
+MB : 115.803
+MB : 232.523
+GR : 246.06
+MB : 66.9082
+GR : 300.748
+MB : 83.2531
+MB : 170.279
+GR : 129.742
+MB : 85.5844
+GR : 175.586
+MB : 63.9305
+MB : 0
+MB : 231.755
+MB : 208.093
+MB : 235.308
+MB : 250.079
+MB : 0
+GR : 169.466
+MB : 272.62
+MB : 440.787
+GR : 408.794
+GR : 214.478
+MB : 0
+MB : 161.684
+MB : 174.337
+MB : 400.406
+MB : 104.82
+GR : 300.084
+GR : 0
+MB : 337.67
+GR : 257.053
+MB : 460.809
+MB : 166.094
+MB : 0
+GR : 0
+MB : 341.993
+GR : 317.794
+MB : 116.963
+MB : 0
+MB : 153.845
+GR : 209.931
+GR : 435.612
+MB : 249.217
+MB : 193.387
+MB : 266.317
+MB : 0
+MB : 357.237
+GR : 301.075
+GR : 175.634
+MB : 0
+MB : 359.839
+GR : 92.127
+MB : 361.761
+MB : 129.871
+MB : 151.227
+MB : 186.272
+GR : 259.124
+MB : 0
+GR : 0
+MB : 0
+MB : 237.419
+MB : 188.154
+GR : 374.711
+MB : 263.66
+MB : 471.982
+MB : 219.739
+MB : 0
+MB : 136.536
+GR : 168.42
+MB : 136.34
+GR : 99.494
+MB : 119.993
+MB : 181.221
+MB : 138.415
+MB : 195.655
+MB : 132.291
+MB : 67.1656
+MB : 121.877
+GR : 119.888
+MB : 0
+MB : 84.5826
+MB : 124.831
+GR : 265.72
+MB : 136.55
+GR : 305.797
+MB : 0
+MB : 279.472
+MB : 65.2007
+GR : 0
+GR : 79.9053
+MB : 262.135
+MB : 0
+MB : 234.212
+GR : 372.021
+MB : 0
+GR : 412.874
+MB : 100.114
+MB : 103.63
+MB : 287.036
+GR : 279.605
+MB : 64.0203
+GR : 161.152
+MB : 100.883
+MB : 320.353
+GR : 138.149
+MB : 0
+MB : 79.5387
+MB : 95.5199
+GR : 324.194
+GR : 230.8
+MB : 441.65
+MB : 263.058
+MB : 114.838
+MB : 262.2
+MB : 0
+MB : 231.746
+MB : 66.799
+MB : 263.945
+MB : 94.7158
+MB : 160.47
+MB : 0
+MB : 458.715
+MB : 89.2984
+MB : 0
+MB : 188.234
+GR : 252.284
+MB : 73.6361
+MB : 260.866
+MB : 179.637
+GR : 428.435
+GR : 290.838
+MB : 114.595
+MB : 0
+MB : 0
+GR : 152.828
+MB : 319.398
+MB : 185.217
+GR : 141.228
+MB : 279.4
+MB : 236.256
+MB : 197.239
+MB : 228.268
+GR : 176.204
+MB : 300.37
+GR : 156.66
+MB : 401.114
+MB : 73.2983
+GR : 408.664
+GR : 170.335
+GR : 226.899
+GR : 204.699
+GR : 141.541
+MB : 82.3011
+MB : 218.662
+GR : 137.388
+GR : 315.663
+MB : 223.11
+GR : 101.395
+GR : 258.258
+MB : 173.445
+MB : 286.912
+MB : 85.3287
+GR : 225.863
+MB : 256.607
+GR : 0
+MB : 371.628
+MB : 170.793
+MB : 417.747
+GR : 0
+MB : 85.1383
+MB : 218.799
+MB : 356.451
+GR : 248.069
+MB : 476.096
+MB : 417.579
+MB : 80.4981
+MB : 167.934
+MB : 312.208
+MB : 309.126
+MB : 106.241
+MB : 267.899
+GR : 0
+MB : 179.923
+GR : 184.955
+MB : 779.504
+MB : 223.629
+GR : 414.792
+GR : 74.6587
+MB : 207.068
+MB : 173.314
+GR : 291.655
+MB : 117.583
+MB : 272.433
+MB : 361.468
+MB : 257.698
+MB : 85.7986
+MB : 0
+GR : 368.45
+GR : 195.593
+MB : 214.144
+GR : 371.513
+MB : 439.765
+MB : 62.757
+MB : 102.467
+GR : 193.326
+MB : 136.103
+MB : 0
+MB : 159.914
+GR : 182.12
+MB : 409.578
+MB : 0
+MB : 397.618
+MB : 131.628
+MB : 142.629
+MB : 361.375
+MB : 70.1819
+GR : 153.94
+MB : 166.513
+MB : 180.131
+MB : 189.733
+MB : 0
+MB : 369.878
+MB : 0
+MB : 0
+MB : 221.362
+MB : 244.652
+MB : 453.811
+MB : 242.081
+MB : 236.546
+MB : 178.908
+MB : 135.103
+MB : 73.2833
+MB : 376.077
+GR : 234.676
+GR : 154.478
+MB : 97.0092
+MB : 106.986
+MB : 81.9644
+MB : 128.46
+GR : 95.3067
+MB : 380.465
+MB : 69.134
+MB : 115.837
+MB : 196.51
+MB : 177.748
+MB : 171.265
+MB : 191.391
+GR : 392.429
+MB : 112.564
+MB : 135.485
+MB : 435.554
+GR : 226.789
+MB : 158.402
+MB : 303.702
+MB : 252.629
+MB : 268.654
+MB : 269.058
+MB : 262.918
+GR : 118.782
+MB : 0
+GR : 0
+GR : 324.584
+MB : 216.909
+GR : 0
+MB : 271.52
+MB : 0
+MB : 299.583
+MB : 174.961
+MB : 127.36
+MB : 423.063
+MB : 297.951
+MB : 217.494
+MB : 293.74
+MB : 0
+MB : 241.313
+MB : 279.088
+GR : 173.267
+MB : 0
+GR : 91.483
+MB : 223.274
+MB : 353.427
+GR : 239.431
+MB : 103.079
+MB : 0
+MB : 0
+GR : 463.146
+MB : 128.015
+MB : 0
+GR : 470.008
+MB : 394.87
+GR : 297.727
+MB : 122.844
+MB : 375.074
+MB : 203.146
+MB : 217.256
+MB : 122.584
+MB : 278.57
+GR : 235.369
+MB : 0
+MB : 335.215
+MB : 177.874
+MB : 299.005
+MB : 141.622
+GR : 444.254
+GR : 154.615
+MB : 0
+MB : 223.707
+MB : 150.745
+MB : 386.61
+GR : 93.363
+MB : 114.205
+MB : 87.4623
+MB : 78.9427
+MB : 424.539
+MB : 377.679
+MB : 187.295
+GR : 137.099
+MB : 183.393
+MB : 97.8506
+MB : 284.284
+MB : 0
+MB : 127.055
+MB : 289.651
+MB : 90.0454
+MB : 248.66
+GR : 237.518
+MB : 201.67
+MB : 132.956
+MB : 103.758
+MB : 456.612
+MB : 150.78
+GR : 145.805
+MB : 173.879
+MB : 0
+MB : 476.621
+MB : 132.547
+MB : 344.83
+MB : 115.491
+MB : 84.3497
+MB : 123.879
+MB : 179.562
+GR : 284.506
+MB : 224.268
+MB : 286.777
+MB : 215.308
+MB : 185.753
+MB : 67.8341
+GR : 163.469
+MB : 0
+MB : 67.2904
+MB : 187.274
+MB : 231.256
+GR : 103.398
+MB : 95.3692
+GR : 415.684
+MB : 0
+MB : 88.803
+MB : 152.315
+MB : 240.662
+MB : 102.357
+MB : 0
+MB : 183.68
+MB : 170.989
+MB : 241.516
+MB : 0
+MB : 410.253
+GR : 399.776
+MB : 0
+MB : 107.277
+MB : 263.777
+GR : 96.7758
+MB : 130.619
+MB : 186.132
+MB : 206.799
+MB : 288.931
+MB : 468.08
+MB : 241.058
+MB : 93.8223
+MB : 124.103
+GR : 295.763
+MB : 112.562
+GR : 86.8484
+MB : 281.511
+MB : 151.127
+MB : 194.252
+GR : 362.288
+MB : 244.284
+MB : 0
+GR : 264.869
+GR : 357.993
+MB : 0
+MB : 173.271
+MB : 75.4749
+MB : 70.6794
+MB : 145.481
+MB : 450.406
+MB : 244.646
+MB : 464.391
+MB : 277.504
+GR : 474.404
+GR : 202.597
+GR : 456.55
+GR : 0
+MB : 186.291
+MB : 0
+MB : 251.584
+MB : 152.281
+MB : 210.086
+MB : 267.952
+MB : 120.481
+MB : 79.1032
+MB : 112.745
+MB : 104.662
+MB : 216.571
+GR : 241.835
+GR : 195.221
+MB : 360.119
+MB : 147.706
+GR : 239.302
+GR : 251.28
+MB : 287.819
+MB : 229.216
+GR : 127.013
+MB : 148.906
+GR : 420.748
+GR : 197.425
+MB : 287.659
+MB : 189.99
+GR : 201.126
+MB : 206.447
+GR : 367.578
+MB : 103.451
+GR : 145.471
+GR : 188.365
+MB : 291.708
+GR : 291.655
+MB : 104.426
+GR : 146.079
+MB : 68.8355
+MB : 101.738
+MB : 72.3497
+GR : 230.993
+MB : 74.4501
+MB : 274.637
+MB : 450.404
+MB : 139.519
+GR : 208.411
+MB : 128.346
+MB : 251.034
+GR : 0
+GR : 0
+GR : 94.7662
+MB : 371.855
+MB : 393.36
+MB : 0
+MB : 58.9864
+MB : 160.565
+GR : 343.268
+MB : 193.6
+GR : 108.379
+MB : 458.564
+MB : 262.756
+GR : 166.505
+MB : 171.403
+MB : 432.997
+MB : 179.489
+MB : 114.999
+MB : 133.017
+GR : 421.006
+MB : 250.446
+GR : 217.818
+MB : 125.758
+GR : 177.69
+MB : 138.977
+MB : 0
+MB : 195.952
+MB : 461.331
+GR : 173.347
+MB : 0
+MB : 210.455
+GR : 0
+GR : 253.869
+MB : 84.0013
+MB : 212.787
+GR : 290.197
+GR : 127.499
+MB : 253.938
+MB : 360.069
+MB : 206.38
+MB : 162.303
+GR : 347.084
+MB : 468.381
+MB : 259.02
+MB : 412.13
+MB : 245.913
+MB : 162.139
+MB : 465.262
+MB : 274.973
+GR : 431.955
+MB : 0
+MB : 168.907
+GR : 82.9491
+MB : 277.635
+GR : 263.682
+MB : 146.544
+MB : 248.349
+MB : 121.848
+MB : 61.4801
+MB : 253.504
+MB : 115.678
+MB : 329.804
+MB : 0
+MB : 305.757
+GR : 108.009
+GR : 392.406
+MB : 59.372
+MB : 253.705
+GR : 249.667
+MB : 209.868
+MB : 298.221
+GR : 199.003
+GR : 0
+MB : 324.783
+MB : 0
+MB : 238.116
+MB : 272.505
+MB : 80.7389
+GR : 328.846
+MB : 233.81
+MB : 0
+GR : 299.573
+MB : 127.107
+MB : 207.172
+MB : 151.67
+MB : 85.7132
+MB : 94.6138
+GR : 227.747
+MB : 204.961
+MB : 78.3038
+MB : 73.5458
+MB : 232.527
+MB : 319.421
+MB : 260.779
+MB : 0
+GR : 289.062
+MB : 69.1161
+MB : 63.2193
+MB : 0
+GR : 200.058
+MB : 281.646
+GR : 212.144
+MB : 286.835
+MB : 215.285
+MB : 125.938
+MB : 154.846
+MB : 99.2849
+GR : 0
+MB : 252.731
+GR : 269.103
+GR : 245.125
+MB : 456.282
+MB : 99.6464
+MB : 106.542
+MB : 299.631
+MB : 147.884
+MB : 521.432
+MB : 0
+MB : 276.41
+MB : 280.755
+MB : 97.1539
+GR : 99.9583
+GR : 234.633
+MB : 0
+GR : 282.685
+MB : 0
+MB : 86.715
+GR : 404.63
+MB : 0
+GR : 133.5
+GR : 165.167
+GR : 300.68
+GR : 81.0762
+MB : 138.268
+MB : 281.146
+GR : 99.472
+MB : 84.924
+MB : 147.054
+MB : 0
+GR : 320.783
+MB : 116.704
+MB : 238.082
+GR : 128.464
+MB : 192.698
+MB : 260.153
+MB : 90.2227
+MB : 151.755
+MB : 303.484
+MB : 158.905
+MB : 263.423
+MB : 252.503
+GR : 179.279
+MB : 167.428
+MB : 370.841
+MB : 327.272
+MB : 360.098
+MB : 431.309
+MB : 403.934
+MB : 192.892
+GR : 148.367
+MB : 100.524
+GR : 171.755
+GR : 210.839
+MB : 94.4021
+MB : 116.925
+MB : 203.032
+MB : 185.428
+MB : 0
+GR : 257.142
+GR : 209.716
+MB : 85.6858
+MB : 106.872
+GR : 97.8992
+GR : 115.022
+MB : 0
+MB : 225.606
+MB : 146.897
+MB : 376.587
+MB : 154.817
+GR : 399.206
+MB : 232.184
+MB : 193.688
+MB : 452.867
+MB : 74.6642
+MB : 77.0826
+MB : 203.801
+MB : 731.168
+GR : 284.811
+MB : 96.4443
+GR : 293.014
+MB : 146.121
+MB : 181.303
+MB : 275.119
+MB : 223.673
+MB : 87.1091
+MB : 300.562
+MB : 202.767
+GR : 168.803
+MB : 103.081
+MB : 60.313
+MB : 144.002
+MB : 69.5846
+MB : 161.517
+MB : 201.842
+MB : 174.645
+MB : 85.0099
+GR : 198.292
+MB : 109.371
+GR : 385.974
+MB : 177.775
+MB : 102.627
+MB : 83.9775
+MB : 95.6175
+MB : 81.9973
+GR : 167.967
+MB : 178.079
+MB : 215.95
+GR : 231.822
+MB : 269.678
+MB : 393.006
+MB : 212.777
+MB : 63.7531
+MB : 0
+GR : 79.1629
+GR : 158.103
+MB : 241.901
+MB : 287.98
+MB : 118.469
+MB : 0
+MB : 0
+MB : 161.178
+GR : 59.5063
+GR : 319.091
+MB : 182.885
+MB : 277.718
+GR : 151.215
+GR : 318.824
+MB : 440.75
+MB : 0
+MB : 223.07
+MB : 196.676
+MB : 209.369
+GR : 0
+GR : 182.117
+MB : 306.637
+MB : 472.036
+MB : 0
+MB : 85.2639
+MB : 189.367
+MB : 391.56
+MB : 300.485
+MB : 246.346
+MB : 233.971
+MB : 111.723
+GR : 204.855
+MB : 267.179
+MB : 0
+MB : 55.9242
+MB : 0
+MB : 462.451
+MB : 0
+MB : 173.885
+GR : 116.148
+MB : 527.677
+GR : 0
+GR : 144.809
+MB : 138.314
+GR : 267.137
+GR : 135.505
+MB : 452.714
+MB : 424.641
+MB : 286.39
+GR : 163.26
+MB : 142.313
+MB : 107.788
+GR : 233.787
+MB : 403.773
+MB : 194.989
+MB : 446.937
+MB : 137.488
+MB : 197.903
+MB : 196.015
+MB : 270.755
+MB : 0
+MB : 295.403
+MB : 130.917
+MB : 123.031
+MB : 245.471
+MB : 132.448
+GR : 202.786
+MB : 0
+MB : 467.872
+MB : 229.874
+GR : 276.715
+MB : 0
+MB : 277.871
+MB : 0
+MB : 163.785
+MB : 331.395
+MB : 200.444
+GR : 131.1
+MB : 195.73
+MB : 247.436
+MB : 439.602
+MB : 247.268
+GR : 70.494
+MB : 0
+MB : 161.49
+GR : 270.629
+MB : 212.378
+MB : 202.079
+MB : 260.839
+MB : 398.161
+MB : 366.769
+MB : 175.959
+MB : 166.859
+MB : 314.887
+MB : 332.015
+MB : 168.468
+MB : 64.5456
+GR : 150.784
+MB : 0
+MB : 266.203
+GR : 200.7
+MB : 321.337
+MB : 0
+MB : 0
+MB : 0
+MB : 266.93
+MB : 168.262
+GR : 381.152
+MB : 173.998
+MB : 84.3563
+MB : 321.348
+MB : 171.833
+MB : 75.7799
+GR : 283.198
+GR : 208.878
+MB : 407.21
+MB : 0
+MB : 133.628
+MB : 471.495
+MB : 278.328
+MB : 343.526
+MB : 211.716
+GR : 0
+GR : 153.263
+GR : 268.054
+MB : 143.132
+MB : 323.348
+MB : 471.396
+MB : 267.401
+GR : 369.612
+MB : 178.288
+MB : 166.011
+MB : 88.6156
+MB : 208.584
+MB : 135.041
+GR : 216.52
+MB : 119.742
+MB : 0
+GR : 108.155
+MB : 276.063
+MB : 189.688
+MB : 229.994
+MB : 90.263
+MB : 266.501
+MB : 137.996
+MB : 300.716
+GR : 153.91
+MB : 89.3525
+GR : 129.963
+MB : 110.094
+MB : 169.632
+MB : 123.899
+MB : 217.808
+MB : 373.357
+MB : 79.8725
+GR : 376.263
+MB : 120.181
+MB : 443.931
+GR : 217.989
+MB : 126.701
+GR : 156.072
+MB : 0
+GR : 225.019
+GR : 459.484
+MB : 227.391
+MB : 353.302
+MB : 0
+MB : 250.416
+MB : 131.227
+MB : 172.465
+GR : 399.702
+MB : 426.837
+MB : 175.484
+GR : 570.256
+MB : 419.894
+GR : 438.644
+GR : 115.51
+MB : 243.769
+MB : 374.65
+MB : 287.523
+MB : 205.191
+GR : 139.097
+GR : 372.107
+MB : 116.199
+MB : 200.808
+MB : 242.045
+MB : 117.844
+MB : 355.069
+MB : 165.356
+GR : 144.014
+MB : 171.625
+MB : 112.884
+GR : 386.368
+MB : 261.523
+MB : 335.829
+MB : 108.613
+GR : 354.165
+GR : 188.622
+GR : 147.142
+MB : 157.531
+GR : 175.261
+MB : 123.807
+GR : 233.747
+GR : 433.524
+MB : 295.184
+MB : 186.791
+MB : 274.459
+MB : 119.421
+GR : 421.923
+MB : 134.099
+MB : 253.46
+MB : 109.547
+MB : 198.269
+MB : 197.548
+MB : 233.097
+MB : 247.781
+GR : 250.937
+MB : 127.401
+MB : 338.058
+GR : 162.937
+MB : 598.474
+MB : 355.692
+MB : 274.527
+MB : 416.73
+MB : 261.378
+GR : 146.115
+MB : 277.368
+GR : 189.02
+MB : 191.411
+MB : 99.4411
+MB : 88.1839
+MB : 0
+GR : 164.656
+MB : 173.8
+MB : 206.68
+MB : 263.7
+MB : 254.815
+MB : 181.103
+MB : 416.314
+MB : 148.752
+GR : 0
+GR : 119.577
+MB : 248.572
+MB : 137.642
+GR : 75.8574
+MB : 114.784
+MB : 104.841
+GR : 89.7879
+MB : 0
+MB : 0
+MB : 57.8274
+MB : 143.973
+MB : 279.114
+MB : 108.352
+MB : 80.4355
+MB : 89.9701
+MB : 84.5552
+GR : 337.109
+MB : 79.978
+MB : 71.697
+MB : 210.945
+MB : 236.976
+MB : 132.031
+GR : 164.005
+MB : 0
+MB : 268.279
+MB : 188.422
+MB : 200.74
+MB : 0
+MB : 241.279
+MB : 170.981
+GR : 0
+MB : 0
+GR : 195.111
+MB : 404.585
+MB : 346.06
+MB : 193.23
+GR : 423.781
+GR : 256.367
+MB : 224.419
+GR : 199.188
+MB : 212.571
+MB : 0
+GR : 233.079
+MB : 156.323
+MB : 52.7027
+GR : 215.062
+MB : 268.107
+MB : 72.969
+GR : 157.706
+MB : 196.903
+MB : 177.301
+GR : 92.4119
+GR : 258.686
+MB : 479.276
+MB : 223.214
+MB : 116.543
+MB : 421.092
+MB : 221.002
+MB : 0
+MB : 329.558
+GR : 241.043
+GR : 114.785
+MB : 94.8271
+GR : 184.755
+GR : 248.59
+MB : 92.1869
+MB : 412.777
+MB : 97.7157
+MB : 222.923
+MB : 84.2454
+GR : 123.846
+MB : 274.364
+MB : 0
+MB : 188.166
+MB : 183.117
+MB : 444.417
+MB : 0
+GR : 255.496
+GR : 215.079
+MB : 123.719
+GR : 181.272
+GR : 175.286
+MB : 101.825
+MB : 262.619
+GR : 338.063
+GR : 168.763
+MB : 170.419
+MB : 255.748
+GR : 280.969
+GR : 0
+MB : 317.567
+MB : 467.905
+GR : 0
+MB : 0
+MB : 199.93
+GR : 434.405
+MB : 0
+MB : 237.789
+MB : 432.903
+MB : 320.646
+GR : 98.6554
+MB : 160.228
+GR : 310.388
+MB : 216.573
+GR : 132.377
+MB : 355.354
+MB : 231.536
+GR : 253.291
+MB : 219.809
+MB : 83.144
+MB : 227.6
+MB : 166.165
+MB : 236.471
+GR : 193.337
+GR : 0
+MB : 0
+MB : 407.046
+MB : 358.724
+MB : 183.893
+MB : 200.951
+GR : 162.708
+MB : 78.3829
+MB : 398.216
+GR : 331.36
+MB : 128.367
+MB : 470.574
+MB : 361.426
+MB : 0
+MB : 301.209
+MB : 262.672
+MB : 304.805
+GR : 99.7164
+MB : 451.029
+MB : 441.587
+MB : 107.241
+MB : 353.381
+MB : 78.1663
+MB : 0
+MB : 114.506
+MB : 216.273
+GR : 69.1455
+GR : 130.919
+MB : 99.6641
+MB : 90.7135
+GR : 0
+MB : 157.642
+MB : 169.596
+MB : 121.21
+GR : 100.482
+MB : 0
+MB : 0
+MB : 200.515
+GR : 132.067
+MB : 435.436
+MB : 232.358
+MB : 59.7415
+MB : 75.1803
+MB : 154.661
+MB : 224.536
+MB : 126.568
+MB : 0
+GR : 145.778
+MB : 323.072
+MB : 140.751
+GR : 366.307
+MB : 64.8585
+MB : 186.035
+MB : 269.946
+MB : 469.26
+MB : 248.069
+GR : 418.293
+MB : 0
+MB : 0
+MB : 489.646
+MB : 53.3709
+MB : 150.118
+MB : 83.4228
+MB : 98.2292
+MB : 0
+MB : 181.399
+MB : 382.033
+MB : 230.834
+MB : 332.128
+MB : 118.549
+MB : 73.9271
+MB : 155.456
+GR : 471.037
+MB : 236.71
+MB : 205.458
+MB : 109.905
+MB : 404.936
+MB : 101.766
+MB : 412.055
+MB : 247.892
+GR : 178.479
+MB : 140.196
+MB : 299.323
+MB : 280.501
+MB : 180.186
+MB : 280.846
+MB : 95.5282
+MB : 105.189
+MB : 87.1944
+GR : 0
+MB : 318.565
+GR : 93.1561
+GR : 159.472
+MB : 0
+MB : 74.1537
+MB : 103.495
+MB : 212.298
+MB : 114.848
+MB : 113.572
+GR : 152.7
+MB : 71.7384
+MB : 272.945
+GR : 0
+GR : 138.768
+MB : 276.469
+GR : 435.862
+MB : 250.358
+GR : 381.338
+MB : 340.004
+MB : 105.342
+MB : 275.564
+MB : 160.531
+MB : 267.413
+MB : 417.151
+MB : 229.476
+MB : 0
+MB : 424.994
+MB : 0
+MB : 240.755
+MB : 248.224
+MB : 90.9209
+MB : 87.6958
+GR : 294.088
+MB : 429.081
+MB : 391.02
+GR : 122.704
+GR : 96.8022
+GR : 228.912
+MB : 421.733
+GR : 148.164
+MB : 185.117
+MB : 133.666
+GR : 358.234
+MB : 181.291
+MB : 0
+MB : 82.6353
+MB : 218.448
+MB : 317.046
+GR : 312.572
+GR : 0
+GR : 251.269
+MB : 166.567
+MB : 307.345
+GR : 432.375
+MB : 100.438
+MB : 103.775
+MB : 88.256
+MB : 166.457
+MB : 247.898
+MB : 71.3986
+GR : 176.081
+MB : 387.093
+MB : 0
+MB : 114.796
+GR : 0
+MB : 185.255
+GR : 94.1314
+MB : 179.994
+GR : 102.748
+MB : 140.41
+MB : 112.847
+MB : 151.052
+MB : 242.583
+MB : 143.946
+MB : 0
+GR : 205.271
+MB : 131.859
+MB : 291.662
+MB : 187.063
+GR : 0
+MB : 70.5738
+MB : 304.262
+MB : 127.673
+MB : 162.696
+MB : 0
+MB : 84.985
+MB : 199.908
+GR : 236.545
+MB : 128.165
+MB : 120.726
+GR : 422.039
+MB : 143.74
+GR : 265.323
+MB : 426.068
+MB : 124.539
+GR : 198.102
+MB : 0
+MB : 420.948
+GR : 191.857
+MB : 254.074
+MB : 293.847
+MB : 171.098
+MB : 269.779
+MB : 138.621
+GR : 253.987
+MB : 260.532
+MB : 249.909
+MB : 237.288
+MB : 347
+MB : 126.185
+MB : 190.648
+GR : 0
+GR : 112.995
+MB : 249.169
+MB : 207.968
+MB : 393.417
+MB : 70.3848
+MB : 282.132
+GR : 258.83
+MB : 417.859
+MB : 257.849
+MB : 270.049
+MB : 0
+MB : 277.535
+GR : 226.211
+MB : 131.51
+MB : 91.0555
+GR : 337.956
+MB : 224.134
+MB : 462.704
+MB : 280.259
+GR : 113.689
+MB : 92.3992
+MB : 160.085
+MB : 316.395
+GR : 134.576
+MB : 298.81
+MB : 0
+MB : 105.641
+MB : 152.906
+GR : 233.139
+GR : 102.076
+GR : 81.2428
+GR : 176.509
+MB : 68.0133
+MB : 87.6961
+MB : 72.9158
+MB : 78.354
+GR : 416.51
+MB : 261.571
+GR : 188.267
+GR : 224.935
+MB : 63.6261
+MB : 372.766
+GR : 265.209
+MB : 100.471
+MB : 346.3
+MB : 68.9201
+MB : 0
+MB : 0
+MB : 230.562
+MB : 236.79
+GR : 224.335
+GR : 239.68
+GR : 408.296
+MB : 80.506
+MB : 177.143
+MB : 420.698
+MB : 0
+MB : 195.351
+MB : 230.067
+MB : 289.675
+GR : 0
+MB : 296.866
+MB : 139.073
+MB : 388.092
+MB : 199.314
+MB : 445.416
+MB : 227.291
+GR : 189.723
+GR : 313.778
+MB : 236.252
+MB : 234.079
+GR : 215.599
+MB : 87.7564
+MB : 409.517
+GR : 259.479
+GR : 70.6727
+MB : 261.753
+GR : 373.483
+MB : 274.992
+MB : 262.101
+MB : 252.453
+GR : 217.642
+MB : 0
+MB : 459.791
+MB : 0
+GR : 175.06
+GR : 227.721
+MB : 208.52
+MB : 0
+GR : 305.63
+MB : 83.2618
+GR : 116.278
+MB : 450.243
+MB : 413.628
+MB : 187.899
+MB : 170.187
+GR : 460.16
+MB : 63.0045
+GR : 255.368
+GR : 150.694
+GR : 157.086
+MB : 121.514
+MB : 182.826
+GR : 280.469
+MB : 328.372
+MB : 186.373
+MB : 66.6402
+MB : 292.194
+GR : 129.505
+MB : 120.295
+MB : 91.9843
+MB : 186.615
+MB : 248.057
+GR : 356.755
+GR : 94.4751
+GR : 150.965
+MB : 241.282
+GR : 61.9753
+GR : 293.803
+MB : 182.043
+GR : 306.259
+GR : 241.321
+MB : 161.335
+MB : 148.684
+MB : 284.726
+GR : 413.25
+GR : 133.703
+MB : 0
+MB : 142.595
+MB : 260.466
+MB : 240.884
+MB : 0
+GR : 158.594
+MB : 239.762
+MB : 257.658
+MB : 139.489
+MB : 341.925
+GR : 0
+MB : 224.867
+MB : 276.235
+GR : 301.121
+MB : 0
+MB : 77.0545
+MB : 368.488
+MB : 436.23
+MB : 455.378
+MB : 147.344
+MB : 148.314
+MB : 143.038
+MB : 153.349
+MB : 125.668
+MB : 344.958
+MB : 238.698
+MB : 0
+MB : 469.409
+MB : 265.938
+GR : 91.578
+MB : 0
+GR : 425.635
+MB : 284.142
+GR : 88.4983
+GR : 94.7383
+MB : 304.052
+MB : 134.65
+GR : 201.991
+GR : 226.312
+MB : 212.067
+MB : 92.3636
+GR : 258.679
+GR : 222.442
+MB : 0
+MB : 273.055
+MB : 275.453
+MB : 477.558
+MB : 78.4978
+GR : 581.286
+MB : 450.067
+MB : 157.71
+MB : 0
+MB : 107.53
+MB : 136.281
+GR : 178.727
+MB : 144.696
+GR : 159.583
+MB : 146.044
+MB : 201.653
+MB : 119.764
+MB : 74.69
+GR : 0
+MB : 129.368
+GR : 222.891
+MB : 0
+MB : 258.402
+MB : 332.464
+MB : 284.252
+MB : 94.3594
+MB : 196.758
+MB : 234.499
+MB : 0
+GR : 291.37
+MB : 142.406
+GR : 110.79
+GR : 359.222
+MB : 99.9396
+MB : 92.9709
+MB : 86.3475
+MB : 340.747
+MB : 61.4296
+MB : 100.838
+MB : 0
+GR : 152.234
+MB : 247.098
+MB : 374.517
+MB : 0
+MB : 54.6084
+MB : 212.045
+MB : 72.3798
+GR : 0
+GR : 280.659
+GR : 126.433
+MB : 108.844
+GR : 406.504
+MB : 0
+MB : 200.587
+MB : 0
+MB : 185.932
+MB : 141.096
+MB : 392.063
+GR : 0
+GR : 156.22
+GR : 0
+MB : 132.26
+GR : 149.712
+MB : 140.234
+GR : 102.115
+MB : 93.1445
+MB : 74.0529
+GR : 466.883
+MB : 95.8197
+MB : 0
+MB : 315.482
+GR : 88.7623
+GR : 106.098
+GR : 151.853
+MB : 246.925
+MB : 266.864
+MB : 0
+GR : 346.064
+GR : 123.169
+GR : 67.8552
+MB : 131.909
+MB : 215.882
+MB : 305.268
+GR : 475.138
+MB : 448.602
+MB : 239.907
+GR : 0
+GR : 0
+MB : 242.8
+MB : 408.745
+MB : 318.484
+MB : 269.499
+MB : 406.256
+MB : 134.843
+MB : 353.102
+GR : 0
+MB : 204.673
+GR : 226.3
+MB : 133.253
+MB : 156.094
+MB : 409.897
+MB : 251.69
+MB : 0
+MB : 129.187
+GR : 301.011
+GR : 204.684
+GR : 212.323
+MB : 126.61
+MB : 205.358
+MB : 148.589
+MB : 0
+MB : 0
+MB : 122.574
+MB : 134.758
+MB : 204.272
+GR : 0
+MB : 144.299
+GR : 205.017
+MB : 106.394
+MB : 0
+MB : 122.42
+MB : 0
+GR : 176.037
+MB : 186.052
+GR : 139.669
+MB : 0
+MB : 255.702
+MB : 215.048
+MB : 138.841
+MB : 120.627
+MB : 402.358
+MB : 0
+GR : 256.366
+MB : 89.5953
+MB : 96.1729
+MB : 130.445
+GR : 456.695
+GR : 180.094
+MB : 161.145
+MB : 376.694
+GR : 153.107
+MB : 63.8695
+MB : 119.999
+GR : 0
+MB : 220.7
+MB : 180.536
+MB : 185.319
+MB : 61.4143
+MB : 211.663
+MB : 232.633
+MB : 322.647
+MB : 204.148
+MB : 71.0888
+MB : 0
+MB : 0
+MB : 94.193
+MB : 224.142
+MB : 310.65
+MB : 129.502
+MB : 72.3779
+MB : 229.656
+MB : 96.4986
+GR : 204.719
+MB : 0
+MB : 195.304
+GR : 276.696
+MB : 199.172
+MB : 186.785
+MB : 120.156
+MB : 242.145
+MB : 212.185
+MB : 100.78
+MB : 303.11
+MB : 171.649
+GR : 0
+MB : 160.066
+MB : 69.9243
+MB : 0
+GR : 361.508
+GR : 183.314
+MB : 124.438
+MB : 106.757
+MB : 207.427
+GR : 134.389
+MB : 162.208
+MB : 403.173
+GR : 175.447
+MB : 80.6627
+MB : 111.71
+MB : 404.481
+MB : 238.288
+MB : 77.4815
+MB : 214.256
+MB : 99.6072
+GR : 103.444
+MB : 98.5346
+GR : 113.649
+MB : 0
+MB : 241.922
+GR : 0
+GR : 302.615
+MB : 250.971
+MB : 76.6321
+GR : 266.054
+MB : 260.891
+MB : 188.654
+MB : 211.063
+MB : 78.0047
+MB : 129.295
+MB : 438.726
+GR : 210.627
+GR : 339.87
+MB : 126.414
+MB : 269.354
+MB : 98.1431
+MB : 240.824
+MB : 269.105
+MB : 256.98
+MB : 185.678
+MB : 210.768
+MB : 102.413
+MB : 62.6174
+GR : 99.7204
+GR : 122.178
+MB : 228.997
+MB : 242.784
+GR : 180.996
+MB : 78.0518
+GR : 476.893
+GR : 429.279
+MB : 286.492
+MB : 285.998
+MB : 0
+MB : 75.9411
+MB : 196.554
+MB : 522.968
+MB : 120.206
+MB : 274.498
+MB : 95.118
+MB : 95.2861
+GR : 430.027
+MB : 136.21
+MB : 60.3097
+MB : 147.573
+MB : 474.538
+GR : 157.635
+GR : 197.823
+MB : 100.394
+GR : 0
+MB : 155.229
+MB : 130.886
+MB : 95.55
+GR : 255.288
+MB : 231.86
+MB : 59.7426
+GR : 338.73
+GR : 0
+MB : 82.7402
+MB : 198.097
+MB : 410.647
+MB : 233.342
+MB : 279.581
+GR : 143.2
+MB : 193.434
+MB : 0
+MB : 176.718
+MB : 265.995
+MB : 278.667
+MB : 60.1441
+MB : 108.872
+GR : 0
+MB : 125.297
+MB : 230.936
+MB : 0
+MB : 145.105
+MB : 395.779
+GR : 77.7197
+MB : 216.739
+GR : 125.7
+MB : 330.517
+GR : 548.97
+GR : 174.575
+GR : 370.592
+MB : 393.341
+MB : 66.7989
+MB : 144.346
+MB : 398.809
+MB : 134.446
+MB : 442.758
+MB : 134.174
+MB : 71.9704
+GR : 191.436
+MB : 334.416
+MB : 248.735
+GR : 135.281
+MB : 0
+GR : 210.481
+MB : 208.82
+MB : 204.538
+MB : 213.836
+GR : 73.9597
+GR : 236.46
+MB : 101.278
+MB : 192.289
+MB : 264.446
+MB : 319.967
+GR : 260.694
+MB : 137.975
+MB : 101.633
+GR : 0
+MB : 134.451
+MB : 151.251
+GR : 371.413
+MB : 235.753
+MB : 91.6802
+GR : 291.825
+MB : 0
+MB : 125.091
+GR : 169.722
+MB : 262.085
+GR : 0
+MB : 0
+MB : 242.117
+MB : 68.912
+MB : 231.384
+MB : 210.947
+MB : 175.026
+GR : 209.578
+MB : 394.25
+GR : 92.4427
+GR : 206.898
+MB : 319.988
+MB : 443.771
+MB : 266.521
+GR : 147.408
+MB : 376.748
+MB : 141.615
+MB : 226.462
+GR : 142.313
+GR : 316.666
+MB : 174.636
+MB : 412.554
+GR : 152.323
+MB : 384.629
+MB : 246.663
+GR : 173.145
+GR : 0
+MB : 140.128
+MB : 0
+GR : 131.007
+MB : 262.555
+MB : 88.3232
+GR : 418.279
+MB : 161.637
+MB : 243.763
+MB : 92.3587
+MB : 302.908
+GR : 246.677
+MB : 0
+MB : 414.37
+MB : 121.58
+MB : 273.95
+MB : 464.542
+MB : 58.4624
+MB : 125.577
+MB : 104.935
+MB : 160.1
+MB : 412.482
+MB : 220.501
+MB : 359.138
+MB : 273.13
+MB : 98.3875
+GR : 244.022
+MB : 196.948
+MB : 218.336
+MB : 271.681
+MB : 749.678
+MB : 143.748
+MB : 233.782
+GR : 204.851
+MB : 74.2372
+MB : 161.172
+MB : 158.163
+MB : 464.355
+MB : 284.186
+MB : 153.676
+GR : 668.741
+MB : 259.14
+MB : 441.738
+MB : 279.146
+MB : 176.068
+MB : 50.7633
+GR : 444.05
+MB : 127.142
+MB : 390.994
+MB : 370.833
+GR : 153.431
+MB : 56.6601
+MB : 89.2697
+MB : 121.188
+GR : 207.142
+GR : 130.312
+MB : 281.909
+GR : 120.739
+MB : 238.351
+MB : 208.469
+GR : 214.704
+MB : 423.227
+MB : 117.68
+MB : 332.527
+MB : 78.8227
+GR : 336.592
+GR : 468.596
+MB : 154.722
+MB : 231.285
+MB : 103.341
+MB : 224.145
+MB : 256.712
+MB : 229.787
+GR : 131.665
+MB : 69.5816
+MB : 476.671
+GR : 211.15
+GR : 157.607
+MB : 190.956
+MB : 141.509
+GR : 474.212
+GR : 253.355
+MB : 404.761
+GR : 290.508
+MB : 197.87
+GR : 191.678
+MB : 279.096
+MB : 134.167
+MB : 243.529
+GR : 0
+GR : 205.256
+GR : 101.781
+MB : 0
+MB : 152.695
+MB : 180.789
+MB : 286.156
+MB : 122.895
+MB : 167.503
+GR : 178.682
+MB : 150.331
+MB : 0
+GR : 376.974
+MB : 127.785
+MB : 0
+GR : 110.736
+MB : 295.034
+GR : 0
+MB : 218.939
+GR : 241.119
+GR : 174.977
+MB : 235.681
+MB : 365.126
+MB : 115.156
+MB : 99.859
+MB : 443.05
+MB : 69.6096
+MB : 271.696
+MB : 87.7722
+MB : 138.604
+MB : 60.2236
+MB : 184.487
+MB : 76.2521
+MB : 80.2087
+MB : 265.537
+GR : 150.633
+MB : 347.009
+MB : 0
+MB : 146.353
+MB : 365.272
+MB : 248.859
+MB : 83.546
+MB : 355.526
+GR : 155.339
+MB : 93.3122
+MB : 69.7949
+MB : 275.612
+MB : 295.083
+MB : 149.619
+MB : 123.068
+MB : 95.7695
+MB : 87.7331
+MB : 60.4265
+GR : 205.761
+MB : 0
+MB : 0
+MB : 390.182
+GR : 154.289
+MB : 202.168
+GR : 0
+MB : 137.881
+MB : 425.664
+GR : 187.125
+MB : 0
+MB : 0
+MB : 0
+MB : 117.009
+MB : 0
+MB : 436.972
+MB : 192.872
+MB : 0
+MB : 235.562
+MB : 104.235
+GR : 148.886
+MB : 269.338
+MB : 0
+GR : 375.883
+GR : 299.658
+GR : 0
+MB : 148.083
+GR : 173.257
+MB : 253.774
+MB : 112.789
+MB : 302.211
+MB : 0
+MB : 61.197
+MB : 247.973
+MB : 203.971
+GR : 224.752
+MB : 0
+MB : 79.7174
+MB : 125.537
+MB : 109.456
+MB : 182.242
+GR : 144.457
+GR : 287.576
+GR : 266.752
+GR : 134.151
+MB : 272.588
+MB : 447.997
+GR : 259.326
+GR : 174.826
+MB : 272.197
+MB : 215.215
+GR : 0
+GR : 154.272
+MB : 279.47
+MB : 65.6975
+MB : 208.651
+MB : 105.823
+GR : 151.713
+MB : 209.625
+MB : 437.751
+MB : 246.436
+MB : 449.812
+MB : 262.781
+MB : 245.83
+MB : 493.417
+GR : 413.596
+MB : 208.295
+MB : 95.6618
+MB : 0
+MB : 402.929
+MB : 359.489
+GR : 191.28
+GR : 456.711
+GR : 150.801
+MB : 271.18
+MB : 148.293
+MB : 292.702
+MB : 169.134
+MB : 271.274
+MB : 98.3572
+MB : 170.214
+MB : 97.191
+MB : 171.083
+MB : 106.544
+MB : 101.07
+MB : 233.709
+GR : 227.021
+MB : 130.993
+MB : 67.5196
+MB : 232.098
+MB : 282.636
+MB : 72.67
+MB : 338.84
+GR : 168.082
+MB : 80.7716
+GR : 110.65
+MB : 300.747
+MB : 0
+GR : 225.801
+MB : 247.717
+GR : 0
+GR : 372.892
+MB : 121.995
+GR : 162.449
+MB : 0
+MB : 210.222
+MB : 199.504
+MB : 455.834
+MB : 0
+MB : 370.482
+MB : 321.843
+MB : 103.829
+MB : 402.307
+MB : 319.144
+MB : 0
+MB : 109.767
+MB : 150.296
+MB : 426.384
+GR : 227.448
+MB : 220.616
+MB : 103.05
+MB : 140.189
+GR : 245.78
+MB : 81.7921
+MB : 125.87
+MB : 192.859
+MB : 385.391
+MB : 112.222
+GR : 161.207
+MB : 213.587
+GR : 333.626
+MB : 0
+MB : 240.222
+MB : 83.1732
+GR : 207.454
+MB : 214.298
+MB : 89.6985
+MB : 396.473
+MB : 124.178
+MB : 183.014
+GR : 117.954
+MB : 120.829
+MB : 101.237
+MB : 0
+MB : 457.234
+MB : 0
+MB : 284.593
+GR : 411.073
+GR : 112.7
+MB : 0
+MB : 360.439
+MB : 175.264
+MB : 411.18
+MB : 245.899
+MB : 0
+MB : 263.302
+GR : 138.607
+MB : 0
+MB : 254.324
+MB : 216.276
+MB : 144.237
+MB : 138.555
+MB : 0
+MB : 135.343
+MB : 70.2279
+MB : 87.4105
+MB : 0
+GR : 445.29
+MB : 292.229
+MB : 81.7425
+MB : 76.0593
+MB : 231.542
+MB : 462.736
+MB : 85.318
+MB : 129.227
+MB : 80.1654
+GR : 383.182
+MB : 259.55
+MB : 460.613
+MB : 123.066
+MB : 422.089
+GR : 0
+GR : 267.928
+MB : 159.464
+GR : 584.428
+GR : 207.316
+GR : 165.985
+MB : 196.334
+MB : 415.737
+MB : 258.245
+GR : 70.4511
+GR : 183.745
+MB : 124.308
+MB : 0
+MB : 386.035
+MB : 74.5866
+MB : 267.781
+MB : 105.812
+MB : 71.9094
+GR : 202.504
+MB : 288.979
+MB : 364.331
+MB : 212.667
+MB : 138.027
+MB : 337.594
+GR : 0
+MB : 0
+MB : 153.105
+GR : 316.238
+MB : 241.559
+MB : 225.005
+GR : 160.434
+MB : 410.858
+MB : 146.651
+MB : 410.47
+MB : 261.239
+MB : 0
+MB : 0
+MB : 177.344
+GR : 0
+MB : 72.0738
+MB : 129.988
+GR : 424.099
+MB : 263.637
+GR : 151.771
+MB : 186.776
+MB : 118.832
+MB : 52.348
+MB : 251.236
+GR : 94.7144
+MB : 132.946
+MB : 320.907
+GR : 127.933
+MB : 458.684
+MB : 0
+MB : 220.182
+MB : 485.173
+MB : 215.222
+GR : 303.742
+MB : 95.7794
+MB : 419.164
+MB : 86.127
+MB : 135.334
+MB : 0
+MB : 208.383
+MB : 106.252
+MB : 233.295
+MB : 255.126
+MB : 307.81
+MB : 280.522
+MB : 240.927
+MB : 333.425
+MB : 451.946
+GR : 459.922
+MB : 169.421
+MB : 196.903
+MB : 0
+MB : 365.98
+MB : 260.615
+GR : 149.22
+MB : 0
+MB : 80.24
+GR : 173.266
+MB : 204.341
+MB : 0
+GR : 257.17
+MB : 152.909
+GR : 178.956
+MB : 160.304
+GR : 155.561
+GR : 138.217
+GR : 163.961
+MB : 58.3555
+MB : 96.944
+MB : 64.1365
+MB : 201.48
+MB : 142.074
+MB : 86.1906
+MB : 249.879
+MB : 97.5156
+MB : 298.33
+MB : 0
+MB : 155.909
+MB : 241.697
+MB : 108.196
+MB : 84.5569
+MB : 115.384
+GR : 0
+GR : 212.979
+MB : 116.488
+MB : 128.743
+MB : 206.903
+MB : 366.494
+MB : 129.502
+MB : 254.462
+MB : 213.638
+MB : 198.985
+MB : 194.481
+MB : 426.142
+MB : 424.739
+MB : 200.481
+MB : 126.754
+MB : 448.692
+MB : 85.233
+MB : 0
+MB : 0
+MB : 0
+GR : 175.209
+MB : 73.8383
+MB : 417.158
+GR : 137.892
+MB : 360.486
+GR : 428.021
+MB : 271.399
+MB : 406.836
+MB : 247.106
+GR : 174.691
+MB : 269.48
+MB : 67.5782
+MB : 219.464
+MB : 289.529
+GR : 104.704
+MB : 256.974
+MB : 333.959
+GR : 387.942
+MB : 128.763
+GR : 117.972
+MB : 246.987
+MB : 348.167
+MB : 228.133
+GR : 174.049
+MB : 82.9059
+MB : 431.068
+GR : 205.684
+MB : 138.396
+GR : 318.771
+MB : 106.566
+MB : 94.1737
+MB : 0
+GR : 133.627
+GR : 164.848
+MB : 0
+GR : 388.837
+MB : 260.466
+MB : 102.924
+MB : 281.794
+GR : 110.374
+MB : 283.986
+MB : 76.6384
+MB : 75.4962
+MB : 341.047
+MB : 177.991
+MB : 185.13
+MB : 129.223
+MB : 171.968
+MB : 110.648
+MB : 139.472
+MB : 0
+GR : 462.747
+GR : 414.281
+MB : 275.91
+MB : 0
+MB : 0
+GR : 389.068
+MB : 249.903
+MB : 159.431
+MB : 0
+GR : 207.02
+MB : 309.912
+GR : 156.162
+MB : 401.929
+MB : 313.931
+MB : 153.686
+MB : 260.031
+MB : 161.917
+MB : 115.035
+MB : 177.122
+MB : 0
+MB : 119.501
+MB : 422.639
+MB : 326.685
+MB : 152.433
+MB : 147.691
+GR : 160.012
+GR : 228.7
+MB : 260.404
+MB : 412.012
+MB : 443.931
+MB : 255.054
+MB : 230.441
+MB : 464.846
+MB : 160.194
+MB : 0
+MB : 264.241
+MB : 415.814
+MB : 137.664
+MB : 466.861
+GR : 0
+MB : 146.647
+MB : 174.35
+MB : 0
+GR : 203.822
+MB : 242.453
+MB : 97.886
+MB : 98.2772
+MB : 230.129
+MB : 69.7624
+MB : 258.41
+MB : 0
+GR : 130.441
+MB : 112.256
+MB : 247.133
+MB : 100.088
+MB : 269.844
+MB : 106.654
+MB : 0
+MB : 264.122
+MB : 130.626
+MB : 275.551
+MB : 246.974
+MB : 208.865
+MB : 248.198
+MB : 0
+MB : 111.102
+MB : 121.556
+GR : 183.35
+MB : 61.7262
+GR : 236.69
+MB : 181.395
+MB : 310.795
+MB : 259.83
+MB : 127.15
+MB : 284.859
+MB : 120.092
+MB : 151.953
+MB : 0
+MB : 170.253
+GR : 388.207
+MB : 165.62
+MB : 250.114
+MB : 441.301
+MB : 101.072
+GR : 75.1392
+GR : 169.954
+MB : 208.494
+MB : 210.718
+MB : 161.626
+MB : 0
+MB : 460.73
+MB : 144.659
+MB : 127.472
+GR : 212.806
+GR : 248.307
+MB : 87.364
+MB : 154.512
+MB : 418.167
+MB : 246.831
+MB : 382.272
+MB : 69.6169
+GR : 158.861
+MB : 154.373
+MB : 246.612
+MB : 144.29
+MB : 135.569
+MB : 400.77
+MB : 262.678
+MB : 276.989
+MB : 421.833
+MB : 276.311
+GR : 189.911
+MB : 85.9223
+MB : 164.191
+GR : 170.964
+MB : 275.599
+MB : 340.104
+MB : 199.967
+MB : 145.602
+MB : 125.652
+GR : 216.198
+GR : 290.34
+GR : 221.946
+MB : 161.663
+MB : 230.629
+MB : 335.305
+MB : 96.5983
+MB : 395.117
+GR : 188.546
+MB : 175.149
+MB : 467.917
+GR : 119.337
+GR : 254.626
+MB : 409.796
+MB : 219.335
+MB : 178.122
+GR : 268.291
+GR : 98.5249
+GR : 137.403
+MB : 161.565
+MB : 230.026
+GR : 272.689
+MB : 128.486
+MB : 462.202
+MB : 191.398
+GR : 425.897
+MB : 165.245
+MB : 353.803
+MB : 58.1792
+GR : 311.939
+MB : 122.876
+MB : 191.624
+MB : 114.927
+MB : 0
+MB : 127.015
+GR : 159.237
+MB : 167.219
+MB : 228.972
+MB : 268.543
+GR : 125.115
+GR : 231.086
+MB : 126.643
+MB : 0
+MB : 220.976
+MB : 327.892
+MB : 285.841
+MB : 91.7162
+GR : 82.6143
+MB : 161.699
+MB : 263.826
+MB : 0
+MB : 168.538
+MB : 101.855
+MB : 273.233
+MB : 170.275
+GR : 313.794
+MB : 156.146
+MB : 204.1
+GR : 93.2008
+MB : 128.299
+MB : 86.3735
+MB : 402.913
+MB : 86.8314
+MB : 164.157
+MB : 93.9568
+GR : 258.079
+GR : 91.5515
+MB : 0
+GR : 139.357
+MB : 100.232
+MB : 62.1878
+MB : 269.955
+GR : 169.586
+MB : 250.168
+MB : 280.306
+GR : 358.626
+GR : 212.135
+GR : 0
+GR : 219.282
+MB : 98.1602
+MB : 203.17
+GR : 0
+MB : 0
+MB : 93.6541
+MB : 136.595
+GR : 164.733
+GR : 195.994
+MB : 246.763
+MB : 220.549
+MB : 65.7833
+MB : 85.0594
+GR : 0
+GR : 112.709
+MB : 89.0987
+GR : 0
+MB : 107.652
+MB : 451.056
+MB : 441.392
+MB : 279.904
+GR : 258.375
+GR : 0
+MB : 192.46
+MB : 98.9991
+MB : 137.789
+GR : 0
+MB : 78.1225
+MB : 0
+GR : 212.43
+MB : 207.906
+GR : 116.488
+MB : 242.286
+MB : 0
+MB : 116.932
+MB : 111.162
+MB : 0
+GR : 174.289
+MB : 220.499
+MB : 460.288
+MB : 280.804
+MB : 97.2411
+MB : 171.251
+MB : 232.903
+MB : 0
+MB : 164.56
+MB : 75.6551
+MB : 109.667
+GR : 369.32
+MB : 86.1084
+MB : 192.209
+MB : 55.7981
+MB : 0
+MB : 63.6034
+MB : 243.984
+MB : 210.311
+MB : 494.733
+MB : 122.259
+MB : 82.2168
+MB : 174.899
+MB : 0
+MB : 477.116
+MB : 279.875
+MB : 130.772
+GR : 208.047
+MB : 263.158
+GR : 0
+MB : 175.63
+MB : 327.109
+MB : 189.266
+MB : 452.85
+GR : 142.117
+MB : 413.256
+GR : 223.693
+GR : 197.046
+MB : 202.794
+MB : 160.395
+GR : 131.964
+MB : 261.393
+MB : 97.7186
+MB : 0
+MB : 0
+MB : 266.07
+MB : 443.075
+MB : 177.627
+MB : 63.671
+MB : 112.51
+MB : 200.916
+MB : 455.046
+GR : 238.08
+MB : 202.784
+GR : 289.196
+MB : 105.207
+MB : 345.816
+MB : 100.2
+MB : 116.845
+GR : 137.674
+GR : 264.808
+MB : 0
+GR : 235.885
+MB : 0
+GR : 218.691
+GR : 164.14
+GR : 77.4445
+MB : 0
+GR : 191.559
+MB : 0
+GR : 93.0387
+GR : 150.82
+MB : 295.714
+MB : 301.722
+GR : 227.891
+MB : 393.234
+MB : 128.794
+MB : 203.546
+MB : 263.919
+GR : 0
+MB : 274.295
+GR : 142.901
+GR : 0
+MB : 269.58
+MB : 100.025
+GR : 0
+GR : 0
+MB : 253.545
+MB : 202.729
+MB : 72.7186
+MB : 248.753
+MB : 173.74
+MB : 424.076
+GR : 215.212
+MB : 286.136
+MB : 130.038
+MB : 271.115
+MB : 104.088
+GR : 249.519
+GR : 460.883
+GR : 100.846
+MB : 0
+MB : 0
+MB : 120.732
+MB : 119.071
+MB : 246.489
+MB : 296.599
+GR : 322.96
+GR : 0
+MB : 87.3301
+MB : 211.871
+GR : 355.688
+GR : 135.422
+GR : 0
+MB : 120.387
+MB : 434.97
+MB : 267.735
+GR : 213.175
+MB : 455.516
+GR : 172.906
+MB : 60.8944
+GR : 195.92
+MB : 414.724
+MB : 257.508
+MB : 98.565
+MB : 238.537
+MB : 98.949
+GR : 127.445
+GR : 363.808
+MB : 171.544
+GR : 419.78
+GR : 192.712
+MB : 254.759
+GR : 0
+GR : 0
+MB : 67.7871
+GR : 125.201
+MB : 127.117
+MB : 301.992
+GR : 319.617
+MB : 0
+MB : 94.5114
+MB : 150.994
+MB : 102.477
+MB : 122.143
+MB : 73.2293
+MB : 293.552
+MB : 0
+GR : 101.662
+MB : 100.81
+GR : 205.655
+MB : 391.633
+MB : 141.587
+MB : 200.984
+MB : 272.373
+MB : 112.428
+MB : 98.5716
+MB : 263.622
+MB : 66.961
+GR : 329.493
+MB : 93.271
+GR : 312.336
+GR : 169.592
+GR : 212.238
+GR : 227.133
+MB : 106.703
+MB : 0
+MB : 0
+GR : 321.396
+MB : 173.319
+MB : 108.135
+MB : 161.578
+MB : 173.335
+MB : 251.219
+GR : 91.8531
+GR : 414.106
+GR : 144.82
+MB : 259.827
+MB : 91.6953
+GR : 0
+MB : 0
+GR : 0
+MB : 207.917
+MB : 254.765
+GR : 312.642
+MB : 280.736
+MB : 236.941
+MB : 327.012
+MB : 84.9004
+MB : 430.437
+MB : 287.079
+GR : 428.252
+GR : 0
+MB : 417.066
+GR : 0
+MB : 96.3432
+MB : 171.365
+MB : 325.339
+MB : 142.487
+MB : 214.269
+MB : 395.997
+MB : 259.28
+MB : 288.53
+MB : 280.953
+MB : 0
+MB : 138.064
+MB : 98.5033
+GR : 275.449
+MB : 73.4875
+MB : 136.749
+MB : 144.878
+GR : 514.565
+MB : 112.684
+MB : 333.721
+MB : 222.364
+GR : 110.535
+MB : 0
+GR : 221.662
+MB : 94.0603
+MB : 194.713
+MB : 127.914
+MB : 92.1204
+MB : 345.524
+MB : 470.21
+GR : 0
+GR : 435.858
+MB : 425.127
+MB : 116.342
+GR : 224.934
+MB : 77.9994
+MB : 172.876
+MB : 236.701
+MB : 0
+MB : 228.663
+MB : 67.4421
+GR : 467.596
+MB : 284.052
+GR : 233.422
+MB : 188.297
+MB : 82.4671
+MB : 157.383
+MB : 139.126
+MB : 461.861
+MB : 0
+MB : 136.2
+GR : 157.711
+GR : 198.787
+MB : 425.272
+MB : 194.974
+MB : 70.7783
+GR : 171.215
+MB : 0
+MB : 459.02
+MB : 82.4669
+MB : 261.889
+MB : 150.36
+MB : 254.517
+GR : 162.604
+MB : 104.457
+MB : 159.007
+MB : 139.29
+MB : 145.092
+MB : 273.63
+GR : 211.116
+MB : 66.8608
+MB : 170.237
+GR : 0
+MB : 440.423
+GR : 192.67
+GR : 0
+GR : 194.658
+MB : 318.734
+MB : 348.333
+MB : 56.3209
+GR : 0
+GR : 222.816
+MB : 203.307
+MB : 114.537
+MB : 0
+MB : 402.756
+GR : 454.437
+GR : 202.061
+MB : 263.165
+MB : 468.463
+MB : 119.197
+MB : 462.176
+MB : 0
+MB : 91.3414
+GR : 387.875
+MB : 110.437
+GR : 206.742
+MB : 193.943
+GR : 0
+GR : 229.272
+MB : 245.608
+GR : 155.988
+GR : 165.658
+MB : 439.58
+GR : 217.015
+MB : 67.6839
+MB : 564.747
+MB : 213.854
+MB : 219.61
+MB : 68.2102
+MB : 113.584
+GR : 0
+MB : 88.1405
+GR : 469.582
+GR : 0
+MB : 100.945
+MB : 114.779
+MB : 464.313
+GR : 453.423
+MB : 169.388
+MB : 116.647
+GR : 241.909
+MB : 373.491
+MB : 322.972
+MB : 88.4386
+MB : 114.633
+MB : 270.334
+MB : 141.167
+MB : 410.203
+MB : 82.1995
+GR : 175.823
+MB : 105.821
+MB : 0
+GR : 276.691
+MB : 363.105
+GR : 161.814
+MB : 235.758
+MB : 448.622
+MB : 0
+MB : 245.626
+GR : 192.145
+MB : 0
+MB : 240.053
+MB : 131.61
+MB : 176.628
+MB : 104.073
+MB : 100.082
+GR : 175.728
+MB : 435.736
+MB : 443.732
+MB : 362.929
+MB : 77.9621
+MB : 176.274
+MB : 202.37
+MB : 174.631
+MB : 206.358
+GR : 180.555
+MB : 0
+GR : 139.307
+MB : 258.636
+MB : 471.892
+GR : 0
+MB : 542.069
+MB : 216.34
+MB : 206.378
+MB : 95.5552
+MB : 148.544
+GR : 164.754
+MB : 0
+MB : 137.211
+MB : 62.7405
+MB : 210.176
+GR : 248.059
+MB : 239.267
+GR : 229.37
+GR : 234.282
+MB : 389.177
+MB : 54.9841
+MB : 109.13
+MB : 74.0316
+MB : 236.245
+MB : 337.396
+MB : 129.633
+MB : 0
+MB : 130.269
+MB : 449.156
+MB : 203.268
+GR : 250.639
+MB : 322.302
+MB : 144.901
+MB : 272.826
+GR : 119.359
+MB : 79.5455
+MB : 240.882
+MB : 199.719
+GR : 120.356
+GR : 139.631
+MB : 384.278
+MB : 66.9215
+MB : 198.613
+GR : 379.933
+GR : 222.764
+MB : 105.775
+MB : 120.957
+MB : 204.062
+GR : 200.634
+GR : 235.023
+GR : 149.089
+MB : 101.859
+GR : 187.622
+MB : 151.081
+MB : 343.659
+MB : 114.629
+MB : 281.825
+MB : 154.469
+MB : 261.817
+MB : 276.347
+GR : 0
+MB : 227.876
+MB : 152.662
+GR : 174.929
+GR : 252.342
+GR : 141.903
+MB : 453.155
+MB : 264.178
+MB : 90.4078
+GR : 0
+MB : 253.958
+MB : 474.046
+MB : 0
+MB : 0
+MB : 178.582
+MB : 197.796
+MB : 0
+MB : 261.437
+MB : 167.044
+MB : 273.702
+MB : 187.763
+GR : 451.352
+MB : 314.02
+MB : 179.79
+MB : 233.54
+MB : 418.591
+MB : 111.509
+MB : 125.614
+MB : 0
+MB : 0
+GR : 468.013
+MB : 211.702
+MB : 271.108
+MB : 217.254
+MB : 198.955
+MB : 96.2754
+MB : 54.5408
+GR : 107.654
+MB : 240.38
+MB : 136.405
+MB : 352.712
+MB : 112.882
+GR : 198.562
+MB : 183.856
+MB : 115.577
+MB : 149.426
+GR : 438.143
+GR : 273.05
+MB : 465.123
+MB : 241.467
+MB : 94.3526
+GR : 76.5372
+MB : 54.6979
+GR : 348.062
+MB : 115.965
+MB : 367.699
+MB : 244.431
+MB : 0
+GR : 254.082
+GR : 420.552
+GR : 215.966
+MB : 0
+MB : 0
+GR : 0
+MB : 467.686
+MB : 275.612
+MB : 96.618
+MB : 140.172
+MB : 175.992
+MB : 136.257
+MB : 158.831
+MB : 96.4033
+GR : 299.18
+MB : 202.143
+GR : 174.627
+MB : 266.484
+MB : 72.5971
+MB : 116.904
+MB : 123.772
+MB : 76.6754
+GR : 113.992
+MB : 349.379
+GR : 256.465
+MB : 0
+MB : 256.188
+MB : 84.4192
+MB : 200.517
+MB : 344.528
+MB : 0
+MB : 452.084
+GR : 465.526
+MB : 160.941
+GR : 361.959
+MB : 0
+MB : 210.753
+MB : 144.264
+MB : 171.34
+MB : 255.834
+MB : 0
+MB : 438.374
+MB : 174.087
+GR : 146.722
+MB : 122.718
+MB : 95.0192
+GR : 95.6379
+MB : 159.427
+MB : 0
+GR : 284.855
+GR : 95.2025
+GR : 422.673
+MB : 157.027
+MB : 191.113
+MB : 138.12
+MB : 227.435
+MB : 69.334
+MB : 196.972
+MB : 217.523
+MB : 169.881
+MB : 271.084
+MB : 297.751
+GR : 91.631
+GR : 463.877
+MB : 0
+MB : 0
+MB : 320.933
+MB : 86.8977
+MB : 665.325
+MB : 81.6032
+MB : 342.242
+MB : 481.124
+GR : 249.272
+MB : 440.087
+MB : 239.355
+MB : 203.385
+MB : 252.077
+MB : 194.888
+GR : 67.9719
+MB : 203.036
+MB : 460.485
+MB : 120.059
+MB : 99.6607
+GR : 0
+MB : 81.0049
+MB : 133.994
+GR : 157.781
+MB : 292.55
+GR : 447.345
+GR : 115.181
+MB : 164.381
+MB : 170.108
+MB : 96.343
+MB : 457.465
+GR : 96.4842
+MB : 309.061
+MB : 119.405
+MB : 369.656
+MB : 254.888
+MB : 156.994
+MB : 130.088
+GR : 254.538
+MB : 104.913
+MB : 89.0916
+GR : 152.314
+MB : 99.8582
+MB : 301.076
+MB : 429.731
+MB : 276.746
+GR : 125.242
+MB : 190.767
+MB : 142.654
+GR : 374.229
+MB : 168.072
+MB : 139.671
+GR : 266.195
+MB : 0
+GR : 247.182
+MB : 122.962
+MB : 102.921
+MB : 89.0585
+MB : 93.9109
+GR : 383.077
+MB : 183.167
+GR : 133.5
+GR : 181.649
+MB : 428.044
+MB : 109.972
+MB : 198.808
+MB : 155.437
+MB : 0
+MB : 70.8942
+MB : 149.441
+MB : 427.245
+MB : 116.651
+MB : 398.29
+GR : 167.686
+GR : 471.307
+GR : 0
+MB : 113.445
+MB : 0
+GR : 127.178
+MB : 257.547
+MB : 133.623
+MB : 453.548
+MB : 128.034
+GR : 285.553
+MB : 103.643
+MB : 309.358
+GR : 117.755
+MB : 141.642
+MB : 130.093
+GR : 105.217
+MB : 349.821
+MB : 200.846
+GR : 276.459
+MB : 51.2865
+MB : 84.2769
+GR : 201.026
+MB : 117.4
+MB : 397.293
+MB : 433.167
+MB : 262.013
+MB : 167.771
+MB : 172.064
+MB : 218.107
+MB : 374.556
+MB : 149.635
+GR : 87.2813
+MB : 259.378
+MB : 94.7844
+MB : 285.468
+MB : 116.732
+MB : 173.021
+GR : 285.282
+MB : 140.098
+GR : 228.234
+MB : 382.735
+MB : 187.211
+MB : 125.365
+MB : 88.1344
+MB : 162.778
+MB : 0
+MB : 158.808
+MB : 199.446
+GR : 115.746
+MB : 136.16
+GR : 159.15
+GR : 248.045
+MB : 462.429
+MB : 115.83
+MB : 91.6989
+MB : 169.111
+GR : 218.199
+GR : 412.092
+MB : 285.157
+MB : 216.815
+GR : 141.237
+MB : 79.6018
+GR : 206.67
+MB : 109.274
+MB : 166.071
+MB : 0
+MB : 139.574
+MB : 122.8
+GR : 388.088
+MB : 252.377
+MB : 0
+MB : 408.295
+MB : 70.2075
+MB : 0
+GR : 341.978
+MB : 121.501
+MB : 325.134
+MB : 130.132
+GR : 65.3812
+MB : 101.35
+MB : 394.881
+GR : 168.744
+MB : 260.849
+GR : 375.409
+MB : 205.54
+GR : 215.225
+MB : 184.21
+MB : 75.9647
+MB : 0
+GR : 468.505
+MB : 117.626
+MB : 89.4203
+MB : 291.199
+MB : 334.597
+MB : 437.38
+MB : 257.473
+GR : 227.777
+MB : 164.566
+GR : 485.829
+GR : 285.245
+MB : 281.542
+MB : 104.103
+MB : 0
+GR : 120.815
+MB : 259.561
+GR : 118.106
+MB : 139.233
+MB : 231.7
+GR : 192.527
+MB : 433.92
+MB : 239.85
+GR : 0
+MB : 149.104
+MB : 194.254
+MB : 392.97
+GR : 197.846
+MB : 188.999
+MB : 76.2697
+GR : 430.082
+MB : 232.471
+MB : 179.437
+MB : 166.471
+GR : 220.173
+MB : 130.836
+MB : 166.221
+MB : 189.172
+GR : 220.572
+GR : 0
+GR : 132.488
+GR : 401.359
+MB : 154.975
+GR : 216.643
+GR : 211.47
+MB : 180.083
+GR : 154.576
+MB : 272.881
+MB : 207.856
+MB : 194.248
+GR : 258.984
+MB : 294.729
+GR : 342.03
+MB : 230.187
+MB : 187.771
+GR : 467.03
+GR : 159.086
+MB : 92.456
+GR : 181.286
+GR : 277.024
+MB : 0
+MB : 74.1636
+MB : 200.359
+MB : 388.258
+MB : 209.889
+MB : 273.605
+MB : 331.115
+MB : 133.559
+GR : 93.8357
+GR : 297.983
+MB : 362.981
+GR : 348.663
+MB : 97.3919
+GR : 245.43
+GR : 132.669
+MB : 154.932
+MB : 101.193
+MB : 192.733
+GR : 76.2286
+MB : 457.301
+MB : 138.985
+MB : 166.072
+GR : 216.924
+MB : 151.923
+MB : 162.901
+MB : 181.989
+MB : 74.3896
+GR : 164.248
+MB : 143.509
+MB : 224.997
+MB : 187.277
+GR : 154.186
+GR : 175.873
+MB : 328.465
+GR : 323.655
+MB : 0
+GR : 417.104
+MB : 109.675
+MB : 141.839
+MB : 280.562
+MB : 261.456
+MB : 191.045
+MB : 70.2695
+MB : 197.761
+MB : 190.368
+MB : 68.7401
+GR : 166.609
+MB : 0
+MB : 85.8962
+GR : 164.138
+GR : 453.293
+MB : 164.693
+GR : 151.974
+MB : 244.278
+MB : 206.173
+MB : 199.253
+MB : 181.173
+MB : 280.376
+GR : 144.123
+MB : 0
+MB : 69.3986
+GR : 231.578
+GR : 250.162
+MB : 344.568
+MB : 225.305
+MB : 77.7446
+MB : 259.115
+GR : 272.675
+MB : 209.897
+GR : 241.72
+GR : 250
+MB : 0
+GR : 170.18
+MB : 317.324
+GR : 239.017
+MB : 163.589
+MB : 0
+MB : 136.302
+GR : 173.115
+MB : 539.657
+MB : 392.028
+MB : 192.331
+MB : 86.8345
+MB : 168.555
+MB : 345.161
+MB : 421.9
+MB : 105.819
+MB : 162.294
+MB : 436.153
+MB : 263.363
+GR : 113.196
+GR : 116.495
+MB : 453.12
+MB : 206.336
+GR : 467.076
+MB : 319.306
+MB : 256.54
+GR : 495.988
+MB : 0
+GR : 197.316
+MB : 259.959
+GR : 160.836
+MB : 355.589
+MB : 184.489
+GR : 134.433
+MB : 375.542
+GR : 179.104
+MB : 417.703
+MB : 273.589
+MB : 93.2286
+GR : 134.684
+MB : 188.47
+MB : 140.548
+MB : 189.193
+MB : 215.329
+GR : 423.91
+GR : 145.898
+MB : 150.416
+MB : 278.035
+MB : 423.687
+MB : 293.813
+GR : 262.047
+MB : 113.245
+MB : 154.915
+GR : 247.772
+GR : 384.202
+MB : 277.697
+MB : 228.585
+MB : 108.188
+MB : 108.6
+MB : 372.727
+MB : 197.71
+GR : 272.622
+MB : 155.603
+MB : 100.005
+MB : 0
+GR : 232.106
+MB : 86.6412
+GR : 174.403
+MB : 143.835
+MB : 83.5229
+MB : 202.012
+MB : 210.662
+MB : 96.9533
+GR : 333.652
+MB : 448.083
+GR : 360.389
+GR : 246.774
+GR : 195.189
+MB : 227.842
+MB : 194.072
+GR : 76.4885
+MB : 253.644
+MB : 214.759
+GR : 246.371
+GR : 86.9602
+MB : 264.939
+GR : 391.905
+MB : 58.0116
+MB : 268.559
+MB : 101.61
+MB : 476.114
+MB : 320.941
+MB : 140.754
+GR : 263.956
+MB : 219.518
+MB : 0
+GR : 383.954
+GR : 455.624
+MB : 216.79
+MB : 202.413
+MB : 88.8781
+GR : 315.26
+GR : 199.702
+MB : 210.09
+MB : 248.029
+GR : 145.644
+MB : 198.099
+GR : 116.726
+GR : 224.27
+GR : 259.416
+MB : 437.403
+MB : 402.596
+MB : 179.698
+MB : 156.078
+GR : 296.569
+MB : 128.864
+MB : 0
+MB : 151.209
+GR : 256.086
+GR : 318.346
+MB : 217.483
+GR : 157.494
+MB : 93.7174
+MB : 446.281
+MB : 271.122
+MB : 121.05
+MB : 156.727
+MB : 204.381
+MB : 218.374
+MB : 285.87
+MB : 152.436
+MB : 204.756
+MB : 669.886
+MB : 148.083
+GR : 94.5406
+GR : 125.092
+MB : 243.609
+GR : 255.726
+MB : 421.21
+MB : 181.115
+GR : 173.233
+GR : 203.749
+MB : 255.208
+MB : 136.512
+MB : 0
+MB : 246.028
+MB : 125.534
+MB : 395.165
+GR : 127.878
+MB : 174.716
+MB : 138.524
+GR : 252.1
+GR : 97.539
+MB : 0
+MB : 97.1677
+MB : 105.93
+MB : 295.462
+MB : 188.797
+MB : 79.2848
+MB : 331.495
+MB : 100.541
+MB : 227.154
+GR : 411.463
+MB : 104.106
+MB : 243.126
+MB : 306.587
+MB : 394.194
+GR : 251.471
+MB : 217.558
+MB : 143.546
+MB : 202.702
+GR : 268.039
+MB : 87.0857
+MB : 65.9011
+MB : 60.061
+GR : 244.186
+MB : 277.762
+MB : 128.226
+MB : 165.489
+MB : 394.777
+MB : 115.769
+MB : 69.6371
+MB : 133.979
+MB : 206.334
+MB : 245.054
+MB : 0
+MB : 131.873
+GR : 163.063
+GR : 279.306
+GR : 0
+MB : 166.961
+MB : 284.202
+MB : 132.566
+GR : 0
+MB : 123.561
+MB : 162.378
+MB : 163.23
+GR : 159.948
+MB : 174.399
+MB : 179.681
+MB : 157
+MB : 92.0486
+MB : 192.297
+MB : 118.74
+MB : 66.9129
+MB : 199.257
+MB : 441.794
+MB : 134.729
+MB : 134.797
+GR : 76.8347
+MB : 206.414
+GR : 236.983
+GR : 102.755
+GR : 123.699
+MB : 168.583
+MB : 145.045
+MB : 322.948
+MB : 227.139
+MB : 237.205
+MB : 363.192
+MB : 331.503
+MB : 188.117
+GR : 261.229
+GR : 256.508
+GR : 130.083
+MB : 252.023
+MB : 430.94
+MB : 259.625
+MB : 375.851
+MB : 96.5722
+MB : 132.179
+MB : 181.062
+MB : 165.128
+GR : 80.7303
+MB : 210.015
+MB : 208.289
+MB : 247.111
+GR : 227.768
+MB : 164.85
+MB : 147.629
+MB : 339.842
+MB : 268.329
+MB : 329.69
+MB : 150.552
+GR : 81.4391
+MB : 265.669
+MB : 0
+GR : 142.854
+MB : 255.492
+MB : 131.443
+MB : 329.268
+GR : 87.9054
+GR : 134.688
+MB : 77.3936
+MB : 0
+MB : 148.613
+MB : 311.092
+GR : 456.306
+GR : 211.142
+MB : 365.215
+MB : 192.887
+GR : 274.854
+MB : 105.282
+MB : 93.5359
+GR : 145.513
+MB : 280.326
+MB : 445.117
+MB : 216.202
+MB : 0
+GR : 364.691
+MB : 196.595
+MB : 223.072
+MB : 0
+MB : 0
+MB : 78.34
+MB : 111.017
+MB : 140.619
+MB : 284.681
+MB : 115.729
+MB : 234.268
+GR : 158.587
+MB : 0
+MB : 230.094
+GR : 160.987
+MB : 331.635
+MB : 261.769
+MB : 268.164
+GR : 147.864
+MB : 128.008
+MB : 246.202
+MB : 84.9019
+MB : 324.278
+MB : 183.64
+GR : 193.825
+MB : 229.796
+MB : 455.238
+GR : 141.581
+MB : 443.276
+MB : 100.071
+MB : 120.161
+MB : 421.593
+MB : 200.459
+MB : 66.4759
+MB : 84.2042
+MB : 255.436
+MB : 229.981
+MB : 373.069
+MB : 0
+MB : 178.051
+GR : 185.365
+MB : 56.0921
+MB : 131.162
+MB : 251.405
+MB : 56.2705
+GR : 334.108
+MB : 196.346
+GR : 181.422
+MB : 230.329
+GR : 460.579
+MB : 140.255
+MB : 322.315
+GR : 155.681
+GR : 458.693
+MB : 0
+GR : 97.2243
+MB : 178.197
+GR : 333.391
+MB : 214.923
+MB : 250.163
+MB : 178.712
+MB : 195.079
+MB : 152.628
+GR : 163.475
+MB : 154.899
+MB : 430.268
+MB : 246.155
+MB : 136.234
+GR : 348.803
+MB : 261.405
+GR : 135.321
+MB : 0
+MB : 107.24
+MB : 280.836
+GR : 229.06
+MB : 128.524
+MB : 204.302
+MB : 114.195
+MB : 129.254
+MB : 309.923
+GR : 394.988
+GR : 166.332
+MB : 0
+GR : 111.659
+MB : 101.919
+MB : 115.924
+MB : 160.477
+MB : 185.087
+MB : 137.346
+MB : 182.483
+GR : 107.079
+MB : 216.056
+MB : 156.958
+MB : 101.45
+MB : 0
+MB : 90.1002
+MB : 54.6115
+GR : 92.7764
+MB : 85.1024
+MB : 59.1996
+MB : 0
+MB : 128.308
+MB : 153.977
+MB : 82.0634
+MB : 229.09
+MB : 149.658
+GR : 129.548
+GR : 139.221
+MB : 231.153
+GR : 0
+MB : 374.529
+MB : 123.126
+GR : 158.701
+MB : 271.669
+MB : 162.698
+GR : 0
+MB : 198.088
+MB : 90.9196
+MB : 414.661
+GR : 91.2078
+MB : 377.711
+MB : 121.531
+MB : 261.481
+MB : 239.148
+MB : 109.24
+MB : 129.359
+MB : 0
+MB : 236.257
+MB : 236.001
+GR : 235.405
+MB : 0
+MB : 128.422
+MB : 106.369
+GR : 95.3584
+MB : 357.259
+MB : 281.937
+MB : 94.3577
+MB : 205.716
+MB : 68.8247
+MB : 204.427
+GR : 229.141
+MB : 249.133
+GR : 395.936
+MB : 242.13
+MB : 370.977
+MB : 193.586
+MB : 0
+MB : 86.9717
+MB : 217.576
+MB : 169.513
+MB : 247.741
+MB : 134.742
+GR : 410.508
+MB : 0
+MB : 262.808
+MB : 0
+MB : 109.133
+MB : 320.184
+MB : 405.804
+MB : 90.019
+GR : 246.628
+MB : 332.012
+MB : 0
+GR : 366.492
+MB : 0
+MB : 238.301
+GR : 374.341
+GR : 134.179
+MB : 97.6606
+GR : 172.501
+MB : 352.729
+MB : 273.662
+MB : 140.138
+MB : 145.771
+MB : 0
+MB : 177.922
+GR : 290.506
+MB : 114.143
+MB : 280.919
+GR : 468.195
+MB : 97.6266
+GR : 341.428
+MB : 157.159
+GR : 210.744
+MB : 221.437
+GR : 173.703
+MB : 138.516
+GR : 324.903
+GR : 190.761
+GR : 177.889
+MB : 261.535
+MB : 274.507
+MB : 81.5273
+GR : 120.862
+MB : 62.2645
+MB : 108.729
+MB : 89.9083
+MB : 249.779
+MB : 151.907
+MB : 395.809
+MB : 109.021
+MB : 251.948
+MB : 92.3135
+MB : 134.709
+GR : 341.176
+GR : 89.7616
+MB : 0
+MB : 141.439
+GR : 444.07
+MB : 261.984
+GR : 101.489
+MB : 207.543
+MB : 229.168
+MB : 127.879
+MB : 101.931
+MB : 64.6823
+MB : 67.4421
+MB : 279.953
+MB : 294.927
+MB : 195.97
+MB : 0
+MB : 0
+GR : 0
+GR : 178.308
+GR : 144.303
+MB : 276.765
+GR : 172.637
+MB : 437.275
+MB : 95.5141
+MB : 0
+MB : 254.291
+MB : 120.373
+MB : 0
+MB : 227.058
+GR : 270.621
+MB : 118.236
+MB : 181.679
+MB : 322.365
+GR : 0
+MB : 89.2376
+MB : 225.53
+GR : 0
+GR : 0
+MB : 67.8227
+MB : 166.643
+GR : 142.571
+MB : 252.65
+MB : 0
+MB : 151.348
+MB : 256.988
+MB : 227.03
+MB : 0
+MB : 108.701
+MB : 179.195
+MB : 250.89
+MB : 163.756
+GR : 194.447
+MB : 212.113
+MB : 151.109
+MB : 239.414
+MB : 147.485
+MB : 80.7794
+MB : 73.9631
+GR : 165.115
+MB : 77.6099
+GR : 165.496
+MB : 0
+MB : 266.403
+GR : 102.098
+MB : 103.145
+MB : 274.176
+MB : 434.261
+MB : 272.427
+MB : 450.738
+GR : 277.361
+MB : 139.21
+GR : 416.11
+MB : 0
+MB : 468.805
+MB : 131.053
+MB : 311.167
+GR : 212.821
+MB : 304.493
+MB : 235.206
+MB : 150.963
+MB : 158.253
+MB : 168.633
+GR : 117.474
+GR : 149.909
+MB : 261.823
+MB : 274.883
+MB : 248.914
+GR : 181.28
+GR : 0
+GR : 193.608
+MB : 560.295
+MB : 136.107
+GR : 123.771
+MB : 145.882
+GR : 98.9414
+MB : 451.151
+GR : 176.356
+MB : 456.76
+MB : 230.228
+GR : 268.635
+MB : 169.678
+MB : 459.623
+MB : 108.212
+GR : 0
+MB : 0
+MB : 165.3
+MB : 273.032
+MB : 271.348
+MB : 124.416
+GR : 201.014
+MB : 175.925
+MB : 58.253
+MB : 111.148
+MB : 244.079
+GR : 242.804
+MB : 232.968
+GR : 98.7891
+GR : 122.885
+GR : 471.176
+MB : 0
+GR : 164.428
+MB : 446.02
+MB : 225.146
+MB : 457.988
+GR : 242.709
+GR : 443.206
+MB : 449.585
+MB : 313.073
+MB : 0
+MB : 151.068
+GR : 188.238
+MB : 469.794
+GR : 404.558
+GR : 0
+MB : 262.106
+MB : 164.379
+GR : 129.476
+GR : 182.325
+MB : 112.435
+MB : 263.818
+GR : 243.812
+MB : 158.04
+MB : 176.805
+GR : 147.458
+MB : 275.018
+MB : 259.168
+MB : 149.915
+MB : 142.96
+MB : 207.274
+MB : 94.7608
+MB : 111.632
+GR : 200.351
+MB : 222.584
+MB : 88.6764
+MB : 277.125
+MB : 141.826
+MB : 275.525
+MB : 218.621
+GR : 155.324
+GR : 382.385
+MB : 0
+MB : 184.193
+GR : 0
+GR : 464.151
+MB : 283.339
+MB : 74.5841
+MB : 81.5639
+MB : 0
+MB : 306.295
+GR : 270.711
+MB : 255.699
+MB : 283.199
+GR : 456.598
+MB : 280.424
+MB : 235.501
+MB : 403.186
+MB : 230.579
+GR : 308.658
+MB : 105.317
+MB : 134.387
+MB : 87.9586
+MB : 242.284
+MB : 459.911
+MB : 231.644
+MB : 408.284
+MB : 58.2236
+MB : 121.194
+MB : 118.419
+MB : 234.281
+GR : 352.05
+MB : 226.953
+GR : 378.009
+MB : 0
+MB : 121.495
+GR : 288.828
+MB : 72.4839
+MB : 66.7383
+MB : 105.886
+MB : 449.148
+MB : 0
+MB : 424.801
+GR : 0
+GR : 188.46
+GR : 366.023
+GR : 209.252
+MB : 0
+MB : 0
+GR : 467.069
+GR : 112.72
+GR : 326.399
+MB : 266.839
+MB : 384.693
+GR : 208.81
+GR : 300.033
+MB : 152.574
+MB : 135.144
+GR : 383.783
+MB : 103.147
+MB : 285.242
+MB : 71.2995
+MB : 0
+GR : 224.457
+MB : 178.646
+GR : 137.84
+GR : 310.383
+MB : 163.477
+GR : 0
+GR : 280.674
+GR : 347.967
+GR : 240.281
+MB : 67.2386
+MB : 188.57
+GR : 256.177
+MB : 87.7826
+GR : 78.2903
+MB : 83.9191
+MB : 223.039
+MB : 255.896
+MB : 95.7889
+MB : 257.222
+GR : 417.631
+MB : 482.554
+MB : 314.574
+MB : 252.428
+MB : 106.488
+MB : 109.42
+MB : 415.106
+GR : 444.417
+MB : 215.477
+MB : 0
+MB : 267.114
+MB : 159.203
+MB : 231.965
+MB : 453.553
+MB : 235.774
+MB : 296.437
+MB : 213.654
+MB : 325.022
+MB : 286.8
+MB : 381.438
+MB : 101.973
+MB : 327.959
+MB : 70.8662
+MB : 172.985
+GR : 404.156
+GR : 167.256
+GR : 442.104
+MB : 126.382
+MB : 174.83
+MB : 0
+MB : 0
+MB : 112.22
+GR : 165.206
+MB : 264.766
+MB : 0
+MB : 179.005
+MB : 0
+MB : 256.57
+GR : 99.7172
+MB : 264.192
+MB : 141.338
+GR : 191.566
+MB : 338.627
+GR : 102.408
+MB : 0
+MB : 95.544
+GR : 107.601
+GR : 140.683
+GR : 147.08
+MB : 238.909
+MB : 120.513
+MB : 283.794
+MB : 139.273
+MB : 234.498
+GR : 140.963
+MB : 377.339
+MB : 146.908
+MB : 100.501
+MB : 371.8
+MB : 94.8196
+MB : 251.466
+MB : 144.256
+MB : 301.875
+MB : 84.2332
+MB : 339.743
+GR : 206.357
+MB : 0
+MB : 171.917
+MB : 481.358
+MB : 79.2245
+MB : 125.28
+GR : 219.828
+GR : 112.857
+MB : 202.517
+MB : 243.796
+MB : 215.003
+MB : 0
+MB : 367.329
+MB : 89.3195
+GR : 232.568
+MB : 202.716
+MB : 106.649
+MB : 432.83
+GR : 0
+MB : 214.359
+MB : 131.916
+MB : 0
+MB : 0
+MB : 143.967
+MB : 76.3266
+GR : 103.663
+MB : 147.238
+GR : 183.59
+GR : 216.972
+GR : 369.037
+GR : 163.249
+GR : 201.94
+MB : 116.812
+MB : 143.492
+MB : 140.297
+MB : 0
+MB : 435.797
+GR : 225.418
+GR : 144.281
+GR : 97.9423
+MB : 266.083
+MB : 576.885
+MB : 67.0902
+GR : 394.429
+MB : 90.584
+MB : 387.749
+MB : 226.127
+GR : 99.9893
+MB : 426.436
+GR : 457.858
+MB : 280.307
+MB : 0
+MB : 261.554
+MB : 0
+MB : 94.8015
+MB : 429.977
+GR : 288.633
+MB : 0
+MB : 0
+GR : 106.034
+MB : 214.858
+MB : 259.689
+GR : 360.751
+GR : 255.483
+MB : 301.681
+GR : 110.918
+MB : 94.283
+MB : 0
+GR : 121.166
+GR : 190.561
+MB : 113.831
+MB : 0
+MB : 291.587
+MB : 0
+MB : 116.946
+MB : 103.67
+MB : 0
+GR : 95.9295
+MB : 187.983
+MB : 86.5563
+GR : 343.64
+MB : 98.7124
+MB : 0
+MB : 188.013
+MB : 0
+MB : 65.3972
+MB : 420.507
+GR : 153.891
+MB : 148.025
+MB : 130.325
+MB : 228.037
+MB : 217.981
+MB : 358.243
+MB : 159.92
+GR : 361.553
+MB : 456.72
+MB : 0
+GR : 200.547
+MB : 0
+MB : 438.602
+MB : 322.448
+MB : 149.815
+MB : 84.3675
+GR : 124.772
+MB : 274.361
+GR : 189.838
+GR : 229.508
+GR : 204.666
+MB : 127.551
+GR : 0
+MB : 68.5276
+GR : 129.242
+MB : 171.011
+GR : 150.453
+MB : 186.479
+MB : 82.4992
+MB : 121.285
+MB : 0
+GR : 242.197
+GR : 116.816
+GR : 281.447
+MB : 251.204
+GR : 244.915
+MB : 70.582
+MB : 0
+MB : 218.195
+MB : 151.979
+GR : 277.422
+MB : 0
+MB : 69.1488
+MB : 108.826
+GR : 132.215
+GR : 363.661
+GR : 561.55
+GR : 173.623
+MB : 226.888
+GR : 341.765
+MB : 287.962
+GR : 316.331
+MB : 148.661
+MB : 115.744
+MB : 450.852
+GR : 407.974
+GR : 183.983
+MB : 258.784
+MB : 0
+MB : 129.216
+GR : 270.803
+MB : 130.193
+MB : 129.15
+GR : 248.961
+MB : 297.689
+GR : 340.401
+MB : 260.178
+MB : 140.977
+MB : 476.632
+GR : 244.664
+MB : 164.296
+GR : 118.431
+MB : 150.437
+MB : 91.4566
+MB : 64.2496
+GR : 432.339
+MB : 249.913
+MB : 202.092
+MB : 381.858
+GR : 322.372
+MB : 185.199
+GR : 303.61
+GR : 148.737
+MB : 355.53
+MB : 108.747
+GR : 259.152
+MB : 133.732
+MB : 307.136
+MB : 114.751
+MB : 166.618
+MB : 122.487
+MB : 291.701
+MB : 240.309
+MB : 384.562
+GR : 185.489
+MB : 430.678
+GR : 93.545
+MB : 146.235
+MB : 421.685
+MB : 104.685
+GR : 358.312
+MB : 93.8725
+MB : 216.703
+MB : 196.004
+MB : 380.988
+MB : 157.452
+MB : 134.789
+MB : 152.656
+MB : 392.04
+MB : 171.189
+MB : 93.0405
+MB : 178.86
+MB : 212.082
+GR : 291.817
+MB : 112.643
+MB : 138.612
+MB : 378.19
+GR : 395.837
+GR : 275.155
+MB : 150.753
+MB : 89.0795
+MB : 208.741
+MB : 58.5753
+MB : 163.019
+MB : 275.209
+MB : 94.506
+GR : 296.064
+MB : 472.824
+MB : 412.074
+MB : 82.1079
+GR : 686.782
+MB : 247.512
+GR : 200.418
+MB : 111.104
+MB : 222.03
+GR : 122.656
+MB : 230.704
+MB : 0
+GR : 128.689
+GR : 105.149
+MB : 300.203
+MB : 320.088
+MB : 119.287
+MB : 122.581
+MB : 163.9
+GR : 258.648
+MB : 344.267
+MB : 165.106
+MB : 434.705
+MB : 237.504
+MB : 99.6484
+MB : 101.822
+MB : 230.127
+GR : 446.29
+MB : 59.3131
+MB : 135.664
+MB : 145.905
+GR : 242.764
+MB : 151.937
+MB : 143.102
+GR : 0
+GR : 103.946
+MB : 264.828
+MB : 76.4869
+MB : 273.955
+MB : 79.85
+GR : 206.779
+MB : 191.644
+MB : 557.905
+MB : 72.5278
+MB : 124.459
+MB : 310.185
+GR : 194.121
+GR : 429.615
+MB : 442.026
+MB : 61.7987
+MB : 224.237
+MB : 0
+MB : 119.698
+GR : 80.8699
+MB : 140.717
+MB : 132.151
+MB : 343.57
+MB : 465.98
+GR : 91.233
+MB : 200.179
+MB : 138.838
+MB : 156.725
+MB : 102.394
+MB : 232.362
+MB : 323.785
+MB : 340.939
+GR : 209.472
+GR : 242.392
+MB : 0
+MB : 121.003
+GR : 159.443
+GR : 138.382
+MB : 175.965
+MB : 126.089
+MB : 109.761
+MB : 99.9141
+GR : 113.819
+MB : 126.908
+MB : 138.357
+MB : 303.41
+MB : 0
+GR : 180.212
+MB : 90.6984
+MB : 100.189
+MB : 97.437
+MB : 249.743
+MB : 125.388
+MB : 341.547
+MB : 134.407
+MB : 116.725
+MB : 116.564
+GR : 0
+MB : 107.48
+MB : 233.014
+MB : 295.234
+MB : 249.309
+MB : 403.402
+GR : 362.369
+MB : 0
+MB : 362.143
+MB : 188.743
+MB : 112.885
+MB : 0
+MB : 195.336
+MB : 396.793
+MB : 318.763
+MB : 255.201
+MB : 388.033
+MB : 84.1447
+MB : 0
+MB : 205.182
+MB : 203.774
+GR : 374.991
+GR : 261.728
+MB : 0
+MB : 0
+MB : 218.358
+MB : 131.529
+MB : 95.3094
+MB : 185.146
+MB : 150.042
+MB : 0
+GR : 302.108
+MB : 410.84
+MB : 253.185
+GR : 288.466
+GR : 205.645
+GR : 0
+MB : 214.151
+MB : 444.113
+MB : 422.713
+MB : 228.41
+MB : 380.63
+MB : 132.405
+MB : 254.498
+MB : 125.687
+MB : 285.791
+MB : 58.435
+GR : 187.121
+GR : 135.428
+MB : 419.618
+MB : 408.029
+MB : 0
+MB : 225.869
+MB : 237.917
+GR : 195.419
+MB : 417.573
+MB : 156.106
+MB : 214.641
+MB : 81.382
+GR : 130.362
+MB : 254.69
+MB : 88.1377
+GR : 129.567
+MB : 241.518
+GR : 368.024
+MB : 116.228
+MB : 247.713
+MB : 247.234
+GR : 793.656
+GR : 250.388
+MB : 269.54
+GR : 159.862
+MB : 390.23
+GR : 175.736
+MB : 337.216
+MB : 59.5157
+MB : 55.0229
+GR : 200.297
+MB : 380.644
+MB : 110.007
+MB : 126.811
+GR : 125.857
+MB : 276.642
+MB : 144.376
+GR : 185.75
+MB : 74.7193
+MB : 236.02
+MB : 389.874
+GR : 102.667
+MB : 331.569
+MB : 89.1847
+MB : 167.176
+MB : 252.404
+MB : 436.105
+MB : 266.33
+MB : 80.2046
+GR : 385.388
+MB : 143.845
+GR : 325.061
+MB : 0
+MB : 110.966
+MB : 369.755
+MB : 63.4444
+MB : 66.5784
+MB : 0
+GR : 367.316
+MB : 61.4604
+MB : 385.31
+MB : 0
+GR : 129.667
+MB : 164.305
+MB : 144.437
+GR : 182.172
+MB : 117.968
+MB : 429.319
+MB : 475.221
+MB : 0
+GR : 80.0619
+MB : 340.991
+MB : 275.822
+MB : 169.135
+MB : 362.987
+MB : 314.345
+MB : 178.527
+GR : 404.36
+MB : 74.25
+MB : 253.779
+MB : 83.9611
+MB : 269.078
+GR : 250.577
+MB : 69.24
+MB : 67.2123
+MB : 164.4
+MB : 150.363
+GR : 400.346
+MB : 264.014
+GR : 168.554
+MB : 316.762
+MB : 312.61
+MB : 260.166
+MB : 263.569
+MB : 327.923
+MB : 276.529
+MB : 213.616
+GR : 246.375
+MB : 100.774
+MB : 239.056
+MB : 98.4706
+MB : 241.545
+GR : 151.468
+MB : 234.132
+MB : 101.918
+MB : 103.313
+MB : 236.199
+MB : 332.434
+MB : 222.252
+MB : 227.567
+MB : 84.6003
+GR : 0
+MB : 117.934
+MB : 0
+MB : 174.141
+MB : 476.928
+GR : 225.666
+MB : 82.0558
+MB : 262.152
+MB : 0
+MB : 89.9241
+MB : 63.1191
+GR : 154.245
+MB : 201.786
+GR : 262.529
+GR : 130.457
+GR : 0
+MB : 98.298
+GR : 203.299
+MB : 380.969
+MB : 238.088
+MB : 206.295
+MB : 216.543
+GR : 358.325
+MB : 75.6102
+GR : 474.679
+MB : 243.216
+MB : 88.3029
+MB : 0
+GR : 134.514
+MB : 282.983
+MB : 215.286
+GR : 517.678
+MB : 102.462
+MB : 291.501
+MB : 213.514
+MB : 0
+GR : 254.327
+MB : 167.504
+MB : 113.827
+MB : 530.782
+GR : 164.981
+MB : 276.785
+MB : 394.869
+MB : 183.118
+MB : 86.6751
+MB : 324.896
+MB : 176.509
+MB : 204.92
+MB : 276.011
+MB : 470.342
+MB : 79.0602
+MB : 75.731
+GR : 187.983
+MB : 87.7268
+MB : 343.576
+MB : 345.342
+MB : 0
+GR : 0
+MB : 266.177
+MB : 249.976
+GR : 318.232
+MB : 209.834
+MB : 258.389
+MB : 154.24
+MB : 0
+MB : 127.781
+MB : 248.354
+MB : 194.987
+GR : 485.376
+MB : 0
+MB : 254.121
+MB : 0
+GR : 206.656
+MB : 259.417
+GR : 203.366
+MB : 233.524
+MB : 0
+MB : 61.7344
+MB : 150.441
+MB : 274.493
+MB : 440.786
+GR : 333.087
+MB : 0
+MB : 142.16
+GR : 144.317
+MB : 235.441
+MB : 270.141
+MB : 301.566
+MB : 199.77
+MB : 275.288
+MB : 75.8508
+MB : 405.989
+MB : 422.845
+MB : 667.37
+MB : 189.132
+MB : 331.193
+MB : 192.905
+MB : 265.845
+MB : 0
+MB : 166.191
+MB : 276.146
+MB : 0
+MB : 0
+MB : 235.968
+MB : 90.4271
+MB : 427.388
+MB : 0
+MB : 0
+MB : 0
+MB : 422.466
+MB : 148.087
+MB : 68.0611
+MB : 181.372
+GR : 110.492
+GR : 191.061
+MB : 234.923
+MB : 246.457
+MB : 470.105
+MB : 192.08
+MB : 203.368
+MB : 280.857
+MB : 81.647
+MB : 0
+MB : 241.536
+MB : 122.337
+MB : 222.786
+MB : 0
+MB : 207.79
+MB : 80.6855
+GR : 173.737
+MB : 149.286
+MB : 264.837
+GR : 204.201
+MB : 234.188
+GR : 122.24
+GR : 167.231
+MB : 473.935
+MB : 74.911
+MB : 133.513
+MB : 272.78
+MB : 372.679
+MB : 268.519
+MB : 0
+MB : 190.305
+MB : 64.2965
+GR : 132.806
+MB : 428.748
+GR : 111.456
+MB : 162.361
+MB : 381.949
+MB : 105.008
+MB : 0
+GR : 151.991
+MB : 230.539
+GR : 180.546
+MB : 95.0971
+MB : 425.001
+GR : 166.758
+MB : 286.69
+MB : 101.929
+MB : 371.637
+MB : 232.762
+GR : 127.584
+MB : 171.277
+MB : 150.874
+MB : 197.672
+MB : 147.21
+MB : 0
+MB : 441.475
+GR : 124.519
+MB : 100.136
+GR : 232.774
+GR : 268.138
+MB : 172.012
+GR : 94.757
+MB : 238.044
+GR : 123.811
+MB : 474.99
+MB : 218.578
+MB : 396.722
+MB : 223.272
+MB : 435.193
+GR : 315.724
+GR : 202.92
+MB : 376.954
+MB : 93.5023
+MB : 192.434
+MB : 0
+GR : 183.178
+MB : 369.727
+MB : 214.28
+GR : 437.659
+GR : 488.412
+GR : 126.58
+GR : 261.105
+MB : 226.833
+MB : 299.512
+MB : 0
+MB : 260.882
+MB : 457.575
+GR : 474.66
+MB : 0
+MB : 195.417
+GR : 393.386
+MB : 367.161
+MB : 273.398
+GR : 260.808
+GR : 118.121
+MB : 125.006
+GR : 140.037
+MB : 115.573
+MB : 148.848
+MB : 0
+MB : 189.327
+GR : 255.742
+MB : 206.3
+MB : 119.356
+GR : 221.608
+MB : 85.0699
+MB : 0
+GR : 372.158
+MB : 265.173
+GR : 157.827
+GR : 347.865
+MB : 264.813
+MB : 241.785
+MB : 107.662
+MB : 165.985
+GR : 177.935
+MB : 268.166
+GR : 123.867
+GR : 108.669
+MB : 459.439
+MB : 470.522
+MB : 281.905
+GR : 333.895
+MB : 82.0672
+MB : 618.298
+GR : 198.995
+MB : 208.032
+GR : 167.004
+GR : 186.463
+MB : 265.605
+MB : 472.99
+MB : 389.664
+MB : 257.576
+MB : 0
+GR : 224.091
+MB : 186.507
+MB : 96.6629
+GR : 190.057
+MB : 281.94
+GR : 203.921
+MB : 202.457
+MB : 87.7272
+GR : 0
+MB : 158.633
+MB : 0
+MB : 0
+GR : 116.859
+MB : 238.682
+GR : 269.335
+GR : 213.593
+MB : 462.639
+MB : 276.664
+MB : 459.219
+MB : 235.493
+MB : 0
+MB : 353.599
+GR : 399.011
+MB : 160.222
+GR : 0
+MB : 250.084
+MB : 130.082
+GR : 210.1
+MB : 0
+MB : 121.105
+MB : 188.977
+MB : 118.368
+MB : 0
+GR : 343.757
+MB : 87.7742
+MB : 147.558
+MB : 158.888
+MB : 133.286
+MB : 117.813
+MB : 150.784
+GR : 63.5292
+MB : 278.266
+MB : 84.5101
+MB : 473.837
+GR : 295.096
+MB : 183.864
+MB : 444.07
+MB : 270.398
+MB : 361.943
+GR : 406.271
+GR : 270.028
+GR : 113.114
+GR : 194.536
+MB : 62.4951
+MB : 259.507
+MB : 0
+GR : 239.766
+MB : 163.872
+MB : 144.688
+GR : 212.371
+GR : 88.9337
+MB : 86.963
+GR : 231.331
+GR : 166.268
+MB : 124.512
+MB : 77.2702
+MB : 136.876
+MB : 246.736
+MB : 0
+GR : 248.446
+GR : 74.0657
+GR : 152.538
+MB : 187.499
+MB : 83.8173
+MB : 0
+MB : 476.108
+GR : 189.935
+MB : 126.118
+MB : 254.448
+MB : 225.811
+MB : 77.1152
+GR : 351.457
+MB : 129.372
+MB : 184.746
+MB : 96.3645
+MB : 76.9259
+MB : 0
+MB : 74.8146
+MB : 135.889
+MB : 154.299
+MB : 159.074
+MB : 0
+MB : 240.459
+MB : 77.4228
+GR : 242.589
+MB : 0
+MB : 94.6504
+MB : 0
+MB : 453.729
+GR : 131.878
+MB : 154.466
+MB : 316.84
+GR : 180.475
+MB : 229.775
+MB : 108.412
+MB : 182.205
+MB : 302.726
+MB : 434.365
+GR : 92.3606
+MB : 75.3088
+MB : 152.023
+GR : 108.411
+MB : 234.89
+MB : 259.39
+MB : 0
+MB : 0
+MB : 95.305
+GR : 276.06
+GR : 69.653
+GR : 0
+MB : 346.872
+MB : 95.0274
+MB : 276.474
+MB : 159.584
+MB : 82.5518
+MB : 116.925
+GR : 243.782
+MB : 68.8319
+MB : 134.29
+MB : 87.1931
+GR : 334.817
+MB : 278.629
+MB : 288.389
+MB : 75.7195
+GR : 140.807
+MB : 0
+MB : 112.271
+GR : 93.77
+MB : 328.336
+MB : 254.545
+MB : 406.991
+MB : 241.628
+MB : 56.6086
+MB : 0
+MB : 0
+MB : 117.229
+MB : 381.806
+MB : 118.779
+MB : 140.016
+GR : 153.954
+MB : 409.341
+MB : 226.56
+MB : 230.889
+GR : 457.507
+MB : 122.624
+MB : 70.9982
+MB : 70.2122
+MB : 63.9307
+GR : 438.499
+GR : 223.114
+GR : 196.456
+MB : 402.412
+MB : 87.3475
+MB : 311.623
+MB : 274.08
+GR : 178.214
+MB : 103.722
+MB : 447.906
+GR : 154.872
+MB : 147.337
+MB : 101.033
+GR : 311.809
+GR : 455.503
+MB : 204.834
+MB : 0
+MB : 0
+MB : 432.403
+MB : 233.336
+MB : 250.872
+MB : 97.3963
+MB : 199.535
+GR : 242.741
+MB : 104.639
+MB : 252.561
+GR : 344.311
+GR : 170.454
+MB : 166.848
+MB : 111.817
+GR : 176.851
+MB : 235.557
+MB : 0
+MB : 213.29
+MB : 147.213
+GR : 353.839
+MB : 102.836
+GR : 350.728
+GR : 127.815
+MB : 0
+MB : 224.318
+GR : 156.801
+GR : 202.892
+MB : 391.43
+MB : 144.452
+MB : 97.1399
+GR : 141.697
+MB : 196.1
+MB : 263.814
+MB : 59.7546
+GR : 257.595
+MB : 229.243
+MB : 259.511
+MB : 127.007
+MB : 280.1
+MB : 183.723
+MB : 0
+GR : 349.49
+GR : 173.62
+GR : 249.778
+MB : 447.397
+MB : 215.078
+MB : 467.925
+MB : 0
+MB : 167.324
+MB : 57.015
+MB : 0
+MB : 132.466
+MB : 455.281
+MB : 170.008
+MB : 101.63
+MB : 122.83
+MB : 313.951
+MB : 235.464
+GR : 0
+MB : 282.332
+GR : 262.174
+MB : 0
+MB : 258.749
+GR : 233.68
+GR : 370.397
+GR : 0
+MB : 102.244
+MB : 0
+GR : 472.697
+MB : 83.3725
+MB : 117.437
+GR : 125.49
+MB : 181.066
+GR : 0
+GR : 395.788
+MB : 97.3963
+GR : 134.999
+MB : 101.226
+MB : 402.129
+MB : 107.433
+MB : 77.3761
+MB : 0
+GR : 186.562
+MB : 99.2329
+MB : 82.3586
+MB : 180.806
+MB : 244.43
+MB : 264.115
+GR : 172.766
+MB : 117.952
+MB : 133.766
+MB : 312.029
+MB : 217.386
+MB : 249.566
+MB : 239.734
+MB : 60.1133
+GR : 211.592
+MB : 74.0606
+MB : 193.24
+GR : 203.485
+MB : 248.023
+MB : 240.092
+MB : 219.527
+GR : 0
+MB : 75.6697
+GR : 149.596
+MB : 267.711
+MB : 114.79
+MB : 472.134
+MB : 0
+GR : 198.267
+GR : 248.609
+MB : 127.457
+GR : 264.072
+MB : 104.498
+MB : 109.541
+MB : 222.709
+GR : 170.528
+MB : 240.271
+MB : 120.583
+GR : 421.927
+MB : 244.667
+GR : 149.141
+MB : 0
+MB : 137.052
+MB : 149.053
+MB : 189.604
+MB : 82.091
+MB : 277.824
+GR : 142.241
+MB : 142.102
+MB : 0
+MB : 332.508
+MB : 268.139
+GR : 216.188
+MB : 169.919
+MB : 0
+MB : 230.921
+MB : 229.727
+MB : 286.137
+MB : 97.5269
+GR : 136.475
+MB : 270.693
+GR : 620.698
+GR : 0
+MB : 98.5741
+MB : 231.843
+MB : 242.641
+MB : 285.467
+MB : 244.062
+MB : 277.304
+GR : 262.607
+MB : 0
+MB : 435.38
+GR : 226.661
+GR : 371.494
+MB : 0
+MB : 258.111
+GR : 365.216
+MB : 260.082
+GR : 0
+GR : 403.797
+MB : 92.2638
+MB : 385.467
+MB : 244.649
+GR : 174.572
+MB : 189.029
+MB : 302.79
+MB : 254.652
+MB : 705.903
+GR : 107.603
+GR : 246.78
+MB : 112.38
+GR : 246.511
+GR : 183.082
+MB : 141.886
+MB : 188.124
+MB : 425.742
+GR : 245.363
+MB : 474.018
+MB : 408.77
+MB : 223.904
+MB : 241.823
+MB : 183.444
+MB : 123.744
+MB : 175.244
+MB : 272.703
+MB : 248.776
+GR : 156.376
+MB : 293.986
+GR : 211.988
+GR : 376.277
+MB : 185.929
+MB : 153.549
+MB : 198.823
+GR : 249.471
+GR : 473.71
+MB : 0
+MB : 83.1198
+GR : 391.241
+GR : 238.653
+MB : 345.986
+MB : 0
+GR : 239.208
+MB : 150.891
+MB : 0
+MB : 707.91
+MB : 184.771
+GR : 108.327
+GR : 198.81
+MB : 101.482
+MB : 100.303
+MB : 141.35
+MB : 0
+MB : 95.0113
+MB : 93.9411
+MB : 243.014
+GR : 221.077
+MB : 0
+GR : 143.377
+MB : 185.303
+MB : 348.418
+MB : 287.348
+MB : 271.325
+MB : 246.275
+MB : 0
+MB : 0
+MB : 322.476
+MB : 293.564
+MB : 156.113
+GR : 356.16
+GR : 219.357
+MB : 269.818
+MB : 132.578
+MB : 277.062
+MB : 401.108
+MB : 109.773
+MB : 84.4238
+GR : 142.62
+MB : 0
+MB : 123.33
+MB : 89.7633
+MB : 204.495
+GR : 0
+GR : 245.198
+MB : 235.523
+MB : 60.7817
+MB : 62.4744
+MB : 171.431
+MB : 110.839
+MB : 277.146
+MB : 467.557
+MB : 359.949
+MB : 198.105
+MB : 240.818
+MB : 0
+MB : 103.232
+GR : 155.953
+MB : 92.7504
+MB : 162.477
+MB : 127.376
+GR : 162.924
+MB : 437.246
+MB : 0
+MB : 221.22
+GR : 230.219
+MB : 229.394
+MB : 454.234
+MB : 457.765
+MB : 134.844
+MB : 250.521
+MB : 133.621
+MB : 293.95
+MB : 108.702
+MB : 433.679
+MB : 328.603
+GR : 176.463
+MB : 68.8076
+MB : 153.905
+MB : 78.6084
+GR : 477.099
+MB : 76.1411
+MB : 144.967
+MB : 406.083
+MB : 214.833
+MB : 106.669
+MB : 159.093
+MB : 216.376
+MB : 460.057
+MB : 277.399
+GR : 0
+MB : 60.0084
+MB : 103.268
+MB : 143.587
+GR : 137.796
+GR : 123.415
+MB : 226.934
+MB : 284.253
+GR : 348.963
+MB : 331.752
+MB : 124.029
+MB : 119.539
+GR : 188.218
+MB : 357.639
+MB : 390.629
+GR : 282.156
+GR : 267.507
+MB : 0
+MB : 151.683
+MB : 202.493
+MB : 446.341
+MB : 109.061
+MB : 241.873
+MB : 181.552
+MB : 177.588
+MB : 282.057
+GR : 101.534
+MB : 166.499
+MB : 417.535
+MB : 442.535
+MB : 244.063
+MB : 184.213
+MB : 341.024
+MB : 520.534
+MB : 378.557
+MB : 103.818
+MB : 164.013
+GR : 397.377
+GR : 142.914
+MB : 175.18
+MB : 297.672
+MB : 198.512
+MB : 0
+MB : 155.76
+GR : 75.5111
+MB : 87.7587
+MB : 0
+GR : 243.545
+MB : 137.339
+MB : 190.26
+GR : 155.832
+MB : 62.8247
+GR : 158.307
+MB : 253.56
+MB : 194.404
+MB : 98.6263
+GR : 133.556
+GR : 132.023
+MB : 388.505
+MB : 301.263
+MB : 285.563
+MB : 488.76
+GR : 247.287
+MB : 104.576
+MB : 414.917
+GR : 177.486
+MB : 273.106
+GR : 82.0283
+MB : 99.3444
+GR : 117.943
+MB : 87.1088
+MB : 276.689
+MB : 59.5617
+GR : 405.492
+MB : 81.0945
+MB : 136.174
+MB : 99.5863
+MB : 132.191
+MB : 107.613
+MB : 69.1385
+GR : 441.051
+GR : 0
+MB : 69.6998
+GR : 279.39
+MB : 143.149
+MB : 281.1
+MB : 123.349
+MB : 131.934
+MB : 77.8027
+MB : 314.217
+MB : 314.141
+MB : 84.7119
+MB : 134.355
+MB : 114.664
+GR : 394.497
+GR : 206.386
+MB : 85.3955
+GR : 371.313
+MB : 205.33
+MB : 210.167
+MB : 183.623
+MB : 179.135
+MB : 406.478
+MB : 144.883
+MB : 226.8
+GR : 232.332
+MB : 210.276
+MB : 52.3634
+GR : 104.981
+GR : 113.303
+MB : 229.94
+MB : 0
+MB : 413.891
+MB : 87.2703
+MB : 209.027
+MB : 104.506
+MB : 246.333
+GR : 223.985
+MB : 105.632
+GR : 112.906
+MB : 0
+GR : 0
+GR : 211.461
+MB : 219.29
+MB : 240.145
+MB : 220.674
+MB : 171.728
+GR : 165.143
+MB : 213.134
+MB : 154.408
+GR : 137.713
+GR : 270.657
+GR : 82.9722
+MB : 0
+GR : 411.516
+MB : 417.434
+MB : 0
+MB : 75.5167
+MB : 71.4639
+MB : 263.903
+MB : 155.902
+GR : 100.939
+MB : 115.318
+GR : 434.549
+MB : 218.003
+MB : 202.516
+MB : 102.522
+MB : 162.381
+MB : 231.156
+MB : 0
+MB : 0
+MB : 127.179
+GR : 161.744
+MB : 113.486
+MB : 93.7454
+MB : 0
+MB : 103.406
+MB : 207.647
+MB : 178.807
+MB : 84.8915
+MB : 79.0697
+MB : 207.854
+MB : 283.333
+MB : 324.876
+MB : 274.605
+MB : 184.071
+MB : 71.2912
+MB : 261.957
+MB : 425.034
+MB : 0
+GR : 198.497
+MB : 417.125
+MB : 190.996
+MB : 279.347
+MB : 253.131
+MB : 0
+GR : 224.834
+GR : 459.187
+GR : 143.328
+MB : 74.2114
+MB : 262.879
+MB : 281.279
+MB : 246.015
+MB : 0
+MB : 220.239
+MB : 0
+MB : 84.5439
+MB : 117.238
+MB : 162.414
+MB : 54.1558
+GR : 95.1491
+GR : 357.923
+MB : 112.094
+GR : 415.8
+MB : 110.57
+MB : 153.904
+MB : 200.911
+MB : 73.1342
+MB : 0
+GR : 142.412
+MB : 112.451
+GR : 110.481
+MB : 0
+MB : 180.586
+MB : 242.171
+MB : 0
+GR : 220.356
+MB : 79.7925
+MB : 147.265
+GR : 240.031
+MB : 0
+MB : 179.366
+MB : 451.572
+MB : 111.545
+MB : 141.811
+MB : 99.6759
+MB : 463.793
+MB : 456.162
+MB : 287.097
+MB : 66.9689
+MB : 138.382
+MB : 218.416
+GR : 282.967
+GR : 127.622
+MB : 123.226
+GR : 172.023
+GR : 408.652
+MB : 245.675
+MB : 343.875
+MB : 151.773
+GR : 132.661
+MB : 188.424
+MB : 164.095
+MB : 328.266
+GR : 0
+MB : 179.724
+MB : 245.033
+MB : 105.625
+MB : 72.6428
+MB : 201.74
+MB : 88.4437
+GR : 0
+GR : 110.43
+MB : 177.405
+MB : 0
+MB : 102.735
+MB : 0
+MB : 244.52
+GR : 96.6933
+GR : 183.396
+MB : 231.29
+GR : 216.795
+MB : 238.333
+MB : 260.085
+MB : 55.7722
+MB : 74.4319
+MB : 0
+MB : 370.874
+GR : 546.181
+MB : 314.876
+MB : 156.516
+MB : 117.197
+MB : 158.949
+MB : 419.022
+MB : 243.505
+MB : 123.78
+MB : 206.798
+MB : 269.102
+MB : 74.7209
+GR : 0
+MB : 393.667
+MB : 237.204
+MB : 89.0186
+MB : 340.587
+MB : 260.01
+MB : 194.826
+GR : 371.754
+MB : 0
+MB : 0
+GR : 0
+MB : 102.688
+MB : 206.059
+GR : 131.306
+GR : 237.913
+MB : 112.17
+GR : 231.698
+MB : 180.298
+MB : 78.6778
+MB : 254.123
+GR : 99.4478
+MB : 273.706
+MB : 116.366
+MB : 400.448
+MB : 0
+GR : 201.569
+MB : 406.1
+GR : 0
+MB : 133.309
+GR : 211.579
+MB : 173.979
+MB : 219.493
+MB : 91.1655
+MB : 120.749
+GR : 142.837
+MB : 219.054
+MB : 120.805
+MB : 419.084
+MB : 281.804
+MB : 243.026
+MB : 152.654
+MB : 300.916
+MB : 204.334
+GR : 303.903
+GR : 194.432
+GR : 135.439
+GR : 269.476
+MB : 342.806
+MB : 198.468
+MB : 220.664
+MB : 466.886
+MB : 395.199
+MB : 454.052
+GR : 144.829
+MB : 446.718
+GR : 242.859
+GR : 253.194
+MB : 72.4309
+MB : 383.228
+MB : 203.547
+MB : 242.261
+MB : 141.442
+MB : 262.455
+MB : 199.801
+MB : 225.771
+MB : 364.149
+MB : 193.433
+GR : 281.491
+MB : 107.095
+MB : 137.818
+MB : 477.836
+GR : 441.256
+MB : 188.652
+MB : 77.8111
+MB : 90.2969
+MB : 100.213
+MB : 263.451
+GR : 205.629
+GR : 205.412
+MB : 258.774
+GR : 389.464
+MB : 246.539
+MB : 381.942
+MB : 225.854
+MB : 260.193
+MB : 190.611
+MB : 0
+MB : 460.383
+MB : 62.4145
+MB : 130.249
+MB : 421.863
+GR : 324.493
+GR : 185.979
+MB : 0
+MB : 418.73
+MB : 0
+MB : 207.814
+MB : 402.431
+MB : 58.5127
+MB : 106.611
+MB : 190.586
+MB : 180.106
+MB : 268.203
+MB : 243.254
+MB : 115.759
+MB : 118.414
+MB : 257.079
+MB : 222.926
+MB : 274.827
+GR : 114.21
+MB : 424.507
+MB : 0
+GR : 404.52
+GR : 171.379
+GR : 292.447
+GR : 139.147
+MB : 127.625
+MB : 90.2072
+MB : 132.476
+MB : 138.101
+MB : 465.844
+MB : 107.233
+GR : 86.1495
+MB : 171.069
+MB : 183.84
+MB : 0
+GR : 199.75
+MB : 274.161
+MB : 101.221
+MB : 118.187
+MB : 234.239
+GR : 99.4651
+MB : 0
+MB : 349.436
+MB : 206.843
+MB : 117.876
+GR : 199.653
+MB : 414.257
+MB : 147.026
+MB : 192.193
+MB : 436.037
+GR : 169.927
+GR : 210.121
+MB : 112.268
+GR : 164.146
+MB : 426.801
+MB : 134.318
+MB : 116.601
+GR : 184.48
+MB : 82.5855
+MB : 100.024
+MB : 187.624
+MB : 0
+GR : 95.902
+MB : 115.593
+MB : 101.792
+GR : 231.109
+MB : 0
+MB : 244.005
+MB : 157.799
+GR : 273.752
+MB : 247.522
+GR : 213.022
+MB : 448.042
+GR : 157.58
+GR : 277.053
+GR : 211.07
+MB : 0
+MB : 393.293
+GR : 466.025
+MB : 212.491
+GR : 0
+MB : 227.118
+MB : 157.012
+MB : 111.101
+MB : 155.977
+MB : 382.609
+MB : 137.886
+MB : 80.0964
+MB : 255.029
+GR : 268.706
+MB : 140.717
+MB : 89.8375
+MB : 287.606
+MB : 0
+GR : 473.054
+MB : 201.257
+GR : 104.667
+GR : 91.044
+MB : 208.107
+MB : 405.917
+MB : 274.417
+GR : 405.192
+GR : 155.539
+MB : 301.7
+MB : 157.674
+MB : 362.396
+GR : 176.325
+GR : 296.024
+MB : 192.389
+MB : 169.858
+MB : 62.8118
+MB : 71.6639
+GR : 292.71
+GR : 152.691
+MB : 179.091
+MB : 0
+MB : 148.901
+MB : 65.6183
+MB : 82.9489
+GR : 347.536
+MB : 63.9512
+MB : 0
+MB : 464.608
+MB : 234.793
+MB : 313.314
+GR : 420.593
+GR : 249.403
+MB : 376.273
+MB : 105.107
+MB : 336.269
+MB : 239.053
+MB : 374.382
+GR : 340.559
+MB : 78.0897
+GR : 206.592
+MB : 227.749
+MB : 0
+MB : 342.414
+MB : 472.058
+MB : 182.408
+GR : 124.646
+MB : 224.82
+GR : 448.261
+MB : 125.485
+MB : 167.051
+MB : 0
+MB : 246.183
+MB : 75.4941
+MB : 121.169
+MB : 183.499
+MB : 139.494
+MB : 263.278
+MB : 126.031
+MB : 334.287
+MB : 73.357
+MB : 239.958
+GR : 274.348
+MB : 127.947
+GR : 134.111
+MB : 133.47
+GR : 99.7308
+GR : 234.525
+MB : 255.369
+GR : 160.812
+MB : 225.231
+MB : 0
+MB : 102.773
+MB : 97.7469
+MB : 119.427
+GR : 349.907
+MB : 91.1894
+MB : 307.342
+MB : 78.866
+GR : 315.085
+MB : 0
+MB : 112.801
+MB : 0
+GR : 170.41
+GR : 275.595
+MB : 68.349
+MB : 114.234
+MB : 221.79
+GR : 213.925
+MB : 295.199
+MB : 136.572
+MB : 264.511
+GR : 241.305
+MB : 140.478
+GR : 452.028
+MB : 108.834
+MB : 145.546
+MB : 208.392
+MB : 255.39
+MB : 170.348
+MB : 447.358
+MB : 135.802
+MB : 90.2122
+MB : 65.717
+MB : 378.372
+GR : 301.886
+GR : 412.69
+MB : 434.018
+MB : 235.737
+MB : 249.996
+MB : 281.553
+GR : 0
+MB : 428.129
+MB : 165.911
+MB : 151.94
+GR : 0
+MB : 121.558
+MB : 466.812
+GR : 174.913
+MB : 278.248
+MB : 244.462
+MB : 61.6695
+MB : 153.001
+MB : 337.712
+MB : 167.759
+MB : 274.522
+MB : 371.801
+GR : 284.317
+MB : 0
+MB : 443.387
+MB : 102.009
+MB : 76.6316
+MB : 278.735
+GR : 0
+GR : 156.219
+GR : 206.592
+MB : 225.364
+MB : 286.705
+MB : 249.34
+MB : 143.005
+MB : 112.793
+MB : 291.763
+MB : 140.469
+GR : 91.4346
+MB : 0
+GR : 271.186
+MB : 83.5241
+MB : 168.974
+MB : 119.036
+GR : 0
+GR : 178.561
+MB : 155.499
+MB : 98.0632
+GR : 434.179
+MB : 193.427
+GR : 142.188
+MB : 197.808
+GR : 367.719
+MB : 242.028
+GR : 343.386
+MB : 298.92
+MB : 98.998
+MB : 77.6978
+MB : 411.62
+MB : 417.512
+GR : 302.699
+MB : 373.758
+MB : 240.053
+GR : 389.927
+GR : 218.383
+GR : 111.575
+GR : 239.66
+MB : 248.753
+GR : 86.0258
+MB : 175.182
+MB : 363.313
+GR : 189.321
+MB : 0
+MB : 64.9468
+MB : 0
+GR : 257.916
+MB : 175.9
+MB : 439.613
+MB : 241.976
+GR : 146.925
+MB : 0
+MB : 141.385
+MB : 76.9775
+MB : 448.344
+MB : 432.755
+MB : 128.479
+GR : 170.365
+MB : 290.196
+MB : 134.342
+MB : 202.218
+MB : 147.11
+GR : 167.494
+MB : 328.329
+MB : 215.035
+GR : 262.165
+MB : 0
+MB : 75.7443
+GR : 118.436
+MB : 0
+MB : 118.919
+MB : 104.44
+MB : 253.897
+MB : 0
+MB : 0
+MB : 361.302
+MB : 251.989
+MB : 56.2814
+GR : 110.518
+MB : 128.508
+MB : 242.726
+MB : 208.111
+MB : 258.353
+MB : 239.915
+GR : 293.483
+MB : 222.584
+MB : 0
+MB : 182.175
+MB : 97.7407
+MB : 466.695
+MB : 258.135
+MB : 179.886
+GR : 231.484
+MB : 57.1026
+GR : 96.284
+GR : 181.271
+MB : 160.998
+GR : 314.15
+MB : 230.317
+MB : 0
+MB : 149.292
+MB : 256.947
+MB : 71.8803
+MB : 269.423
+GR : 239.137
+MB : 0
+MB : 158.136
+GR : 182.792
+MB : 155.177
+MB : 438.079
+MB : 459.421
+MB : 0
+MB : 394.197
+MB : 83.5533
+MB : 57.3791
+MB : 138.189
+MB : 73.1237
+MB : 122.683
+MB : 0
+MB : 228.012
+GR : 0
+GR : 0
+MB : 265.076
+MB : 248.555
+MB : 0
+MB : 140.74
+GR : 392.538
+GR : 163.92
+MB : 118.765
+GR : 0
+GR : 231.069
+MB : 456.669
+MB : 179.124
+MB : 347.777
+GR : 172.413
+MB : 137.83
+MB : 334.509
+GR : 93.8476
+GR : 434.155
+MB : 277.551
+MB : 402.178
+MB : 335.551
+MB : 66.7311
+MB : 59.8073
+GR : 294.886
+MB : 121.471
+MB : 95.6478
+GR : 126.447
+GR : 350.238
+MB : 114.789
+MB : 427.748
+GR : 329.511
+GR : 133.771
+GR : 96.7819
+GR : 149.825
+MB : 103.171
+MB : 376.419
+GR : 336.706
+GR : 205.817
+MB : 283.701
+MB : 456.187
+MB : 117.971
+MB : 409.182
+MB : 220.03
+GR : 221.25
+MB : 104.614
+MB : 74.1031
+GR : 319.028
+MB : 322.704
+GR : 0
+MB : 199.7
+MB : 220.134
+MB : 127.766
+MB : 0
+MB : 329.144
+MB : 188.535
+MB : 154.293
+GR : 162.076
+MB : 282.416
+GR : 195.606
+MB : 106.465
+MB : 134.521
+GR : 342.354
+MB : 360.004
+MB : 0
+MB : 168.002
+GR : 187.471
+GR : 0
+GR : 228.92
+MB : 459.856
+MB : 0
+MB : 208.441
+MB : 100.221
+MB : 95.7036
+MB : 247.109
+MB : 109.212
+MB : 271.349
+MB : 339.333
+GR : 476.725
+MB : 186.304
+MB : 373.055
+MB : 137.684
+MB : 161.284
+MB : 93.5337
+GR : 172.435
+GR : 442.918
+GR : 0
+MB : 211.911
+MB : 244.346
+MB : 468.583
+MB : 299.439
+GR : 144.379
+MB : 452.085
+MB : 222.905
+GR : 274.966
+MB : 105.148
+MB : 260.945
+GR : 223.388
+GR : 116.003
+MB : 165.183
+MB : 316.954
+MB : 252.919
+GR : 187.341
+MB : 193.173
+MB : 164.859
+MB : 250.921
+MB : 449.455
+MB : 97.6416
+GR : 153.171
+GR : 83.9996
+MB : 290.437
+MB : 0
+MB : 73.4072
+GR : 195.233
+MB : 198.131
+MB : 397.971
+MB : 0
+MB : 142.659
+GR : 186.417
+MB : 122.302
+GR : 110.196
+MB : 109.299
+MB : 409.249
+MB : 261.493
+MB : 120.333
+GR : 123.877
+GR : 74.1034
+MB : 149.81
+GR : 93.1612
+GR : 193.907
+MB : 0
+MB : 0
+MB : 224.501
+MB : 193.179
+GR : 124.007
+GR : 173.785
+MB : 185.104
+MB : 0
+GR : 290.192
+MB : 252.828
+MB : 174.955
+MB : 225.109
+MB : 145.182
+MB : 124.454
+MB : 443.717
+GR : 146.186
+MB : 164.043
+GR : 281.848
+MB : 140.582
+GR : 174.309
+MB : 132.812
+MB : 231.195
+MB : 253.962
+MB : 94.5423
+GR : 469.809
+MB : 219.837
+MB : 65.5241
+MB : 198.656
+GR : 244.762
+MB : 263.508
+GR : 285.477
+MB : 133.989
+GR : 392.81
+MB : 199.098
+MB : 259.949
+GR : 448.676
+MB : 251.578
+MB : 247.349
+MB : 245.598
+MB : 161.168
+MB : 176.936
+MB : 117.224
+MB : 111.037
+GR : 193.684
+GR : 175.279
+MB : 236.868
+MB : 343.907
+MB : 0
+GR : 314.697
+GR : 161.223
+MB : 0
+MB : 0
+GR : 436.302
+MB : 238.193
+GR : 156.106
+MB : 203.535
+MB : 208.822
+MB : 242.147
+MB : 386.206
+MB : 295.342
+MB : 310.89
+GR : 256.638
+MB : 0
+GR : 136.814
+GR : 144.471
+MB : 229.056
+GR : 328.275
+GR : 214.282
+MB : 114.389
+MB : 381.942
+MB : 84.1437
+MB : 99.181
+MB : 95.309
+GR : 409.947
+MB : 60.8422
+GR : 475.84
+MB : 177.719
+MB : 0
+MB : 196.456
+MB : 128.094
+MB : 227.119
+MB : 157.672
+MB : 448.25
+GR : 116.181
+GR : 162.471
+GR : 65.4037
+MB : 137.677
+GR : 337.252
+MB : 384.136
+MB : 274.845
+MB : 135.963
+GR : 452.036
+GR : 90.8836
+MB : 259.314
+MB : 113.341
+MB : 374.473
+MB : 0
+MB : 438.413
+GR : 0
+MB : 65.1225
+MB : 75.733
+GR : 96.7742
+MB : 301.03
+MB : 0
+MB : 124.345
+MB : 82.0751
+MB : 52.0865
+MB : 345.487
+MB : 0
+MB : 218.183
+GR : 230.53
+MB : 357.204
+MB : 242.201
+MB : 318.879
+MB : 284.512
+GR : 209.852
+MB : 128.156
+GR : 0
+MB : 206.889
+MB : 215.231
+MB : 431.774
+GR : 372.648
+MB : 205.631
+MB : 0
+MB : 266.786
+MB : 0
+MB : 0
+MB : 156.091
+MB : 176.226
+MB : 0
+MB : 115.8
+GR : 154.35
+MB : 0
+MB : 174.743
+GR : 228.29
+MB : 436.326
+MB : 187.472
+MB : 395.242
+MB : 261.924
+MB : 248.324
+MB : 79.8176
+GR : 132.865
+MB : 129.289
+MB : 213.018
+MB : 168.28
+MB : 91.1526
+MB : 348.708
+MB : 191.501
+MB : 192.644
+GR : 230.976
+GR : 0
+GR : 285.72
+MB : 359.362
+GR : 233.784
+MB : 231.219
+MB : 0
+GR : 183.211
+GR : 0
+MB : 94.9241
+MB : 496.949
+MB : 272.964
+GR : 338.662
+GR : 166.685
+MB : 202.672
+MB : 176.132
+MB : 0
+MB : 240.818
+MB : 79.3191
+MB : 164.576
+MB : 191.852
+MB : 116.414
+MB : 0
+MB : 192.62
+MB : 141.187
+MB : 251.81
+MB : 85.2696
+MB : 0
+MB : 463.444
+MB : 242.219
+MB : 263.928
+GR : 208.442
+GR : 274.094
+MB : 147.8
+MB : 153.876
+MB : 89.7998
+MB : 138.885
+GR : 248.341
+GR : 332.861
+MB : 126.932
+MB : 129.633
+MB : 347.012
+MB : 0
+MB : 93.4767
+GR : 129.922
+MB : 211.053
+GR : 260.829
+MB : 179.021
+GR : 340.006
+MB : 236.804
+MB : 149.611
+MB : 284.701
+MB : 267.151
+MB : 155.392
+MB : 213.146
+MB : 151.102
+MB : 0
+MB : 143.448
+MB : 400.254
+MB : 338.247
+GR : 433.318
+MB : 111.661
+MB : 99.7959
+MB : 149.541
+MB : 69.4763
+GR : 266.712
+MB : 69.6483
+MB : 320.621
+MB : 276.537
+MB : 127.996
+MB : 0
+MB : 309.089
+MB : 225.768
+GR : 414.388
+MB : 217.245
+GR : 271.525
+MB : 75.5059
+MB : 402.789
+MB : 50.5112
+GR : 118.404
+MB : 123.789
+MB : 104.863
+GR : 292.601
+GR : 139.734
+MB : 139.241
+GR : 85.3289
+MB : 218.885
+GR : 141.404
+MB : 122.538
+GR : 119.396
+MB : 300.534
+MB : 0
+MB : 219.223
+GR : 151.496
+MB : 246.806
+MB : 273.052
+GR : 465.341
+MB : 251.523
+MB : 178.587
+MB : 383.034
+MB : 106.579
+MB : 0
+MB : 105.088
+MB : 355.219
+MB : 135.353
+MB : 101.157
+MB : 0
+GR : 121.994
+MB : 72.6527
+MB : 0
+MB : 111.127
+GR : 149.62
+MB : 201.088
+MB : 123.154
+MB : 370.287
+MB : 150.364
+MB : 245.324
+GR : 173.144
+MB : 227.784
+MB : 261.332
+MB : 358.727
+GR : 182.508
+MB : 88.8025
+GR : 168.339
+MB : 123.784
+MB : 108.963
+MB : 178.756
+MB : 217.954
+MB : 77.0422
+MB : 75.2164
+MB : 242.068
+MB : 148.935
+MB : 0
+MB : 260.644
+MB : 251.935
+MB : 66.3318
+GR : 363.064
+MB : 265.708
+GR : 0
+MB : 0
+MB : 399.279
+GR : 266.801
+MB : 218.086
+GR : 282.519
+MB : 218.611
+MB : 231.195
+MB : 463.208
+MB : 203.836
+MB : 153.452
+GR : 155.468
+MB : 191.121
+GR : 0
+MB : 200.815
+GR : 0
+MB : 307.324
+GR : 107.227
+GR : 235.522
+GR : 149.629
+GR : 0
+GR : 76.8703
+MB : 111.8
+MB : 99.6621
+MB : 326.334
+MB : 272.782
+MB : 272.256
+MB : 175.727
+GR : 130.534
+MB : 124.093
+MB : 188.581
+MB : 305.022
+GR : 276.23
+MB : 499.525
+MB : 117.09
+GR : 70.6701
+MB : 65.1906
+GR : 131.778
+MB : 453.47
+MB : 110.49
+MB : 395.087
+GR : 337.254
+MB : 146.242
+MB : 111.504
+GR : 177.716
+GR : 383.265
+MB : 447.21
+MB : 144.412
+MB : 454.472
+MB : 250.015
+GR : 179.193
+MB : 268.819
+GR : 128.322
+MB : 85.1207
+MB : 117.767
+GR : 249.07
+MB : 133.912
+MB : 263.889
+MB : 130.913
+GR : 309.551
+MB : 74.7453
+MB : 268.075
+GR : 442.262
+MB : 0
+GR : 200.02
+GR : 203.286
+MB : 240.291
+MB : 81.8736
+GR : 0
+GR : 281.2
+GR : 167.244
+MB : 118.584
+MB : 106.915
+MB : 0
+MB : 133.998
+GR : 0
+GR : 171.047
+MB : 170.921
+MB : 116.985
+MB : 0
+GR : 484.451
+GR : 406.992
+GR : 224.867
+MB : 425.378
+MB : 0
+GR : 297.302
+GR : 95.5809
+MB : 181.14
+MB : 133.578
+MB : 217.992
+GR : 273.594
+MB : 186.188
+GR : 344.656
+MB : 177.762
+GR : 273.17
+GR : 423.273
+GR : 197.971
+MB : 250.939
+MB : 468.279
+MB : 194.311
+GR : 153.534
+MB : 57.7292
+MB : 403.398
+MB : 265.056
+MB : 123.49
+MB : 272.859
+MB : 161.717
+MB : 85.5704
+MB : 260.987
+MB : 145.528
+GR : 140.488
+MB : 135.852
+MB : 86.4308
+MB : 88.2365
+MB : 194.944
+MB : 466.148
+GR : 116.348
+GR : 183.619
+MB : 240.036
+MB : 0
+GR : 142.981
+MB : 59.7156
+GR : 218.371
+GR : 160.443
+MB : 265.677
+MB : 300.02
+MB : 201.135
+MB : 157.19
+MB : 445.96
+MB : 0
+MB : 315.251
+MB : 112.568
+GR : 132.212
+MB : 160.773
+MB : 236.94
+MB : 171.311
+MB : 403.933
+GR : 164.835
+GR : 0
+GR : 215.239
+GR : 450.887
+MB : 380.852
+MB : 228.876
+GR : 171.884
+MB : 426.78
+MB : 305.328
+GR : 160.159
+MB : 0
+MB : 78.7119
+GR : 148.224
+MB : 227.734
+GR : 374.91
+MB : 257.893
+MB : 86.3757
+GR : 0
+MB : 81.9772
+MB : 468.687
+MB : 0
+MB : 0
+MB : 327.244
+MB : 91.6519
+GR : 215.997
+MB : 0
+MB : 290.513
+MB : 210.418
+MB : 135.874
+MB : 0
+MB : 219.189
+GR : 213.305
+MB : 436.262
+MB : 322.497
+MB : 179.5
+MB : 391.751
+GR : 399.833
+MB : 269.613
+GR : 251.56
