@@ -1,6 +1,7 @@
 Double_t parabola(Double_t *x, Double_t *p){
   return p[0]*x[0]*x[0] + p[1]*x[0] + p[2];
 }
+
 Double_t inverted(Double_t *x, Double_t *p){
   return ( -p[1] - sqrt(p[1]*p[1] - 4*p[0]*(p[2]-x[0])) ) / (2*p[0]);
 }
@@ -8,15 +9,22 @@ void beta(){
   TFile *f = new TFile("mo83_minos.root");
   TTree* tr = (TTree*)f->Get("caltr");
 
-  tr->Draw("minos.fbetare:minos.fpos.fZ>>h(150,-170,-20,200,0.4,0.55)","","colz");
+  tr->Draw("minos.fbetare:minos.fpos.fZ>>h(150,-170,-20,200,0.45,0.6)","","colz");
   TH2F* h = (TH2F*)gROOT->FindObject("h");
   TProfile* p = (TProfile*)h->ProfileX("hp");
   p->Draw("same");
   //h->ProfileY()->Draw();
+  
   TF1* fu = new TF1("fu",inverted,-200,-40,3);
   fu->SetParameters(-3000,2500,-500);
-  p->Fit("fu");
+  p->Fit("fu","","",-200,-40);
   fu->Draw("same");
+  /*
+  TF1* testfit = new TF1("testfit","pol2",-200,-40);
+  p->Fit("testfit");
+  testfit->SetLineColor(kBlue);
+  testfit->Draw("same");
+  */
 }
 void testbeta(){
   TFile *f = new TFile("mo83_minos.root");

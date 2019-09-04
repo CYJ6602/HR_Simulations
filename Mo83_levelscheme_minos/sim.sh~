@@ -1,6 +1,0 @@
-./simcu.sh 130 420 > log/zr_184.log &
-./simcu.sh 229 420 > log/zr_229.log &
-./simcu.sh 251 420 > log/zr_251.log &
-./simcu.sh 380 420 > log/zr_380.log &
-./simcu.sh 642 420 > log/zr_420.log &
-./simcu.sh 942 420 > log/zr_420.log &

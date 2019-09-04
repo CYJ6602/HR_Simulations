@@ -6,7 +6,7 @@ void plot_lowlevel(const char* filename = "histos.root")
   gStyle->SetTextFont(132);
 
  
-  const char *dirname="/home/cho/Desktop/SimulationPackage/HRArray/examples/Mo83_levelscheme_minos/hist/";
+  const char *dirname="/home/cho/Desktop/SimulationPackage_updated/HrROOT/examples/Mo83_levelscheme_minos/hist/";
   const char *ext="lowlevel.root";
   TSystemDirectory dir(dirname, dirname);
   

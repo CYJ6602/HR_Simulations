@@ -5,7 +5,7 @@ Double_t inverted(Double_t *x, Double_t *p){
   return ( -p[1] - sqrt(p[1]*p[1] - 4*p[0]*(p[2]-x[0])) ) / (2*p[0]);
 }
 void beta(){
-  TFile *f = new TFile("k53_minos.root");
+  TFile *f = new TFile("mo83_minos.root");
   TTree* tr = (TTree*)f->Get("caltr");
 
   tr->Draw("minos.fbetare:minos.fpos.fZ>>h(150,-170,-20,200,0.4,0.55)","","colz");
@@ -19,11 +19,11 @@ void beta(){
   fu->Draw("same");
 }
 void testbeta(){
-  TFile *f = new TFile("k53_minos.root");
+  TFile *f = new TFile("mo83_minos.root");
   TTree* tr = (TTree*)f->Get("caltr");
 
   tr->Draw("minos.fbetare:minos.fpos.fZ>>h(150,-170,-20,200,0.4,0.55)","","colz");
-  TEnv* set = new TEnv("minos.set");
+  TEnv* set = new TEnv("mo83_minos.set");
   double fMINOSBetaCoeff[3];
   TF1* fMINOSZett = new TF1("MINOSZett",inverted, -200,  -50, 3);
   for(int i=0;i<3;i++){
