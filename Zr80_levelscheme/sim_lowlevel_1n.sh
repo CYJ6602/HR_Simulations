@@ -1,0 +1,11 @@
+./simzr_1n.sh 289 19200 > log/zr_289.log &
+./simzr_1n.sh 770 19200 > log/zr_770.log &
+./simzr_1n.sh 826 19200 > log/zr_826.log &
+./simzr_1n.sh 1100 19200 > log/zr_1100.log &
+./simzr_1n.sh 1300 19200 > log/zr_1300.log &
+./simzr_1n.sh 1400 19200 > log/zr_1400.log &
+./simzr_1n.sh 1650 19200 > log/zr_1650.log &
+./simzr_1n.sh 1680 19200 > log/zr_1680.log &
+./simzr_1n.sh 1720 19200 > log/zr_1720.log &
+./simzr_1n.sh 2080 19200 > log/zr_2080.log &
+./simzr_1n.sh 2220 19200 > log/zr_2220.log &

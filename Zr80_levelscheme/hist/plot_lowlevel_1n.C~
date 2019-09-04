@@ -1,0 +1,165 @@
+void plot_lowlevel_1n(const char* filename = "histos_1n.root")
+{
+  gStyle->SetOptFit(0);
+  gStyle->SetOptStat(0);
+  gStyle->SetOptTitle(0);
+  gStyle->SetTextFont(132);
+
+ 
+  const char *dirname="/home/cho/Desktop/SimulationPackage_updated/HrROOT/examples/Zr80_levelscheme/hist/";
+  const char *ext="lowlevel_1n.root";
+  TSystemDirectory dir(dirname, dirname);
+  
+  const int mm = 100;
+  TFile *f[mm];
+  int j=0;
+  
+  TList *files = dir.GetListOfFiles();
+  if (files)
+    {
+      TSystemFile *file;
+      TString fname;
+      TIter next(files);
+      
+      while((file=(TSystemFile*)next()))
+	{
+	  fname = file->GetName();
+	  if (!file->IsDirectory() && fname.EndsWith(ext))
+	    {
+	      f[j] = new TFile(fname);
+	      j++;
+	    }
+	}
+
+      cout << "Total number of files = " << j << endl;
+      /*
+      cout << file->GetName() << endl;
+      file = (TSystemFile*)next();
+      cout << file->GetName() << endl;
+      file = (TSystemFile*)next();
+      cout << file->GetName() << endl;
+      */
+      /*
+      while((file = (TSystemFile*)next()))
+	{
+	  fname = file->GetName();
+	  if (!file->IsDirectory() && fname.EndsWith(ext))
+	    {
+	      f[j] = new TFile(fname);
+	      cout << fname << endl;
+	    }
+	  j++;
+	}
+      */
+           
+    }
+
+  const int nn=11;
+  
+  if(nn!=j)
+    {
+      cout << "Something wrong, maybe number of hist files" << endl;
+      cout << "Please check the code" << endl;      
+    }
+  
+  TPad *p1;
+  TPad *p2;
+  TCanvas *c1 = new TCanvas("c1","Miniball hist",1000,400);
+  TCanvas *c2 = new TCanvas("c2","Tracking hist",1000,400);
+  c1->cd();
+  p1 = new TPad("p1","p1",0.9,0.9,1,1);
+  p1->SetTopMargin(0.01);
+  p1->SetLeftMargin(0.08);
+  p1->SetBottomMargin(0.05);
+  p1->SetRightMargin(0.03);
+  p1->Draw();
+  //p->SetLogy();
+  p1->cd();
+  
+  c2->cd();
+  p2 = new TPad("p2","p2",0,0,1,1);
+  p2->SetTopMargin(0.01);
+  p2->SetLeftMargin(0.08);
+  p2->SetBottomMargin(0.05);
+  p2->SetRightMargin(0.03);
+  p2->Draw();
+  //p->SetLogy();
+  p2->cd();
+  
+
+  TH1F* h[nn+1][5];
+  for(int i=0;i<nn;i++){
+    if(i==0)
+      {
+	h[nn][0] = (TH1F*)f[i]->Get("egamABdc");
+	h[nn][0]->SetName("Total_hist");
+	
+	h[nn][1] = (TH1F*)f[i]->Get("MBegamABdc");
+	h[nn][1]->SetName("MB_hist");
+	
+	h[nn][2] = (TH1F*)f[i]->Get("MBegamAB");
+	h[nn][2]->SetName("MB_hist_nodc");
+	
+	h[nn][3] = (TH1F*)f[i]->Get("GRegamABdc");
+	h[nn][3]->SetName("Tracking_hist");
+	
+	h[nn][4] = (TH1F*)f[i]->Get("GRegamAB");
+	h[nn][4]->SetName("Tracking_hist_nodc");
+      }
+    else
+      {
+	h[nn][0]->Add((TH1F*)f[i]->Get("egamABdc"));
+	h[nn][1]->Add((TH1F*)f[i]->Get("MBegamABdc"));
+	h[nn][2]->Add((TH1F*)f[i]->Get("MBegamAB"));
+	h[nn][3]->Add((TH1F*)f[i]->Get("GRegamABdc"));
+	h[nn][4]->Add((TH1F*)f[i]->Get("GRegamAB"));
+      }
+   
+   
+  }
+
+  for(int i=0 ; i<4; i++)
+    {
+      //h[nn][i]->Rebin(1);
+      h[nn][i]->GetYaxis()->SetTitle("counts / 1 keV");
+      h[nn][i]->GetYaxis()->SetTitleSize(0.045);
+      h[nn][i]->GetYaxis()->SetTitleOffset(0.7);
+      h[nn][i]->GetYaxis()->SetLabelSize(0.05);
+      h[nn][i]->GetYaxis()->SetLabelOffset(0.01);
+      
+      h[nn][i]->GetXaxis()->SetTitle("E_{#gamma} (keV)");
+      h[nn][i]->GetXaxis()->SetTitleSize(0.045);
+      h[nn][i]->GetXaxis()->SetTitleOffset(1.2);
+      h[nn][i]->GetXaxis()->SetLabelSize(0.05);
+      h[nn][i]->GetXaxis()->SetLabelOffset(0.01);
+      
+      h[nn][i]->GetXaxis()->SetRangeUser(0,1500);
+      //h[nn][i]->GetYaxis()->SetRangeUser(0,80);
+      
+      h[nn][i]->GetXaxis()->SetTitleFont(132);
+      h[nn][i]->GetXaxis()->SetLabelFont(132);
+      h[nn][i]->GetYaxis()->SetTitleFont(132);
+      h[nn][i]->GetYaxis()->SetLabelFont(132);
+      //h[nn][i]->Draw();
+      
+      //h[nn][i]->SetLineColor(i+2);
+      //h[nn][i]->Draw("same");
+    }
+
+  c1->cd();
+  h[nn][1]->Draw();
+  c2->cd();
+  h[nn][3]->Draw();
+
+  c1->SaveAs("zr80_Miniball_hist.jpg");
+  c2->SaveAs("zr80_Tracking_hist.jpg");
+
+
+  
+  TFile* f0 = new TFile(filename,"RECREATE");
+  for(int i=0 ; i<5 ; i++)
+    h[nn][i]->Write();
+  f0->Close();
+ 
+  
+}

@@ -1,0 +1,35 @@
+# Detector parameters ==========================================================
+/Target/Construct
+/BeamTube/Construct
+/HRarray/detector/enableCapsules
+/HRarray/detector/enableCryostats
+/HRarray/Construct
+
+# Set reaction parameters ======================================================
+/Target/Material Be
+/Target/Thickness 2.706 mm  ##
+/BeamIn/A 81
+/BeamIn/Z 40
+/BeamIn/KEu 166 MeV
+/BeamIn/Dpp 0.00
+/BeamIn/Focus/DX 0. mm
+/BeamIn/Focus/DY 0. mm
+/BeamOut/TargetA 9
+/BeamOut/TargetZ 4
+/BeamOut/DA -1
+/BeamOut/DZ 0
+/BeamOut/LevelDataFile zr80_lowlevel_1n.lvldata
+/BeamOut/ProjectileExcitation 1400 keV
+/BeamOut/AngDistSigmaA 0.000 rad
+/BeamOut/AngDistSigmaB 0.000 rad
+/BeamOut/Update
+
+# Print simulation parameters to stdout ========================================
+/Target/Report
+/ExpHall/Report
+
+# Output parameters ============================================================
+/Mode2/PackingRes 5.0 mm
+/Mode2/Filename data/zr80_1400keV_19200evt_lowlevel_1n.dat 
+/Mode2/FirstInteractions MBcoordinates_2.706mm_1n.dat
+/run/beamOn 19200

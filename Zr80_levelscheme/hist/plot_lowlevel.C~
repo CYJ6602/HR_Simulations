@@ -54,7 +54,7 @@ void plot_lowlevel(const char* filename = "histos.root")
            
     }
 
-  const int nn=13;
+  const int nn=11;
   
   if(nn!=j)
     {
@@ -146,7 +146,7 @@ void plot_lowlevel(const char* filename = "histos.root")
       //h[nn][i]->Draw("same");
     }
 
-  
+  /*
   TF1* f1 = new TF1("f1","pol1(0)+gaus(2)",190,210);
   f1->SetParameters(300.,-0.01,1200.,195.,1.);
   h[nn][3]->Fit("f1","R");
@@ -171,7 +171,7 @@ void plot_lowlevel(const char* filename = "histos.root")
   TF1* f6 = new TF1("f6","pol1(0)+gaus(2)",570,590);
   f6->SetParameters(50.,0.01,50.,575.,1.);
   h[nn][3]->Fit("f6","R+");
-  
+  */
   
   /*
   TF1* f7 = new TF1("f7","pol1(0)+gaus(2)",270,310);
@@ -201,12 +201,12 @@ void plot_lowlevel(const char* filename = "histos.root")
   h[nn][3]->Fit("f2","","",270,310);
   */
   
-  //c1->cd();
-  //h[nn][1]->Draw();
+  c1->cd();
+  h[nn][1]->Draw();
   c2->cd();
   h[nn][3]->Draw();
 
-  //c1->SaveAs("zr80_Miniball_hist.jpg");
+  c1->SaveAs("zr80_Miniball_hist.jpg");
   c2->SaveAs("zr80_Tracking_hist.jpg");
   
   /*
